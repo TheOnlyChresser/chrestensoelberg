@@ -61,7 +61,7 @@ const Hero = () => {
                                 <img
                                     src="/apple-touch-icon.png"
                                     alt="Avatar"
-                                    className="flex md:hidden rounded-full w-100 h-100 object-fit mx-auto"
+                                    className="flex md:hidden rounded-full w-50 h-50 object-fit mx-auto"
                                 />
                             </div>
                         </div>
