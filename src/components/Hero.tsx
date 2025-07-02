@@ -38,11 +38,11 @@ const Hero = () => {
                 end: "+=50",
                 scrub: 4,
                 onEnter: () => {
-                    ego.classList.add("text-gradient");
+                    ego?.classList.add("text-gradient");
                 },
                 onScrubComplete: () => {
 
-                    ego.classList.remove("text-gradient");
+                    ego?.classList.remove("text-gradient");
                 },
             }
         });
