@@ -1,14 +1,14 @@
 export default function Navbar () {
     return (
         <nav className="flex justify-center items-center w-full flex-col">
-            <div className="bg-white dark:bg-black justify-between px-10 pt-2 items-center flex flex-row w-full">
-                <div className="mb-2 flex items-center justify-center cursor-pointer">
+            <div className="bg-white dark:bg-black justify-between px-2 pt-2 items-center flex flex-row w-full">
+                <a className="mb-2 flex items-center justify-center cursor-pointer">
                     <img
                     src="/apple-touch-icon.png"
                     alt="stock photo"
                     className="w-15 h-15"
                     />
-                </div>
+                </a>
                 <div className="mb-2">
                     <a href="/projekter" className="navLink">Projekter</a>
                     <a href="/om" className="navLink">Om mig</a>

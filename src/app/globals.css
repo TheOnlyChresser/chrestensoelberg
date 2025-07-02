@@ -26,5 +26,5 @@ body {
 }
 
 @utility navLink {
-  @apply text-black/50 mx-2 text-xl dark:text-white/50 font-semibold hover:text-black dark:hover:text-white;
+  @apply text-black/80 mx-2 text-base hover:underline hover:underline-offset-[6px] hover:decoration-2 font-semibold hover:text-black;
 }
