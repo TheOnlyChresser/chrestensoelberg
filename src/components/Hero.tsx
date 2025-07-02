@@ -73,7 +73,7 @@ const Hero = () => {
                                 <span className="md:hidden">Hej, </span>Jeg hedder <span className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#A3F7BF] to-[#C5C9FF]" id="titlespan">Chresten</span>
                             </h2>
                             <p className="text-2xl font-semibold text-muted-foreground mb-6">
-                                Jeg er en average og <span className="text-yellow-500 font-bold">kedelig</span> HTX'er med for mange interesser og alt for <span id="ego" className="inline-block">stort</span> ego.
+                                Jeg er en average og <span className="text-yellow-500 font-bold">kedelig</span> HTX&apos;er med for mange interesser og alt for <span id="ego" className="inline-block">stort</span> ego.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                 <button className="rounded-md h-16 w-50 text-xl font-bold cursor-pointer transition delay-[25ms] bg-white border-black border-1 text-black hover:bg-black hover:text-white">
