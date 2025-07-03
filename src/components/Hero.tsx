@@ -69,7 +69,7 @@ const Hero = () => {
                             <h1
                                 className="hidden md:flex md:mb-10 md:text-7xl font-bold md:flex-row text-black"
                             ><span className="font-inter mr-5">Hej</span><span id="hand">👋🏻</span></h1>
-                            <h2 className="text-7xl mb-10 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
+                            <h2 className="text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
                                 <span className="md:hidden">Hej, </span>Jeg hedder <span className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#A3F7BF] to-[#C5C9FF]" id="titlespan">Chresten</span>
                             </h2>
                             <p className="text-2xl font-semibold text-black/90 mb-6">
