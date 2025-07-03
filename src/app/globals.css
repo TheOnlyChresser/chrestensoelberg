@@ -37,6 +37,14 @@ html, body {
   @apply bg-[url(https://grainy-gradients.vercel.app/noise.svg)];
 }
 
+@utility bg-standard {
+  background-color: #b6d0e2;
+  background-image:
+          radial-gradient(ellipse at 35% 0%, #c4a8e4 0%, #c4a8e400 70%),
+          radial-gradient(ellipse at 65% 100%, #a4e5f1 0%, #a4e5f100 70%);
+}
+
+
 @utility text-gradient {
   background: linear-gradient(to bottom, #2563eb, #6366f1, #8b5cf6);
   -webkit-background-clip: text;
@@ -50,4 +58,17 @@ html, body {
   background: linear-gradient(to bottom, #f59e0b, #f97316, #dc2626);
 
   @apply bg-clip-text text-transparent bg-gradient-to-bl from-[#f59e0b] via-[#f97316] to-[#dc2626];
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+@utility text-glass {
+  @apply text-transparent bg-black/50 font-bold bg-clip-text blur-[2px];
+  -webkit-text-stroke: 0.5px black;
+}
+
+@utility glass-box {
+  @apply border-1 border-white/75 bg-white/20 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-2xl;
 }
