@@ -21,11 +21,16 @@ export default function OmMig () {
                         <h1 className="text-gradient text-4xl text-center font-semibold">Mine skills</h1>
                         <div className="m-5"/>
                         <div className="flex-center flex-wrap gap-4">
-                            <SkillCard name="Tailwind CSS" icon="devicon:tailwindcss" />
-                            <SkillCard name="Next.js" icon="devicon:nextjs" />
-                            <SkillCard name="Laravel" icon="devicon:laravel" />
-                            <SkillCard name="React" icon="devicon:react" />
-                            <SkillCard name="Vite.js" icon="devicon:vitejs" />
+                            <SkillCard name="Tailwind CSS" icon="devicon:tailwindcss" website="https://tailwindcss.com/"/>
+                            <SkillCard name="Next.js" icon="devicon:nextjs" website="https://nextjs.org/"/>
+                            <SkillCard name="Laravel" icon="devicon:laravel" website="https://laravel.com/"/>
+                            <SkillCard name="React" icon="devicon:react" website="https://react.dev/"/>
+                            <SkillCard name="Vite.js" icon="devicon:vitejs" website="https://vite.dev/"/>
+                            <SkillCard name="Figma" icon="devicon:figma" website="https://figma.com/"/>
+                            <SkillCard name="Python" icon="devicon:python" website="https://python.org/"/>
+                            <SkillCard name="JavaScript" icon="devicon:javascript" website="https://javascript.com/"/>
+                            <SkillCard name="TypeScript" icon="devicon:typescript" website="https://typescriptlang.org/"/>
+                            <SkillCard name="Wordpress" icon="devicon:wordpress" website="https://wordpress.com/"/>
                         </div>
                     </div>
                 </div>
