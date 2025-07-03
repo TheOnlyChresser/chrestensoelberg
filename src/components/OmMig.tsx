@@ -12,7 +12,7 @@ export default function OmMig () {
                 <div className="flex-col md:flex-row flex-center w-full">
                     <div className="flex items-center w-[40%] flex-col m-5 glass-box">
                         <div className="flex items-center flex-col">
-                            <h1 className="text-black/95 text-4xl font-semibold">HTX'er med flair for hjemmesideudvikling</h1>
+                            <h1 className="text-black/95 text-4xl font-semibold">HTX&apos;er med flair for hjemmesideudvikling</h1>
                             <div className="m-5"/>
                             <p className="text-black/90 font-thin">Selvstændig og nysgerrig HTX’er med flair for hjemmesideudvikling og et skarpt øje for detaljen. Jeg kombinerer teknisk kunnen med kreativ tænkning og brænder for at skabe brugervenlige, moderne og visuelt indbydende webløsninger – altid med fokus på performance, funktion og æstetik.</p>
                         </div>
