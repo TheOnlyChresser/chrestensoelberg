@@ -36,7 +36,7 @@ function Kontakt() {
                 email: userInput.email,
                 message: userInput.message
             };
-            
+
             const res = await emailjs.send(serviceID, templateID, emailParams, userID);
 
             if (res.status === 200) {
