@@ -3,6 +3,7 @@ import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/all";
 import {useRef} from "react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,9 +59,11 @@ const Hero = () => {
                     <div className="z-50 flex flex-col md:flex-row items-center min-h-screen justify-center text-center md:text-left gap-12 mx-auto md:ml-20 w-full">
                         <div className="mt-20 md:mt-0 flex md:hidden">
                             <div className="flex-1">
-                                <img
+                                <Image
                                     src="/apple-touch-icon.png"
                                     alt="Avatar"
+                                    width={200}
+                                    height={200}
                                     className="flex md:hidden rounded-full w-50 h-50 object-fit mx-auto"
                                 />
                             </div>
@@ -68,7 +71,7 @@ const Hero = () => {
                         <div className="flex-1">
                             <h1
                                 className="hidden md:flex md:mb-10 md:text-7xl font-bold md:flex-row text-black"
-                            ><span className="font-inter mr-5">Hej</span><span id="hand">👋🏻</span></h1>
+                            ><span className="font-inter mr-5">Hej</span><span id="hand" role="img" aria-label="waving hand">👋🏻</span></h1>
                             <h2 className="text-4xl md:text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
                                 <span className="md:hidden">Hej, </span>Jeg hedder <span className="text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#A3F7BF] to-[#C5C9FF]" id="titlespan">Chresten</span>
                             </h2>
@@ -83,10 +86,12 @@ const Hero = () => {
                         </div>
 
                         <div className="flex-1">
-                            <img
+                            <Image
                                 src="/apple-touch-icon.png"
                                 alt="Avatar"
                                 id="avatar"
+                                width={500}
+                                height={500}
                                 className="hidden md:flex w-125 h-125 object-fit mx-auto"
                             />
                         </div>
