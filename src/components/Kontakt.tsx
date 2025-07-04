@@ -37,7 +37,7 @@ function Kontakt() {
                 message: userInput.message
             };
 
-            // @ts-ignore
+            // @ts-expect-error
             const res = await emailjs.send(serviceID, templateID, emailParams, userID);
 
             if (res.status === 200) {
@@ -48,7 +48,7 @@ function Kontakt() {
                     message: ""
                 });
             }
-        } catch (error) {
+        } catch {
             toast.error("Kunne ikke sende beskeden. Prøv igen senere.");
         }
     };
