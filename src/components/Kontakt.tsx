@@ -29,7 +29,10 @@ function Kontakt() {
         const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
         const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
         const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
+        if (!serviceID || !templateID || !userID) {
+            toast.error("Email service er ikke konfigureret korrekt.");
+            return;
+        }
         try {
             const emailParams = {
                 name: userInput.name,
