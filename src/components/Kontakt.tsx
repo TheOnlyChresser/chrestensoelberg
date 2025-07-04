@@ -36,8 +36,7 @@ function Kontakt() {
                 email: userInput.email,
                 message: userInput.message
             };
-
-            // @ts-expect-error there shouldnt be error
+            
             const res = await emailjs.send(serviceID, templateID, emailParams, userID);
 
             if (res.status === 200) {
