@@ -7,7 +7,7 @@ export default function OmMig () {
             <section className="min-h-screen w-full flex-center flex-col">
                 <Line/>
                 <div className="flex-center flex-col">
-                    <h1 className="text-center text-6xl md:text-7xl text-glass h-50">Om mig</h1>
+                    <h1 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-50">Om mig</h1>
                 </div>
                 <div className="flex-col md:flex-row flex-center w-full">
                     <div className="flex items-center px-5 md:px-0 md:w-[40%] flex-col m-5 md:glass-box">

@@ -65,10 +65,14 @@ html, body {
 }
 
 @utility text-glass {
-  @apply text-transparent bg-black/50 font-bold bg-clip-text blur-[2px];
+  @apply text-transparent bg-black/50 font-bold bg-clip-text;
   -webkit-text-stroke: 0.5px black;
 }
 
 @utility glass-box {
   @apply border-1 border-white/75 bg-white/20 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-2xl;
+}
+
+@utility text-gradient-subtle {
+  @apply bg-gradient-to-br from-black via-[#1f1f2e] to-[#2a2a36] bg-clip-text text-transparent
 }

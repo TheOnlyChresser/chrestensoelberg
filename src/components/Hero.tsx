@@ -24,7 +24,7 @@ const Hero = () => {
         const tl = gsap.timeline({})
         tl.to("#ego", {
             rotate: 5,
-            scale: 5,
+            scale: 2,
             duration: 3,
             yoyo: true,
             repeat: 1,
