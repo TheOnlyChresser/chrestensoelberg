@@ -1,10 +1,30 @@
-import Image from "next/image"
+"use client"
+
+import Image from "next/image";
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/all"
 
 export default function Navbar () {
+    gsap.registerPlugin(ScrollTrigger)
+    useGSAP(() => {
+        gsap.to("nav", {
+            backdropFilter: "blur(10px)",
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#navtrigger",
+                start: "top top",
+                endTrigger: "#navtrigger",
+                end: "100% top",
+                scrub: 1,
+                markers: true,
+            }
+        })
+    })
     return (
-        <nav className="fixed justify-center items-center w-full flex-col">
+        <nav className="fixed justify-center items-center w-full flex-col z-1000">
             <div className="justify-between px-2 pt-2 items-center flex flex-row w-full">
-                <a className="mb-2 flex items-center justify-center cursor-pointer">
+                <a href="/" className="mb-2 flex items-center justify-center cursor-pointer">
                     <Image
                     width={50}
                     height={50}

@@ -54,7 +54,7 @@ const Hero = () => {
 
     return (
         <>
-            <section ref={main} id="hero" className="w-full flex flex-col items-center text-center min-h-screen">
+            <section ref={main} id="navtrigger" className="w-full flex flex-col items-center text-center min-h-screen">
                 <div className="w-full">
                     <div className="z-50 flex flex-col md:flex-row items-center min-h-screen justify-center text-center md:text-left gap-12 mx-auto md:ml-20 w-full">
                         <div className="mt-20 md:mt-0 flex md:hidden">
