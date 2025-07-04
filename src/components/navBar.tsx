@@ -18,7 +18,6 @@ export default function Navbar () {
                 endTrigger: "#navtrigger",
                 end: "100% top",
                 scrub: 1,
-                markers: true,
             }
         })
     })
