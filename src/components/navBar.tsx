@@ -28,15 +28,15 @@ export default function Navbar () {
                     <Image
                     width={50}
                     height={50}
-                    src="/apple-touch-icon.png"
+                    src="/avatar.png"
                     alt="Chresten Avatar"
                     className="w-15 h-15"
                     />
                 </Link>
-                <div className="mb-2">
+                <div className="group">
                     <Link href="/projekter" className="navLink">Projekter</Link>
-                    <Link href="/om" className="navLink">Om mig</Link>
-                    <Link href="/kontakt" className="navLink">Kontakt</Link>
+                    <Link href="#ommig" className="navLink" >Om mig</Link>
+                    <Link href="#kontakt" className="navLink">Kontakt</Link>
                 </div>
             </div>
         </nav>

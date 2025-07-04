@@ -54,13 +54,13 @@ const Hero = () => {
 
     return (
         <>
-            <section ref={main} id="navtrigger" className="w-full flex flex-col items-center text-center min-h-screen">
-                <div className="w-full">
+            <section ref={main} id="hero" className="w-full flex flex-col items-center text-center min-h-screen">
+                <div className="w-full" id="navtrigger">
                     <div className="z-50 flex flex-col md:flex-row items-center min-h-screen justify-center text-center md:text-left gap-12 mx-auto md:ml-20 w-full">
                         <div className="mt-20 md:mt-0 flex md:hidden">
                             <div className="flex-1">
                                 <Image
-                                    src="/apple-touch-icon.png"
+                                    src="/avatar.png"
                                     alt="Avatar"
                                     width={200}
                                     height={200}
@@ -87,7 +87,7 @@ const Hero = () => {
 
                         <div className="flex-1">
                             <Image
-                                src="/apple-touch-icon.png"
+                                src="/avatar.png"
                                 alt="Avatar"
                                 id="avatar"
                                 width={500}

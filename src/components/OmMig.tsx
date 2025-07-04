@@ -4,7 +4,7 @@ import SkillCard from "@/components/SkillCard";
 export default function OmMig () {
     return (
         <>
-            <section className="min-h-screen w-full flex-center flex-col">
+            <section className="min-h-screen w-full flex-center flex-col" id="ommig">
                 <Line/>
                 <div className="flex-center flex-col">
                     <h2 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-50">Om mig</h2>

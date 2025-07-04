@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import OmMig from "@/components/OmMig";
+import Kontakt from "@/components/Kontakt";
 
 export const metadata = {
   title: "Chresten – Portfolio",
@@ -51,6 +52,7 @@ export default function Home() {
         <main className="w-full max-w-400 min-h-screen flex-col flex justify-center text-black">
           <Hero/>
           <OmMig/>
+          <Kontakt/>
         </main>
       </div>
     </div>
