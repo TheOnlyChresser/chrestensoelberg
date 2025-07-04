@@ -10,7 +10,7 @@ export default function OmMig () {
                     <h1 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-50">Om mig</h1>
                 </div>
                 <div className="flex-col md:flex-row flex-center w-full">
-                    <div className="flex items-center px-5 md:px-0 md:w-[40%] flex-col m-5 md:glass-box">
+                    <div className="flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
                         <div className="flex items-center flex-col w-full">
                             <h1 className="text-black/95 md:text-wrap md:text-left text-center text-4xl font-semibold">HTX&apos;er med flair for hjemmesideudvikling</h1>
                             <div className="m-5"/>
