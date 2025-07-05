@@ -40,17 +40,66 @@ export default function OmMig () {
                         </h3>
                         <div className="m-5"/>
                         <div className="flex-center flex-wrap gap-4" role="list" aria-label="Tekniske færdigheder">
-                            <SkillCard name="Tailwind CSS" icon="devicon:tailwindcss" website="https://tailwindcss.com/"/>
-                            <SkillCard name="Next.js" icon="devicon:nextjs" website="https://nextjs.org/"/>
-                            <SkillCard name="Laravel" icon="devicon:laravel" website="https://laravel.com/"/>
-                            <SkillCard name="React" icon="devicon:react" website="https://react.dev/"/>
-                            <SkillCard name="Vite.js" icon="devicon:vitejs" website="https://vite.dev/"/>
-                            <SkillCard name="Figma" icon="devicon:figma" website="https://figma.com/"/>
-                            <SkillCard name="Python" icon="devicon:python" website="https://python.org/"/>
-                            <SkillCard name="JavaScript" icon="devicon:javascript" website="https://javascript.com/"/>
-                            <SkillCard name="TypeScript" icon="devicon:typescript" website="https://typescriptlang.org/"/>
-                            <SkillCard name="Wordpress" icon="devicon:wordpress" website="https://wordpress.com/"/>
-                            <SkillCard name="PostgreSQL" icon="devicon:postgresql" website="https://postgresql.org/"/>
+                            <SkillCard 
+                                name="Tailwind CSS" 
+                                icon="devicon:tailwindcss" 
+                                website="https://tailwindcss.com/"
+                                description="Et utility-first CSS framework der giver mig hurtig og fleksibel styling med foruddefinerede klasser. Perfekt til at bygge moderne og responsive designs."
+                            />
+                            <SkillCard 
+                                name="Next.js" 
+                                icon="devicon:nextjs" 
+                                website="https://nextjs.org/"
+                                description="React framework med server-side rendering og statisk site generation. Giver mig mulighed for at bygge hurtige og SEO-optimerede webapplikationer."
+                            />
+                            <SkillCard 
+                                name="Laravel" 
+                                icon="devicon:laravel" 
+                                website="https://laravel.com/"
+                                description="PHP framework med elegant syntax og kraftfulde værktøjer. Perfekt til at bygge robuste backend-systemer og API'er."
+                            />
+                            <SkillCard 
+                                name="React" 
+                                icon="devicon:react" 
+                                website="https://react.dev/"
+                                description="JavaScript library til at bygge brugergrænseflader. Giver mig mulighed for at skabe interaktive og dynamiske webapplikationer."
+                            />
+                            <SkillCard 
+                                name="Vite.js" 
+                                icon="devicon:vitejs" 
+                                website="https://vite.dev/"
+                                description="Moderne build tool der giver hurtig udvikling og optimeret produktion. Perfekt til at fremskynde min udviklingsproces."
+                            />
+                            <SkillCard 
+                                name="Figma" 
+                                icon="devicon:figma" 
+                                website="https://figma.com/"
+                                description="Collaborative design tool til UI/UX design. Hjælper mig med at skabe visuelle prototyper og designs før implementering."
+                            />
+                            <SkillCard 
+                                name="Python" 
+                                icon="devicon:python" 
+                                website="https://python.org/"
+                                description="Versatil programmeringssprog med ren syntax. Perfekt til dataanalyse, automatisering og backend-udvikling."
+                            />
+                            <SkillCard 
+                                name="JavaScript" 
+                                icon="devicon:javascript" 
+                                website="https://javascript.com/"
+                                description="Dynamisk programmeringssprog der er grundlaget for moderne webudvikling. Giver mig mulighed for at skabe interaktive oplevelser."
+                            />
+                            <SkillCard 
+                                name="TypeScript" 
+                                icon="devicon:typescript" 
+                                website="https://typescriptlang.org/"
+                                description="Typed superset af JavaScript der giver mig bedre kodekvalitet og udvikleroplevelse gennem statisk type checking."
+                            />
+                            <SkillCard 
+                                name="Wordpress" 
+                                icon="devicon:wordpress" 
+                                website="https://wordpress.com/"
+                                description="Content management system der giver mig mulighed for at bygge hjemmesider hurtigt og effektivt."
+                            />
                         </div>
                     </aside>
                 </div>
