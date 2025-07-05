@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
     template: "%s | Chresten Soelberg"
   },
-  description: "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier. Se mit portfolio med projekter og færdigheder.",
+  description: "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
   keywords: [
     "Chresten Soelberg",
     "Frontend udvikler",

@@ -81,7 +81,7 @@ const Hero = () => {
                         </div>
                         <div className="flex-1">
                             <header>
-                                <h1
+                                <h2
                                     id="theghost" 
                                     className="hidden md:flex md:mb-5 md:text-2xl font-bold md:flex-row text-black/75"
                                     aria-label="Hilsen"
@@ -95,7 +95,7 @@ const Hero = () => {
                                     >
                                         👋🏻
                                     </span>
-                                </h1>
+                                </h2>
                                 <h2 className="text-4xl md:text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
                                     <span className="md:hidden">Hej, </span>
                                     Jeg hedder{" "}

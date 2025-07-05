@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata = {
   title: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
   description:
-      "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier. Se mit portfolio med projekter og færdigheder.",
+      "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Python, SQL og moderne webteknologier.",
   keywords: [
     "Chresten Soelberg",
     "Frontend udvikler",

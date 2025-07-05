@@ -18,9 +18,9 @@ export default function OmMig () {
                 <div className="flex-col md:flex-row flex-center w-full">
                     <article className="flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
                         <div className="flex items-center flex-col w-full">
-                            <h3 className="text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
+                            <h1 className="text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
                                 HTX&apos;er med flair for hjemmesider
-                            </h3>
+                            </h1>
                             <div className="m-5"/>
                             <p className="text-black/90 font-thin md:text-left md:text-wrap text-center px-5 md:px-0">
                                 Jeg er en nysgerrig HTX&apos;er med flair for hjemmesideudvikling og et skarpt øje for detaljen. 
@@ -50,6 +50,7 @@ export default function OmMig () {
                             <SkillCard name="JavaScript" icon="devicon:javascript" website="https://javascript.com/"/>
                             <SkillCard name="TypeScript" icon="devicon:typescript" website="https://typescriptlang.org/"/>
                             <SkillCard name="Wordpress" icon="devicon:wordpress" website="https://wordpress.com/"/>
+                            <SkillCard name="PostgreSQL" icon="devicon:postgresql" website="https://postgresql.org/"/>
                         </div>
                     </aside>
                 </div>
