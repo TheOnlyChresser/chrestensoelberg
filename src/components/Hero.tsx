@@ -77,9 +77,9 @@ const Hero = () => {
                             <h2
                                 id="theghost" className="hidden md:flex md:mb-5 md:text-2xl font-bold md:flex-row text-black/75"
                             ><span className="font-inter mr-5">Hej</span><span id="hand" role="img" aria-label="waving hand">👋🏻</span></h2>
-                            <h1 className="text-4xl md:text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
+                            <h2 className="text-4xl md:text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
                                 <span className="md:hidden">Hej, </span>Jeg hedder <span className="text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#A3F7BF] to-[#C5C9FF]" id="titlespan">Chresten</span>
-                            </h1>
+                            </h2>
                             <p className="text-2xl font-semibold text-black/90 mb-6 mx-10 md:mx-0">
                                 Jeg er en average og <span className="text-yellow-500 font-bold">kedelig</span> HTX&apos;er med for mange interesser og alt for <span id="ego" className="inline-block">stort</span> ego.
                             </p>
