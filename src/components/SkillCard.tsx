@@ -61,7 +61,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
 
             {isPopupOpen && mounted && createPortal(
                 <div 
-                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-black/10 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
                     onClick={handleClose}
                     style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
                 >
@@ -85,7 +85,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                         <div className="flex space-x-3">
                             <button
                                 onClick={handleVisitWebsite}
-                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] bg-blue-500/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-blue-500/90"
+                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] hover:bg-blue-500/30 backdrop-blur-2xl border-black/30 border-1 hover:text-black/90 bg-white/30 text-blue-500/90"
                             >
                                 Besøg Hjemmeside
                             </button>
