@@ -110,7 +110,7 @@ const Hero = () => {
                             </header>
                             <p className="text-2xl font-semibold text-black/90 mb-6 mx-10 md:mx-0">
                                 Jeg er en average og{" "}
-                                <span className="text-yellow-500 font-bold">kedelig</span>{" "}
+                                <span className="text-gradient font-bold">kedelig</span>{" "}
                                 HTX&apos;er med for mange interesser og alt for{" "}
                                 <span 
                                     id="ego" 
