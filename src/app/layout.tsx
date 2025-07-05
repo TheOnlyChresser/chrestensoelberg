@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
+    default: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     template: "%s | Chresten Soelberg"
   },
-  description: "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
+  description: "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
   keywords: [
     "Chresten Soelberg",
     "Frontend udvikler",
@@ -68,8 +68,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'da_DK',
     url: 'https://chrestensoelberg.dk',
-    title: 'Chresten Soelberg - Frontend Udvikler & HTX Elev',
-    description: 'Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
+    title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
+    description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
     siteName: 'Chresten Soelberg Portfolio',
     images: [
       {
@@ -113,7 +113,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Website",
               "name": "Chresten Soelberg Portfolio",
-              "description": "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
+              "description": "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
               "url": "https://chrestensoelberg.dk",
               "author": {
                 "@type": "Person",

@@ -4,9 +4,9 @@ import Kontakt from "@/components/Kontakt";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
+  title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
   description:
-      "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Python, SQL og moderne webteknologier.",
+      "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Python, SQL og moderne webteknologier.",
   keywords: [
     "Chresten Soelberg",
     "Frontend udvikler",
@@ -31,9 +31,9 @@ export const metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
+    title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description:
-        "Chresten Soelberg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
+        "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
     url: "https://chrestensoelberg.dk",
     siteName: "Chresten Soelberg Portfolio",
     images: [
@@ -49,7 +49,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chresten Soelberg - Frontend Udvikler & HTX Elev",
+    title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description:
         "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.",
     images: ["/avatar.png"],
