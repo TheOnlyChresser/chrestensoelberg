@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://chrestensoelberg.dk'),
+  metadataBase: new URL('https://chresten.dk'),
   alternates: {
     canonical: '/',
   },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'da_DK',
-    url: 'https://chrestensoelberg.dk',
+    url: 'https://chresten.dk',
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
     siteName: 'Chresten Soelberg Portfolio',
@@ -86,9 +86,6 @@ export const metadata: Metadata = {
     description: 'Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.',
     images: ['/avatar.png'],
     creator: '@theonlychresser',
-  },
-  verification: {
-    google: 'xk8n21FDaVX0VSKtqZpfOKYN2I39yXJCuG-4uDtZgaE',
   },
   category: 'technology',
 };
@@ -114,13 +111,13 @@ export default function RootLayout({
               "@type": "Website",
               "name": "Chresten Soelberg Portfolio",
               "description": "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
-              "url": "https://chrestensoelberg.dk",
+              "url": "https://chresten.dk",
               "author": {
                 "@type": "Person",
                 "name": "Chresten Soelberg",
                 "jobTitle": "Frontend Udvikler",
                 "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
-                "image": "https://chrestensoelberg.dk/avatar.png",
+                "image": "https://chresten.dk/avatar.png",
                 "sameAs": [
                   "https://github.com/TheOnlyChresser",
                   "https://linkedin.com/in/chresten-soelberg-4577b2272"
@@ -148,7 +145,7 @@ export default function RootLayout({
               },
               "potentialAction": {
                 "@type": "ContactAction",
-                "target": "https://chrestensoelberg.dk#kontakt",
+                "target": "https://chresten.dk#kontakt",
                 "description": "Kontakt Chresten Soelberg"
               }
             })

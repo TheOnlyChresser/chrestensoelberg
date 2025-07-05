@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://chrestensoelberg.dk/sitemap.xml',
+    sitemap: 'https://chresten.dk/sitemap.xml',
   }
 } 

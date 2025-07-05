@@ -34,7 +34,7 @@ export const metadata = {
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description:
         "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
-    url: "https://chrestensoelberg.dk",
+    url: "https://chresten.dk",
     siteName: "Chresten Soelberg Portfolio",
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata = {
     images: ["/avatar.png"],
   },
   alternates: {
-    canonical: "https://chrestensoelberg.dk",
+    canonical: "https://chresten.dk",
   },
 };
 
@@ -72,8 +72,8 @@ export default function Home() {
             "name": "Chresten Soelberg",
             "jobTitle": "Frontend Udvikler",
             "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
-            "url": "https://chrestensoelberg.dk",
-            "image": "https://chrestensoelberg.dk/avatar.png",
+            "url": "https://chresten.dk",
+            "image": "https://chresten.dk/avatar.png",
             "sameAs": [
               "https://github.com/chrestensoelberg",
               "https://linkedin.com/in/chrestensoelberg"
