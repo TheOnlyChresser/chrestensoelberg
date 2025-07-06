@@ -99,7 +99,7 @@ export default function RootLayout({
     <html lang="da">
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/(app)/favicon.ico" />
         <link rel="apple-touch-icon" href="/avatar.png" />
         <meta name="theme-color" content="#000000" />
         <Script
