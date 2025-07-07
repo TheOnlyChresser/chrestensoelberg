@@ -75,3 +75,21 @@ html, body {
 @utility glass-box-2 {
   @apply text-black border-1 border-black/75 bg-black/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-2xl;
 }
+
+@layer base {
+  .prose h1 {
+    @apply text-5xl font-bold text-black/85 mb-7 mt-5 mx-5;
+  }
+  .prose h2 {
+    @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5;
+  }
+  .prose h3 {
+    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5;
+  }
+  .prose h4 {
+    @apply text-2xl font-bold text-black/85 mt-5 mx-5;
+  }
+  .prose p {
+    @apply text-black/95 mb-1 mt-1 mx-5;
+  }
+}
