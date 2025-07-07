@@ -4,37 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm run generate:types && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build:types": "tsc -p tsconfig.build.json",
-    "generate:types": "npm run build:types && npx payload generate:types --config dist/payload.config.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@iconify/react": "^6.0.0",
-    "@payloadcms/db-postgres": "^3.45.0",
-    "@payloadcms/live-preview-react": "^3.45.0",
-    "@payloadcms/next": "^3.45.0",
-    "@payloadcms/payload-cloud": "^3.45.0",
-    "@payloadcms/plugin-search": "^3.45.0",
-    "@payloadcms/plugin-seo": "^3.45.0",
-    "@payloadcms/richtext-lexical": "^3.45.0",
     "@vercel/speed-insights": "^1.2.0",
-    "class-variance-authority": "^0.7.1",
-    "graphql": "^16.11.0",
     "gsap": "^3.13.0",
-    "lucide-react": "^0.525.0",
     "next": "15.3.4",
-    "payload": "^3.45.0",
-    "prism-react-renderer": "^2.4.1",
-    "radix-ui": "^1.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.60.0",
-    "react-toastify": "^11.0.5",
-    "tailwind-merge": "^3.3.1"
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
