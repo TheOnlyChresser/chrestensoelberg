@@ -1,6 +1,6 @@
 import { formatDateTime } from '@/utilities/formatDateTime'
 import React from 'react'
-
+import Image from 'next/image'
 import type { Post } from '@/payload-types'
 
 import { Media } from '@/components/Media'
@@ -63,9 +63,10 @@ export const PostHero: React.FC<{
         </div>
       </div>
       <div className="min-h-[80vh] select-none">
-        {heroImage && typeof heroImage !== 'string' && (
+          {/*{heroImage && typeof heroImage !== 'string' && (
           <Media fill priority imgClassName="-z-10 object-cover" resource={heroImage} />
-        )}
+        )}*/}
+        <Image alt="gradient" fill priority={true} width={1000} height={1000} className="-z-10 object-cover" src="/gradient.avif" />
         <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
     </div>
