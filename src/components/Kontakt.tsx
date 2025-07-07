@@ -1,41 +1,19 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
 import Line from "@/components/Line";
 
-declare global {
-    interface Window {
-        grecaptcha: any;
-    }
-}
-
 function Kontakt() {
-    const [userInput, setUserInput] = useState({
+    const [userInput, setUserInput] = useState<{
+        name: string;
+        email: string;
+        message: string;
+    }>({
         name: "",
         email: "",
         message: ""
     });
-    const [recaptchaReady, setRecaptchaReady] = useState(false);
-
-    // Indsæt din reCAPTCHA site key her (eller hent fra env)
-    const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
-
-    // Load reCAPTCHA script når komponenten loader
-    useEffect(() => {
-        if (!window.grecaptcha) {
-            const script = document.createElement("script");
-            script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-            script.async = true;
-            script.defer = true;
-            script.onload = () => {
-                setRecaptchaReady(true);
-            };
-            document.body.appendChild(script);
-        } else {
-            setRecaptchaReady(true);
-        }
-    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -48,42 +26,18 @@ function Kontakt() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!recaptchaReady) {
-            toast.error("Vent venligst, reCAPTCHA loader...");
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+        if (!serviceID || !templateID || !userID) {
+            toast.error("Email service er ikke konfigureret korrekt.");
             return;
         }
-
-        if (!window.grecaptcha) {
-            toast.error("reCAPTCHA er ikke tilgængelig.");
-            return;
-        }
-
         try {
-            // Kør reCAPTCHA v3 og få token
-            const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: "submit" });
-
-            if (!token) {
-                toast.error("reCAPTCHA validering fejlede.");
-                return;
-            }
-
-            // Her kan du evt. sende token med til din backend for server-side validering
-            // Men hvis du bare bruger client-side, fortsæt...
-
-            const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-            const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-            const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-            if (!serviceID || !templateID || !userID) {
-                toast.error("Email service er ikke konfigureret korrekt.");
-                return;
-            }
-
             const emailParams = {
                 name: userInput.name,
                 email: userInput.email,
-                message: userInput.message,
-                "g-recaptcha-response": token // kan også sendes hvis din emailjs template understøtter det
+                message: userInput.message
             };
 
             const res = await emailjs.send(serviceID, templateID, emailParams, userID);
@@ -95,12 +49,8 @@ function Kontakt() {
                     email: "",
                     message: ""
                 });
-            } else {
-                toast.error("Noget gik galt ved afsendelsen.");
             }
-
-        } catch (err) {
-            console.error(err);
+        } catch {
             toast.error("Kunne ikke sende beskeden. Prøv igen senere.");
         }
     };
