@@ -7,7 +7,7 @@ export default function Page() {
                 Kommer snart!
             </h1>
             <Link
-                href="/public"
+                href="/"
                 className="rounded-xl h-14 w-60 flex items-center justify-center text-lg font-semibold cursor-pointer border-1 border-black transition bg-white/20 backdrop-blur-md hover:border-white/30 text-black/80 shadow-md hover:bg-black/80 hover:text-white/80"
             >
                 Gå tilbage til forsiden
