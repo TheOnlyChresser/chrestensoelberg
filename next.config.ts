@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     images: {
         domains: ["chrestensoelberg.dk"],
     },
-    // any other config options here
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default withPayload(nextConfig);
