@@ -32,7 +32,7 @@ export const Card: React.FC<{
   return (
     <article
       className={cn(
-        'glass-box hover:cursor-pointer hover:bg-black/30 hover:border-black/80 hover:text-white overflow-hidden',
+        'glass-box-2 hover:cursor-pointer hover:bg-black/30 hover:border-black/80 hover:text-white overflow-hidden',
         className,
       )}
       ref={card.ref}

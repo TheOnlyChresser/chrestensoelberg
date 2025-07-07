@@ -71,3 +71,7 @@ html, body {
 @utility text-gradient-subtle {
   @apply bg-gradient-to-br from-black via-[#1f1f2e] to-[#2a2a36] bg-clip-text text-transparent
 }
+
+@utility glass-box-2 {
+  @apply text-black border-1 border-black/75 bg-black/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-2xl;
+}

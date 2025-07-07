@@ -62,10 +62,11 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       <div className="flex flex-col items-center gap-4 pt-8">
         <div className="container">
-          <RichText className="max-w-[48rem] mx-auto" data={post.content} enableGutter={false} />
+          <RichText className="max-w-[60rem] mx-auto" data={post.content} enableGutter={false} />
+          <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
-              className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr]"
+              className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr] mx-4"
               docs={post.relatedPosts.filter((post) => typeof post === 'object')}
             />
           )}
