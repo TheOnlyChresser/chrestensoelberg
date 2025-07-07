@@ -12,6 +12,7 @@
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@iconify/react": "^6.0.0",
+    "@payloadcms/admin-bar": "^3.45.0",
     "@payloadcms/db-postgres": "^3.45.0",
     "@payloadcms/live-preview-react": "^3.45.0",
     "@payloadcms/next": "^3.45.0",
