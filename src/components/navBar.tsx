@@ -34,6 +34,7 @@ export default function Navbar () {
                     />
                 </Link>
                 <div className="group">
+                    <Link href="/blog" className="navLink">Blog</Link>
                     <Link href="/projekter" className="navLink">Projekter</Link>
                     <Link href="#ommig" className="navLink" >Om mig</Link>
                     <Link href="#kontakt" className="navLink">Kontakt</Link>
