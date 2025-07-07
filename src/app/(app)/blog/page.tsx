@@ -28,22 +28,15 @@ export default async function Page() {
   })
 
   return (
-    <div className="pt-24 pb-24">
+    <div className="bg-standard flex-center w-full">
+    <div className="noisy min-h-screen">
       <PageClient />
-      <div className="container mb-16">
+      <div className="mt-10 mb-10 flex-center text-8xl text-gradient font-bold h-30">
         <div className="prose dark:prose-invert max-w-none">
           <h1>Blog</h1>
         </div>
       </div>
 
-      <div className="container mb-8">
-        <PageRange
-          collection="posts"
-          currentPage={posts.page}
-          limit={12}
-          totalDocs={posts.totalDocs}
-        />
-      </div>
 
       <CollectionArchive posts={posts.docs} />
 
@@ -52,6 +45,7 @@ export default async function Page() {
           <Pagination page={posts.page} totalPages={posts.totalPages} />
         )}
       </div>
+    </div>
     </div>
   )
 }
