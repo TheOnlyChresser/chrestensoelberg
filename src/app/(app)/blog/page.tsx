@@ -28,8 +28,8 @@ export default async function Page() {
   })
 
   return (
-    <div className="bg-standard flex-center w-full">
-    <div className="noisy min-h-screen">
+    <div className="bg-gradient-to-br flex-col from-[#e0eafc] to-[#cfdef3] flex-center w-full">
+    <div className="min-h-screen">
       <PageClient />
       <div className="mt-10 mb-10 flex-center text-8xl text-gradient font-bold h-30">
         <div className="prose dark:prose-invert max-w-none">
