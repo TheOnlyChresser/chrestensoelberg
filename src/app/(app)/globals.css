@@ -92,4 +92,7 @@ html, body {
   .prose p {
     @apply text-black/95 mb-1 mt-1 mx-5;
   }
+  .prose {
+    overflow-x: hidden;
+  }
 }
