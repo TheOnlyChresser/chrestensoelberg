@@ -132,7 +132,7 @@ function Kontakt() {
                 <div className="w-full flex-center">
                     <button
                         type="submit"
-                        className="rounded-md h-10 text-center w-60 text-xl font-bold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-white/90"
+                        className="rounded-md h-10 text-center w-60 text-xl font-bold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-white/90 active:bg-black/30 active:text-white/90"
                         aria-label="Send besked til Chresten Soelberg"
                     >
                         Send Besked

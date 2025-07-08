@@ -53,7 +53,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
         <>
             <div 
                 onClick={handleClick}
-                className="cursor-pointer flex-center space-x-2 p-4 bg-white/25 rounded-xl shadow-md hover:shadow-lg group hover:scale-110 transition-all duration-200"
+                className="cursor-pointer flex-center space-x-2 p-4 bg-white/25 rounded-xl shadow-md hover:shadow-lg active:shadow-lg group hover:scale-110 active:scale-110 transition-all duration-200"
             >
                 <Icon icon={`${icon}`} width="24"/>
                 <p className="text-md font-medium group-hover:text-lg">{name}</p>
@@ -85,13 +85,13 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                         <div className="flex space-x-3">
                             <button
                                 onClick={handleVisitWebsite}
-                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] hover:bg-blue-500/30 backdrop-blur-2xl border-black/30 border-1 hover:text-black/90 bg-white/30 text-blue-500/90"
+                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] hover:bg-blue-500/30 active:bg-blue-500/30 backdrop-blur-2xl border-black/30 border-1 hover:text-black/90 active:text-black/90 bg-white/30 text-blue-500/90"
                             >
                                 Besøg Hjemmeside
                             </button>
                             <button
                                 onClick={handleClose}
-                                className="rounded-md flex-1 py-2 text-base font-semibold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-white/90"
+                                className="rounded-md flex-1 py-2 text-base font-semibold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 active:bg-black/30 hover:text-white/90 active:text-white/90"
                             >
                                 Luk
                             </button>

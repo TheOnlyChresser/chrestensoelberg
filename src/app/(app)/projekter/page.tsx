@@ -8,7 +8,7 @@ export default function Page() {
             </h1>
             <Link
                 href="/"
-                className="rounded-xl h-14 w-60 flex items-center justify-center text-lg font-semibold cursor-pointer border-1 border-black transition bg-white/20 backdrop-blur-md hover:border-white/30 text-black/80 shadow-md hover:bg-black/80 hover:text-white/80"
+                className="rounded-xl h-14 w-60 flex items-center justify-center text-lg font-semibold cursor-pointer border-1 border-black transition bg-white/20 backdrop-blur-md active:border-white/30 hover:border-white/30 text-black/80 shadow-md hover:bg-black/80 active:bg-blac/80 hover:text-white/80 active:text-white/80"
             >
                 Gå tilbage til forsiden
             </Link>
