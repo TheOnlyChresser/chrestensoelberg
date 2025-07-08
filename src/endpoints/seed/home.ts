@@ -21,7 +21,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
             type: 'custom',
             appearance: 'default',
             label: 'All posts',
-            url: '/posts',
+            url: '/blog',
           },
         },
         {
@@ -47,7 +47,7 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Payload Website Template',
+                  text: 'Chresten Soelberg',
                   version: 1,
                 },
               ],
@@ -666,9 +666,9 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
       },
     ],
     meta: {
-      description: 'An open-source website built with Payload and Next.js.',
+      description: 'Hej! Jeg hedder Chresten og tja hvorfor ikke tage et hurtigt kig på min hjemmeside.',
       image: heroImage.id,
-      title: 'Payload Website Template',
+      title: 'Chresten Soelberg',
     },
     title: 'Home',
   }
