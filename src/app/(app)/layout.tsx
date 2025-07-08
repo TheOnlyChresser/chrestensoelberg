@@ -136,7 +136,7 @@ export default function RootLayout({
                 ],
                 "memberOf": {
                   "@type": "EducationalOrganization",
-                  "name": "HTX Roskilde"
+                  "name": "HTX"
                 },
                 "worksFor": {
                   "@type": "Organization",

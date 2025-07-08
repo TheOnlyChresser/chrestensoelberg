@@ -27,7 +27,7 @@ export const metadata = {
     "Programmør",
     "Software udvikler",
     "Dansk udvikler",
-    "Roskilde udvikler"
+    "udvikler"
   ],
   robots: "index, follow",
   openGraph: {
@@ -92,7 +92,7 @@ export default function Home() {
             ],
             "memberOf": {
               "@type": "EducationalOrganization",
-              "name": "HTX Roskilde"
+              "name": "HTX"
             },
             "worksFor": {
               "@type": "Organization",
