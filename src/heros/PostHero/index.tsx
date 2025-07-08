@@ -15,9 +15,9 @@ export const PostHero: React.FC<{
     populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
 
   return (
-    <div className="relative -mt-[10.4rem] flex items-end">
-      <div className="container z-10 relative lg:grid lg:grid-cols-[1fr_48rem_1fr] text-white pb-8">
-        <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
+    <div className="relative -mt-[10.4rem] flex justify-center items-end">
+      <div className="z-10 relative lg:grid lg:grid-cols-[1fr_48rem_1fr] text-white pb-8">
+        <div className="glass-box px-20 lg:px-auto col-start-1 col-span-1 md:col-start-2 md:col-span-2">
           <div className="uppercase text-sm mb-6 italic">
             {categories?.map((category, index) => {
               if (typeof category === 'object' && category !== null) {
@@ -66,7 +66,7 @@ export const PostHero: React.FC<{
           {/*{heroImage && typeof heroImage !== 'string' && (
           <Media fill priority imgClassName="-z-10 object-cover" resource={heroImage} />
         )}*/}
-        <Image alt="gradient" fill priority={true} width={1000} height={1000} className="-z-10 object-cover" src="/gradient.avif" />
+        <Image alt="gradient" fill priority={true} className="-z-10 object-cover" src="/gradient.avif" />
         <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
     </div>
