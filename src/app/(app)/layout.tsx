@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://chresten.dk'),
+  metadataBase: new URL('https://chrestensoelberg.dk'),
   alternates: {
     canonical: '/',
   },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'da_DK',
-    url: 'https://chresten.dk',
+    url: 'https://chrestensoelberg.dk',
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
     siteName: 'Chresten Soelberg Portfolio',
@@ -111,13 +111,13 @@ export default function RootLayout({
               "@type": "Website",
               "name": "Chresten Soelberg Portfolio",
               "description": "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
-              "url": "https://chresten.dk",
+              "url": "https://chrestensoelberg.dk",
               "author": {
                 "@type": "Person",
                 "name": "Chresten Soelberg",
                 "jobTitle": "Frontend Udvikler",
                 "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
-                "image": "https://chresten.dk/avatar.png",
+                "image": "https://chrestensoelberg.dk/avatar.png",
                 "sameAs": [
                   "https://github.com/TheOnlyChresser",
                   "https://linkedin.com/in/chresten-soelberg-4577b2272"
@@ -145,7 +145,7 @@ export default function RootLayout({
               },
               "potentialAction": {
                 "@type": "ContactAction",
-                "target": "https://chresten.dk#kontakt",
+                "target": "https://chrestensoelberg.dk#kontakt",
                 "description": "Kontakt Chresten Soelberg"
               }
             })
