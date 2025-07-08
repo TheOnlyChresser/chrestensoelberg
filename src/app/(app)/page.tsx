@@ -35,7 +35,7 @@ export const metadata = {
     description:
         "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
     url: "https://chrestensoelberg.dk",
-    siteName: "Chresten Soelberg Portfolio",
+    siteName: "Chresten Soelberg",
     images: [
       {
         url: "/avatar.png",

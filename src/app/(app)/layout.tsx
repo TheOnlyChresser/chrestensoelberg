@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     url: 'https://chrestensoelberg.dk',
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
-    siteName: 'Chresten Soelberg Portfolio',
+    siteName: 'Chresten Soelberg',
     images: [
       {
         url: '/avatar.png',
@@ -109,7 +109,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Website",
-              "name": "Chresten Soelberg Portfolio",
+              "name": "Chresten Soelberg",
               "description": "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
               "url": "https://chrestensoelberg.dk",
               "author": {

@@ -63,7 +63,7 @@ const Hero = () => {
                 ref={main} 
                 id="hero" 
                 className="w-full flex flex-col items-center text-center min-h-screen"
-                aria-label="Hovedsektion - Chresten Soelberg Portfolio"
+                aria-label="Hovedsektion - Chresten Soelberg"
             >
                 <div className="w-full" id="navtrigger">
                     <div className="z-50 flex flex-col md:flex-row items-center min-h-screen justify-center text-center md:text-left gap-12 mx-auto md:ml-20 w-full">
