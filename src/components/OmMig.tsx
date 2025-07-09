@@ -22,12 +22,12 @@ export default function OmMig () {
                                 HTX&apos;er med flair for hjemmesider
                             </h1>
                             <div className="m-5"/>
-                            <p className="text-black/90 font-thin md:text-left md:text-wrap text-center px-5 md:px-0">
+                            <p className="text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
                                 Jeg er en nysgerrig HTX&apos;er med flair for hjemmesideudvikling og et skarpt øje for detaljen. 
                                 Jeg kombinerer teknisk kunnen fra HTX med kreativ tænkning og brænder for at skabe brugervenlige, 
                                 moderne og visuelt indbydende hjemmesider med fokus på performance, funktion og æstetik.
                             </p>
-                            <p className="mt-5 text-black/90 font-thin md:text-left md:text-wrap text-center px-5 md:px-0">
+                            <p className="mt-5 text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
                                 Udover webudvikling interesserer jeg mig også for brugeroplevelse (UX), UI-design og hvordan 
                                 teknologi kan forenkle hverdagen. Jeg elsker at lære nye værktøjer og frameworks og går op i 
                                 skalerbarhed og at levere løsninger, der både er effektive og æstetisk tilfredsstillende.
