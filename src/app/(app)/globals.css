@@ -117,19 +117,19 @@ html, body {
 
 @layer base {
   .prose h1 {
-    @apply text-5xl font-bold text-black/85 mb-7 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-5xl font-bold text-black/85 mb-7 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h2 {
-    @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h3 {
-    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h4 {
-    @apply text-2xl font-bold text-black/85 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-2xl font-bold text-black/85 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose p {
-    @apply text-black/85 mb-1 leading-6 mt-1 mx-5 flex-wrap flex font-serif;
+    @apply text-black/85 mb-1 leading-6 mt-1 mx-5 text-wrap font-serif;
   }
   .list-number li {
     @apply text-black/85 leading-5 font-serif;
@@ -142,5 +142,6 @@ html, body {
   }
   .prose {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
