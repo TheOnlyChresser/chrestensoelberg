@@ -16,9 +16,9 @@ export const PostHero: React.FC<{
 
   return (
     <div className="relative -mt-[8.4rem] flex justify-center items-end">
-      <div className="z-10 relative lg:flex lg:max-w-[75vw] lg:justify-center text-black/85 pb-25">
-        <div className="glass-box z-10 px-20 lg:px-auto col-start-1 col-span-1 md:col-start-2 md:col-span-2">
-          <div className="uppercase text-sm mb-6 italic">
+      <div className="z-10 relative min-w-[50vw] max-w-[75vw] lg:flex lg:min-w-[10vw] lg:max-w-[75vw] lg:justify-center text-black/85 pb-25">
+        <div className="glass-box z-10 px-5 lg:px-20 col-start-1 col-span-1 md:col-start-2 md:col-span-2">
+          <div className="uppercase text-sm mb-3 md:mb-6 italic">
             {categories?.map((category, index) => {
               if (typeof category === 'object' && category !== null) {
                 const { title: categoryTitle } = category
@@ -39,13 +39,13 @@ export const PostHero: React.FC<{
           </div>
 
           <div className="">
-            <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl font-semibold">{title}</h1>
+            <h1 className="mb-3 md:mb-6 text-2xl md:text-3xl lg:text-4xl font-bold md:font-semibold">{title}</h1>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-16">
             {hasAuthors && (
               <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col md:gap-1">
                   <p className="text-sm">Lavet af</p>
 
                   <p>{formatAuthors(populatedAuthors)}</p>
@@ -53,7 +53,7 @@ export const PostHero: React.FC<{
               </div>
             )}
             {publishedAt && (
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:gap-1">
                 <p className="text-sm">Udgivet</p>
 
                 <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
