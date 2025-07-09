@@ -122,6 +122,9 @@ html, body {
   .prose h2 {
     @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
+  .prose2 h3 {
+    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
+  }
   .prose h3 {
     @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
@@ -143,5 +146,8 @@ html, body {
   .prose {
     overflow-x: hidden;
     overflow-y: hidden;
+  }
+  .blocks {
+
   }
 }

@@ -12,6 +12,7 @@ export default function BlogAnimations() {
         const h4element = document.querySelectorAll(".prose h4")
         const h5element = document.querySelectorAll(".prose h5")
         const olelement = document.querySelectorAll(".prose ol")
+        const blockselement = document.querySelectorAll(".blocks")
         document.fonts.ready.then(() => {
             h1element.forEach((h1) => {
 
@@ -22,7 +23,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     y: -100,
                     opacity: 0,
-                    scrollTrigger: h1,
+                    scrollTrigger: {
+                        trigger: h1,
+                        start: "20% center"
+                    },
                     stagger: 0.01,
                 })
             })
@@ -34,7 +38,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     y: -20,
                     opacity: 0,
-                    scrollTrigger: h2,
+                    scrollTrigger: {
+                        trigger: h2,
+                        start: "20% center"
+                    },
                     stagger: 0.02,
                 })
             })
@@ -46,7 +53,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     y: -20,
                     opacity: 0,
-                    scrollTrigger: h3,
+                    scrollTrigger: {
+                        trigger: h3,
+                        start: "20% center"
+                    },
                     stagger: 0.02,
                 })
             })
@@ -58,7 +68,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     y: -20,
                     opacity: 0,
-                    scrollTrigger: h4,
+                    scrollTrigger: {
+                        trigger: h4,
+                        start: "20% center"
+                    },
                     stagger: 0.02,
                 })
             })
@@ -70,7 +83,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     y: -20,
                     opacity: 0,
-                    scrollTrigger: h5,
+                    scrollTrigger: {
+                        trigger: h5,
+                        start: "20% center"
+                    },
                     stagger: 0.02,
                 })
             })
@@ -83,7 +99,10 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     xPercent: -100,
                     autoAlpha: 0,
-                    scrollTrigger: p,
+                    scrollTrigger: {
+                        trigger: p,
+                        start: "20% center"
+                    },
                     stagger: 0.1,
                 })
             })
@@ -95,7 +114,24 @@ export default function BlogAnimations() {
                     ease: "expo.out",
                     xPercent: -100,
                     autoAlpha: 0,
-                    scrollTrigger: ol,
+                    scrollTrigger: {
+                        trigger: ol,
+                        start: "20% center"
+                    },
+                    stagger: 0.1,
+                })
+            })
+            blockselement.forEach((block) => {
+
+                gsap.from(block, {
+                    duration: 2,
+                    ease: "expo.out",
+                    xPercent: -100,
+                    autoAlpha: 0,
+                    scrollTrigger: {
+                        trigger: block,
+                        start: "20% center"
+                    },
                     stagger: 0.1,
                 })
             })
