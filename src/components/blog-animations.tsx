@@ -11,6 +11,7 @@ export default function BlogAnimations() {
         const h3element = document.querySelectorAll(".prose h3")
         const h4element = document.querySelectorAll(".prose h4")
         const h5element = document.querySelectorAll(".prose h5")
+        const olelement = document.querySelectorAll(".prose ol")
         document.fonts.ready.then(() => {
             h1element.forEach((h1) => {
 
@@ -83,6 +84,18 @@ export default function BlogAnimations() {
                     xPercent: -100,
                     autoAlpha: 0,
                     scrollTrigger: p,
+                    stagger: 0.1,
+                })
+            })
+            olelement.forEach((ol) => {
+                const olsplit = new SplitText(ol, {type: "lines"})
+
+                gsap.from(olsplit.lines, {
+                    duration: 2,
+                    ease: "expo.out",
+                    xPercent: -100,
+                    autoAlpha: 0,
+                    scrollTrigger: ol,
                     stagger: 0.1,
                 })
             })
