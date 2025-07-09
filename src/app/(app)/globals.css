@@ -1,20 +1,59 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Regular.woff2') format('woff2');
-  font-weight: 100 900;
+  font-family: InterVariable;
   font-style: normal;
+  font-weight: 100 900;
   font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter/InterVariable-Italic.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Italic.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
+/* static fonts */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("/fonts/inter/Inter-Thin.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 100; font-display: swap; src: url("/fonts/inter/Inter-ThinItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 200; font-display: swap; src: url("/fonts/inter/Inter-ExtraLight.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 200; font-display: swap; src: url("/fonts/inter/Inter-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 300; font-display: swap; src: url("/fonts/inter/Inter-Light.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 300; font-display: swap; src: url("/fonts/inter/Inter-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter/Inter-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/inter/Inter-Italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter/Inter-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 500; font-display: swap; src: url("/fonts/inter/Inter-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter/Inter-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 600; font-display: swap; src: url("/fonts/inter/Inter-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter/Inter-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 700; font-display: swap; src: url("/fonts/inter/Inter-BoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("/fonts/inter/Inter-ExtraBold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("/fonts/inter/Inter-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("/fonts/inter/Inter-Black.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 900; font-display: swap; src: url("/fonts/inter/Inter-BlackItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 100; font-display: swap; src: url("/fonts/inter/InterDisplay-Thin.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 100; font-display: swap; src: url("/fonts/inter/InterDisplay-ThinItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 200; font-display: swap; src: url("/fonts/inter/InterDisplay-ExtraLight.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 200; font-display: swap; src: url("/fonts/inter/InterDisplay-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 300; font-display: swap; src: url("/fonts/inter/InterDisplay-Light.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 300; font-display: swap; src: url("/fonts/inter/InterDisplay-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter/InterDisplay-Regular.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/inter/InterDisplay-Italic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter/InterDisplay-Medium.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 500; font-display: swap; src: url("/fonts/inter/InterDisplay-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter/InterDisplay-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 600; font-display: swap; src: url("/fonts/inter/InterDisplay-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter/InterDisplay-Bold.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 700; font-display: swap; src: url("/fonts/inter/InterDisplay-BoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 800; font-display: swap; src: url("/fonts/inter/InterDisplay-ExtraBold.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 800; font-display: swap; src: url("/fonts/inter/InterDisplay-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 900; font-display: swap; src: url("/fonts/inter/InterDisplay-Black.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 900; font-display: swap; src: url("/fonts/inter/InterDisplay-BlackItalic.woff2") format("woff2"); }
+
+
 
 html, body {
   font-family: 'Inter', sans-serif;
@@ -78,19 +117,28 @@ html, body {
 
 @layer base {
   .prose h1 {
-    @apply text-5xl font-bold text-black/85 mb-7 mt-5 mx-5 flex flex-wrap;
+    @apply text-5xl font-bold text-black/85 mb-7 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto overflow-wrap-anywhere lg:break-normal;
   }
   .prose h2 {
-    @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5 flex flex-wrap;
+    @apply text-4xl font-bold text-black/85 mb-2 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto overflow-wrap-anywhere lg:break-normal;
   }
   .prose h3 {
-    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 flex-wrap flex;
+    @apply text-3xl font-bold text-black/85 mb-1 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto overflow-wrap-anywhere lg:break-normal;
   }
   .prose h4 {
-    @apply text-2xl font-bold text-black/85 mt-5 mx-5 flex-wrap flex;
+    @apply text-2xl font-bold text-black/85 mt-5 mx-5 lg:flex lg:flex-wrap break-words hyphens-auto overflow-wrap-anywhere lg:break-normal;
   }
   .prose p {
-    @apply text-black/95 mb-1 mt-1 mx-5 flex-wrap flex;
+    @apply text-black/85 mb-1 leading-6 mt-1 mx-5 flex-wrap flex font-serif;
+  }
+  .list-number li {
+    @apply text-black/85 leading-5 font-serif;
+  }
+  .list-number {
+    @apply mt-2 mb-1 mx-5 ml-15 list-decimal space-y-2;
+  }
+  .prose strong {
+    @apply font-black text-black/85;
   }
   .prose {
     overflow-x: hidden;
