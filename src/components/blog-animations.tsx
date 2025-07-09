@@ -70,7 +70,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h4,
-                        start: "20% center"
+                        start: "10% center"
                     },
                     stagger: 0.02,
                 })
@@ -85,7 +85,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h5,
-                        start: "20% center"
+                        start: "10% center"
                     },
                     stagger: 0.02,
                 })
@@ -101,24 +101,24 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: p,
-                        start: "20% center"
+                        start: "10% center"
                     },
                     stagger: 0.1,
                 })
             })
             olelement.forEach((ol) => {
-                const olsplit = new SplitText(ol, {type: "lines"})
+                const olsplit = new SplitText(ol, {type: "elements"})
 
-                gsap.from(olsplit.lines, {
-                    duration: 2,
+                gsap.from(olsplit.elements, {
+                    duration: 1,
                     ease: "expo.out",
                     xPercent: -100,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: ol,
-                        start: "20% center"
+                        start: "10% center"
                     },
-                    stagger: 0.1,
+                    stagger: 0.01,
                 })
             })
             blockselement.forEach((block) => {
@@ -130,7 +130,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: block,
-                        start: "20% center"
+                        start: "10% center"
                     },
                     stagger: 0.1,
                 })
