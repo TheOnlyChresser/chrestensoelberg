@@ -39,7 +39,7 @@ export const PostHero: React.FC<{
           </div>
 
           <div className="">
-            <h1 className="mb-3 md:mb-6 text-2xl md:text-3xl lg:text-4xl font-bold md:font-semibold">{title}</h1>
+            <h1 className="mb-3 md:mb-6 text-2xl md:text-3xl lg:text-5xl font-bold md:font-semibold">{title}</h1>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-16">
