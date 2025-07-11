@@ -36,7 +36,7 @@ export default function Animations() {
             stagger: 0.1,
             ease: "easeOutExpo",
             scrollTrigger: {
-                start: "center center",
+                start: "center bottom",
             }
         })
         gsap.from(".animation-box1", {
@@ -45,7 +45,7 @@ export default function Animations() {
             x: -200,
             ease: "easeOutExpo",
             scrollTrigger: {
-                start: "center center",
+                start: "center bottom",
             }
         })
         gsap.from(".animation-box2", {
@@ -54,7 +54,7 @@ export default function Animations() {
             x: 200,
             ease: "easeOutExpo",
             scrollTrigger: {
-                start: "center center",
+                start: "center bottom",
             }
         })
     })

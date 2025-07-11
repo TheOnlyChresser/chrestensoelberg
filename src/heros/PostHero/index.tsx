@@ -18,30 +18,28 @@ export const PostHero: React.FC<{
     <div className="relative min-h-screen -mt-[8.4rem] mb-[8.4rem] flex justify-center items-center">
       <div className="z-10 relative min-w-[50vw] max-w-[75vw] lg:flex lg:min-w-[10vw] lg:max-w-[75vw] lg:justify-center text-black/85 pb-25">
         <div className="glass-box z-10 px-5 lg:px-20 col-start-1 col-span-1 md:col-start-2 md:col-span-2">
-          <div className="uppercase text-sm mb-3 md:mb-6 italic">
-            {categories?.map((category, index) => {
-              if (typeof category === 'object' && category !== null) {
-                const { title: categoryTitle } = category
-
-                const titleToUse = categoryTitle || 'Untitled category'
-
-                const isLast = index === categories.length - 1
-
-                return (
-                  <React.Fragment key={index}>
-                    {titleToUse}
-                    {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
-                  </React.Fragment>
-                )
-              }
-              return null
-            })}
-          </div>
-
           <div className="">
             <h1 className="mb-3 md:mb-6 text-2xl md:text-3xl lg:text-5xl font-bold md:font-semibold">{title}</h1>
           </div>
+          <div className="uppercase text-sm mt-4 flex items-center italic">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {categories?.map((category, index) => {
+                if (typeof category === 'object') {
+                  const { title: titleFromCategory } = category
+                  const categoryTitle = titleFromCategory || 'Untitled category'
 
+                  return (
+                      <span
+                          key={index}
+                          className="bg-blue-500/10 group-hover:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
+                      >
+                        {categoryTitle}
+                      </span>
+                  )}
+                return null
+              })}
+            </div>
+          </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-16">
             {hasAuthors && (
               <div className="flex flex-col gap-4">
