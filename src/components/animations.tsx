@@ -39,6 +39,24 @@ export default function Animations() {
                 start: "center center",
             }
         })
+        gsap.from(".animation-box1", {
+            autoAlpha: 0,
+            stagger: 0.1,
+            x: -200,
+            ease: "easeOutExpo",
+            scrollTrigger: {
+                start: "center center",
+            }
+        })
+        gsap.from(".animation-box2", {
+            autoAlpha: 0,
+            stagger: 0.1,
+            x: 200,
+            ease: "easeOutExpo",
+            scrollTrigger: {
+                start: "center center",
+            }
+        })
     })
     return (
         <></>

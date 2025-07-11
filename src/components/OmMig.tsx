@@ -20,7 +20,7 @@ export default function OmMig () {
                     </h2>
                 </div>
                 <div className="flex-col md:flex-row flex-center w-full">
-                    <article className="flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
+                    <article className="animation-box1 flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
                         <div className="flex items-center flex-col w-full">
                             <h1 className="glass-title text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
                                 HTX&apos;er med flair for hjemmesider
@@ -38,7 +38,7 @@ export default function OmMig () {
                             </p>
                         </div>
                     </article>
-                    <aside className="md:glass-box px-5 md:px-2 flex items-center flex-col md:w-[40%] m-5">
+                    <aside className="animation-box2 md:glass-box px-5 md:px-2 flex items-center flex-col md:w-[40%] m-5">
                         <h3 className="text-gradient text-4xl text-center font-semibold">
                             Mine skills
                         </h3>
