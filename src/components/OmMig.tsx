@@ -1,9 +1,13 @@
+"use client"
+
 import Line from "@/components/Line"
 import SkillCard from "@/components/SkillCard";
+import Animations from "@/components/animations";
 
 export default function OmMig () {
     return (
         <>
+            <Animations/>
             <section 
                 className="min-h-screen w-full flex-center flex-col" 
                 id="ommig"
@@ -18,16 +22,16 @@ export default function OmMig () {
                 <div className="flex-col md:flex-row flex-center w-full">
                     <article className="flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
                         <div className="flex items-center flex-col w-full">
-                            <h1 className="text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
+                            <h1 className="glass-title text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
                                 HTX&apos;er med flair for hjemmesider
                             </h1>
                             <div className="m-5"/>
-                            <p className="text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
+                            <p className="glass-text text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
                                 Jeg er en nysgerrig HTX&apos;er med flair for hjemmesideudvikling og et skarpt øje for detaljen. 
                                 Jeg kombinerer teknisk kunnen fra HTX med kreativ tænkning og brænder for at skabe brugervenlige, 
                                 moderne og visuelt indbydende hjemmesider med fokus på performance, funktion og æstetik.
                             </p>
-                            <p className="mt-5 text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
+                            <p className="glass-text mt-5 text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
                                 Udover webudvikling interesserer jeg mig også for brugeroplevelse (UX), UI-design og hvordan 
                                 teknologi kan forenkle hverdagen. Jeg elsker at lære nye værktøjer og frameworks og går op i 
                                 skalerbarhed og at levere løsninger, der både er effektive og æstetisk tilfredsstillende.

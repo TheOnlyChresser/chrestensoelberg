@@ -1,4 +1,5 @@
 "use client";
+
 import {Icon} from "@iconify/react"
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
@@ -50,7 +51,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
     }, [isPopupOpen]);
 
     return (
-        <>
+        <div className="skill-card">
             <div 
                 onClick={handleClick}
                 className="cursor-pointer flex-center space-x-2 p-4 bg-white/25 rounded-xl shadow-md hover:shadow-lg focus:shadow-lg group hover:scale-110 focus:scale-110 transition-all duration-200"
@@ -85,7 +86,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                         <div className="flex space-x-3">
                             <button
                                 onClick={handleVisitWebsite}
-                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] hover:bg-blue-500/30 active:bg-blue-500/30 backdrop-blur-2xl border-black/30 border-1 hover:text-black/90 active:text-black/90 bg-white/30 text-blue-500/90"
+                                className="rounded-md flex-1 text-base font-semibold cursor-pointer transition delay-[25ms] hover:bg-blue-500/75 active:bg-blue-500/75 backdrop-blur-2xl border-black/30 border-1 hover:text-white/90 active:text-white/90 bg-white/30 text-blue-500/90"
                             >
                                 Besøg Hjemmeside
                             </button>
@@ -100,6 +101,6 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                 </div>,
                 document.body
             )}
-        </>
+        </div>
     )
 }
