@@ -15,11 +15,11 @@ export const PostHero: React.FC<{
     populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
 
   return (
-    <div className="relative min-h-screen -mt-[8.4rem] mb-[8.4rem] flex justify-center items-center">
-      <div className="z-10 relative min-w-[50vw] max-w-[75vw] lg:flex lg:min-w-[10vw] lg:max-w-[75vw] lg:justify-center text-black/85 pb-25">
+    <div className="relative min-h-screen -mt-[8.4rem] pt-[8.4rem] flex justify-center items-center">
+      <div className="z-10 relative min-w-[60vw] max-w-[75vw] lg:flex lg:min-w-[10vw] lg:max-w-[75vw] lg:justify-center text-black/85 pb-25">
         <div className="glass-box z-10 px-5 lg:px-20 col-start-1 col-span-1 md:col-start-2 md:col-span-2">
           <div className="">
-            <h1 className="mb-3 md:mb-6 text-2xl md:text-3xl lg:text-5xl font-bold md:font-semibold">{title}</h1>
+            <h1 className="mb-3 md:mb-6 text-3xl md:text-4xl lg:text-5xl font-bold md:font-semibold">{title}</h1>
           </div>
           <div className="uppercase text-sm mt-4 flex items-center italic">
             <div className="flex flex-wrap gap-2 mb-4">
@@ -40,7 +40,7 @@ export const PostHero: React.FC<{
               })}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-16">
+          <div className="flex flex-row gap-4 md:gap-16">
             {hasAuthors && (
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col md:gap-1">
