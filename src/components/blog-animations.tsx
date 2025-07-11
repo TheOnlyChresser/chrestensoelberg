@@ -25,7 +25,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h1,
-                        start: "20% center"
+                        start: "center bottom"
                     },
                     stagger: 0.01,
                 })
@@ -40,7 +40,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h2,
-                        start: "20% center"
+                        start: "center bottom"
                     },
                     stagger: 0.02,
                 })
@@ -55,7 +55,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h3,
-                        start: "20% center"
+                        start: "center bottom"
                     },
                     stagger: 0.02,
                 })
@@ -70,7 +70,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h4,
-                        start: "10% center"
+                        start: "center bottom"
                     },
                     stagger: 0.02,
                 })
@@ -85,7 +85,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h5,
-                        start: "10% center"
+                        start: "center bottom"
                     },
                     stagger: 0.02,
                 })
@@ -101,7 +101,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: p,
-                        start: "10% center"
+                        start: "center bottom"
                     },
                     stagger: 0.1,
                 })
@@ -116,7 +116,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: ol,
-                        start: "10% center"
+                        start: "center bottom"
                     },
                     stagger: 0.01,
                 })
@@ -130,7 +130,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: block,
-                        start: "10% center"
+                        start: "center bottom"
                     },
                     stagger: 0.1,
                 })
