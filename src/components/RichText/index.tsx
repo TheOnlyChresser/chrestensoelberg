@@ -21,6 +21,7 @@ import type {
 import { BannerBlock } from '@/blocks/Banner/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { cn } from '@/utilities/ui'
+import BlogAnimations from "@/components/blog-animations";
 
 type NodeTypes =
   | DefaultNodeTypes
@@ -42,7 +43,7 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
     banner: ({ node }) => <BannerBlock className="col-start-2 mb-4" {...node.fields} />,
     mediaBlock: ({ node }) => (
       <MediaBlock
-        className="col-start-1 col-span-3"
+        className="col-start-1 col-span-3 blocks"
         imgClassName="m-0"
         {...node.fields}
         captionClassName="mx-auto max-w-[48rem]"
@@ -64,18 +65,21 @@ type Props = {
 export default function RichText(props: Props) {
   const { className, enableProse = true, enableGutter = true, ...rest } = props
   return (
-    <ConvertRichText
-      converters={jsxConverters}
-      className={cn(
-        'payload-richtext',
-        {
-          container: enableGutter,
-          'max-w-full': !enableGutter,
-          'mx-auto prose md:prose-md dark:prose-invert max-w-full': enableProse,
-        },
-        className,
-      )}
-      {...rest}
-    />
+      <>
+        <BlogAnimations/>
+        <ConvertRichText
+          converters={jsxConverters}
+          className={cn(
+            'payload-richtext',
+            {
+              container: enableGutter,
+              'max-w-full': !enableGutter,
+              'mx-auto prose md:prose-md dark:prose-invert max-w-full': enableProse,
+            },
+            className,
+          )}
+          {...rest}
+        />
+    </>
   )
 }
