@@ -38,7 +38,7 @@ export default function OmMig () {
                             </p>
                         </div>
                     </article>
-                    <aside className="md:glass-box px-5 md:px-0 flex items-center flex-col md:w-[40%] m-5">
+                    <aside className="md:glass-box px-5 md:px-2 flex items-center flex-col md:w-[40%] m-5">
                         <h3 className="text-gradient text-4xl text-center font-semibold">
                             Mine skills
                         </h3>
