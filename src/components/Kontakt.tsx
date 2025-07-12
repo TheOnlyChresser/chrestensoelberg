@@ -1,8 +1,14 @@
 "use client";
+
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
 import Line from "@/components/Line";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/all"
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Kontakt() {
     const [userInput, setUserInput] = useState<{
@@ -54,10 +60,19 @@ function Kontakt() {
             toast.error("Kunne ikke sende beskeden. Prøv igen senere.");
         }
     };
-
+    useGSAP(() => {
+        gsap.from(".kontakt", {
+            autoAlpha: 0,
+            y: 100,
+            scrollTrigger: {
+                trigger: ".kontakt",
+                start: "center bottom",
+            }
+        })
+    })
     return (
         <section
-            className="min-h-screen w-full flex-center flex-col"
+            className="min-h-screen w-full flex-center flex-col overflow-hidden"
             id="kontakt"
             aria-label="Kontakt Chresten Soelberg"
         >
@@ -69,7 +84,7 @@ function Kontakt() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="glass-box p-8 rounded-2xl backdrop-blur-md bg-white/10 shadow-lg ring-1 ring-white/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
+                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-white/10 shadow-lg ring-1 ring-white/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
                 aria-label="Kontaktformular"
             >
                 <div>
