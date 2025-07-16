@@ -5,6 +5,7 @@ import sharp from 'sharp' // sharp-import
 import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
 import { fileURLToPath } from 'url'
+import {da} from "@payloadcms/translations/languages/da"
 
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
@@ -16,6 +17,7 @@ import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
+import {en} from "@payloadcms/translations/languages/en";
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -83,4 +85,8 @@ export default buildConfig({
     },
     tasks: [],
   },
+  i18n: {
+    fallbackLanguage: "da",
+    supportedLanguages: {en, da}
+  }
 })
