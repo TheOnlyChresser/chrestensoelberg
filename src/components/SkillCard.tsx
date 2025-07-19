@@ -57,7 +57,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                 className="cursor-pointer flex-center space-x-2 p-4 bg-white/25 rounded-xl shadow-md hover:shadow-lg focus:shadow-lg group hover:bg-black/25 hover:text-white transition-all duration-200"
             >
                 <Icon icon={`${icon}`} width="24"/>
-                <p className="text-md font-medium group-hover:text-lg">{name}</p>
+                <p className="text-md font-medium">{name}</p>
             </div>
 
             {isPopupOpen && mounted && createPortal(
