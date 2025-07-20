@@ -14,6 +14,7 @@ import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
+import {MathJax, MathJaxContext} from "better-react-mathjax";
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -50,6 +51,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
+    <MathJaxContext>
     <article className="max-w-full pt-16 pb-16">
       <PageClient />
 
@@ -61,7 +63,9 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       <div className="flex flex-col items-center gap-4 pt-8">
         <div className="container">
+          <MathJax>
           <RichText className="max-w-full md:max-w-[60rem]" data={post.content} enableGutter={false} />
+          </MathJax>
           <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
@@ -72,6 +76,7 @@ export default async function Post({ params: paramsPromise }: Args) {
         </div>
       </div>
     </article>
+    </MathJaxContext>
   )
 }
 
