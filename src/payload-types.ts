@@ -88,10 +88,10 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
-    redirects: RedirectsSelect<false> | RedirectsSelect<true>;
+    /*redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
-    search: SearchSelect<false> | SearchSelect<true>;
+    search: SearchSelect<false> | SearchSelect<true>;*/
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -1295,7 +1295,7 @@ export interface UsersSelect<T extends boolean = true> {
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects_select".
  */
-export interface RedirectsSelect<T extends boolean = true> {
+/*export interface RedirectsSelect<T extends boolean = true> {
   from?: T;
   to?:
     | T
@@ -1306,12 +1306,12 @@ export interface RedirectsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
-}
+}*/
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "forms_select".
  */
-export interface FormsSelect<T extends boolean = true> {
+/*export interface FormsSelect<T extends boolean = true> {
   title?: T;
   fields?:
     | T
@@ -1439,12 +1439,12 @@ export interface FormsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
-}
+}*/
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "form-submissions_select".
  */
-export interface FormSubmissionsSelect<T extends boolean = true> {
+/*export interface FormSubmissionsSelect<T extends boolean = true> {
   form?: T;
   submissionData?:
     | T
@@ -1455,12 +1455,12 @@ export interface FormSubmissionsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
-}
+}*/
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "search_select".
  */
-export interface SearchSelect<T extends boolean = true> {
+/*export interface SearchSelect<T extends boolean = true> {
   title?: T;
   priority?: T;
   doc?: T;
@@ -1482,7 +1482,7 @@ export interface SearchSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
-}
+}*/
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs_select".
