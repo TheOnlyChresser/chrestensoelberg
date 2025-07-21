@@ -72,10 +72,10 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
-    redirects: Redirect;
+    /* redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
-    search: Search;
+    search: Search; */
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
