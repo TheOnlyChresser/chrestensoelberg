@@ -62,7 +62,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
 
             {isPopupOpen && mounted && createPortal(
                 <div 
-                    className="fixed inset-0 bg-black/10 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-black/5 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
                     onClick={handleClose}
                     style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
                 >
