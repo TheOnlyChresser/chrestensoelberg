@@ -1,3 +1,5 @@
+// TODO: Tilføj niveau i programmeringssprog
+
 "use client";
 
 import {Icon} from "@iconify/react"
