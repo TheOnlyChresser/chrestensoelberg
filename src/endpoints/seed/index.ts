@@ -282,3 +282,4 @@ async function fetchFileByURL(url: string): Promise<File> {
     size: data.byteLength,
   }
 }
+}
