@@ -51,7 +51,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -75,6 +75,9 @@
       <workItem from="1751478261582" duration="8000" />
       <workItem from="1752031960843" duration="197000" />
       <workItem from="1752032761510" duration="603000" />
+      <workItem from="1753646459054" duration="624000" />
+      <workItem from="1753739546629" duration="1360000" />
+      <workItem from="1754319536204" duration="1553000" />
     </task>
     <servers />
   </component>
