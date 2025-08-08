@@ -69,10 +69,11 @@ html, body {
 
 @utility noisy {
   @apply bg-[url(https://grainy-gradients.vercel.app/noise.svg)];
+  background-blend-mode: screen;
 }
 
 @utility bg-standard {
-  background-color: #b6d0e2;
+  background-color: #fff;
   background-image:
           radial-gradient(ellipse at 35% 0%, #c4a8e4 0%, #c4a8e400 70%),
           radial-gradient(ellipse at 65% 100%, #a4e5f1 0%, #a4e5f100 70%);

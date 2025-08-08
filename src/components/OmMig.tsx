@@ -1,6 +1,5 @@
 "use client"
 
-import Line from "@/components/Line"
 import SkillCard from "@/components/SkillCard";
 import Animations from "@/components/animations";
 
@@ -13,31 +12,26 @@ export default function OmMig () {
                 id="ommig"
                 aria-label="Om Chresten Soelberg"
             >
-                <Line/>
-                <div className="flex-center flex-col">
-                    <h2 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-50">
+                <div className="mt-20 flex-center flex-col">
+                    <h2 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-30">
                         Om mig
                     </h2>
                 </div>
                 <div className="flex-col md:flex-row flex-center w-full">
-                    <article className="animation-box1 flex items-center px-5 w-full md:w-[40%] flex-col m-5 md:glass-box">
-                        <div className="flex items-center flex-col w-full">
-                            <h1 className="glass-title text-black/95 md:text-wrap md:text-left text-center text-3xl md:text-4xl font-semibold px-5 md:px-0">
+                    <article className="animation-box1 flex flex-col items-center w-full md:w-[40%] m-5 px-5">
+                        <div className="flex flex-col items-center w-full">
+                            <h1 className="glass-title font-semibold text-5xl md:text-5xl text-black/95 text-center md:text-left px-5 md:px-0 md:text-wrap">
                                 HTX&apos;er med flair for hjemmesider
                             </h1>
-                            <div className="m-5"/>
-                            <p className="glass-text text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
-                                Jeg er en nysgerrig HTX&apos;er med flair for hjemmesideudvikling og et skarpt øje for detaljen. 
-                                Jeg kombinerer teknisk kunnen fra HTX med kreativ tænkning og brænder for at skabe brugervenlige, 
+                            <div className="m-5" />
+                            <p className="glass-text font-base text-xl text-black/90 md:text-[1.8vw] text-center md:text-left px-5 md:px-0 md:text-wrap">
+                                Jeg er en nysgerrig HTX&apos;er med flair for hjemmesideudvikling og et skarpt øje for detaljen.
+                                Jeg kombinerer teknisk kunnen fra HTX med kreativ tænkning og brænder for at skabe brugervenlige,
                                 moderne og visuelt indbydende hjemmesider med fokus på performance, funktion og æstetik.
-                            </p>
-                            <p className="glass-text mt-5 text-black/90 font-base md:text-left md:text-wrap text-center px-5 md:px-0">
-                                Udover webudvikling interesserer jeg mig også for brugeroplevelse (UX), UI-design og hvordan 
-                                teknologi kan forenkle hverdagen. Jeg elsker at lære nye værktøjer og frameworks og går op i 
-                                skalerbarhed og at levere løsninger, der både er effektive og æstetisk tilfredsstillende.
                             </p>
                         </div>
                     </article>
+
                     <aside className="animation-box2 md:glass-box px-5 md:px-2 flex items-center flex-col md:w-[40%] m-5">
                         <h3 className="text-gradient text-4xl text-center font-semibold">
                             Mine skills

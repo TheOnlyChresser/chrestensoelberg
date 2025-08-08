@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
-import Line from "@/components/Line";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all"
 import gsap from "gsap";
@@ -72,11 +71,10 @@ function Kontakt() {
     })
     return (
         <section
-            className="min-h-screen w-full flex-center flex-col overflow-hidden"
+            className="min-h-screen w-full flex-center flex-col overflow-hidden md:mt-20"
             id="kontakt"
             aria-label="Kontakt Chresten Soelberg"
         >
-            <Line/>
             <div className="flex-center flex-col">
                 <h2 className="text-center text-6xl md:text-7xl text-gradient-subtle font-bold h-20">
                     Kontakt mig
