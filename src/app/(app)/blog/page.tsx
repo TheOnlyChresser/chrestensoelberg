@@ -29,7 +29,7 @@ export default async function Page() {
 
   return (
     <div className="bg-gradient-to-br flex-col from-[#e0eafc] to-[#cfdef3] flex-center w-full">
-    <div className="min-h-screen w-full mb-20 md:mb-0">
+    <div className="min-h-screen w-full mb-20 md:mb-4">
       <PageClient />
       <div className="mt-10 mb-10 flex-center text-8xl text-gradient font-bold h-30">
         <div className="prose dark:prose-invert max-w-none">
