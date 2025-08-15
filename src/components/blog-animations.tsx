@@ -97,7 +97,7 @@ export default function BlogAnimations() {
                     delay: 0.2,
                     duration: 2,
                     ease: "expo.out",
-                    xPercent: -100,
+                    xPercent: -10,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: p,
