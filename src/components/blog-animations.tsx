@@ -21,7 +21,7 @@ export default function BlogAnimations() {
                 gsap.from(h1split.chars, {
                     duration: 2,
                     ease: "expo.out",
-                    y: -100,
+                    y: -40,
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h1,
@@ -36,7 +36,7 @@ export default function BlogAnimations() {
                 gsap.from(h2split.chars, {
                     duration: 2,
                     ease: "expo.out",
-                    y: -20,
+                    y: -10,
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h2,
@@ -51,7 +51,7 @@ export default function BlogAnimations() {
                 gsap.from(h3split.chars, {
                     duration: 2,
                     ease: "expo.out",
-                    y: -20,
+                    y: -10,
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h3,
@@ -66,7 +66,7 @@ export default function BlogAnimations() {
                 gsap.from(h4split.chars, {
                     duration: 2,
                     ease: "expo.out",
-                    y: -20,
+                    y: -10,
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h4,
@@ -81,7 +81,7 @@ export default function BlogAnimations() {
                 gsap.from(h5split.chars, {
                     duration: 2,
                     ease: "expo.out",
-                    y: -20,
+                    y: -10,
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h5,
@@ -112,7 +112,7 @@ export default function BlogAnimations() {
                 gsap.from(olsplit.elements, {
                     duration: 1,
                     ease: "expo.out",
-                    xPercent: -100,
+                    xPercent: -10,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: ol,
@@ -126,7 +126,7 @@ export default function BlogAnimations() {
                 gsap.from(block, {
                     duration: 2,
                     ease: "expo.out",
-                    xPercent: -100,
+                    xPercent: -10,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: block,
