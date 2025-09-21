@@ -10,8 +10,8 @@ export default function OmMig() {
             <Animations />
             <section
                 className="min-h-screen w-full flex-center flex-col -mt-40 md:-mt-64"
-                id="ommig"
-                aria-label="Om Chresten Soelberg"
+                id="skills"
+                aria-label="Chresten Soelberg - Skills"
             >
                 <div className="flex-col md:flex-row flex-center w-full">
                     <aside className="animation-box2 flex items-center flex-col w-full">

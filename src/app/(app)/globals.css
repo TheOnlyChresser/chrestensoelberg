@@ -66,7 +66,7 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
 @utility navLink {
-  @apply text-black/80 px-2 text-base group-hover:text-black/50 font-semibold hover:!text-black;
+  @apply text-black/80 px-2 text-base group-hover:text-black/50 font-semibold hover:!text-black transition-colors;
 }
 
 @utility noisy {
