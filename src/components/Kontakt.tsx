@@ -71,7 +71,7 @@ function Kontakt() {
     })
     return (
         <section
-            className="min-h-screen w-full flex-center flex-col overflow-hidden md:mt-20"
+            className="min-h-screen w-full flex-center flex-col overflow-hidden -mt-20"
             id="kontakt"
             aria-label="Kontakt Chresten Soelberg"
         >
