@@ -52,7 +52,7 @@ export default async function Post({ params: paramsPromise }: Args) {
 
   return (
     <MathJaxContext>
-    <article className="max-w-full pt-16 pb-16 bg-white/64">
+    <article className="max-w-full pt-16 pb-16 bg-white/80">
       <PageClient />
 
       <PayloadRedirects disableNotFound url={url} />
