@@ -52,7 +52,7 @@ export default async function Post({ params: paramsPromise }: Args) {
 
   return (
     <MathJaxContext>
-    <article className="max-w-full pt-16 pb-16">
+    <article className="max-w-full pt-16 pb-16 bg-white/64">
       <PageClient />
 
       <PayloadRedirects disableNotFound url={url} />
@@ -61,8 +61,9 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       <PostHero post={post} />
 
-      <div className="flex flex-col items-center gap-4 pt-8">
+      <div className="flex flex-col items-center gap-4 pt-8 relative">
         <div className="container">
+          <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 to-transparent" />
           <MathJax>
           <RichText className="max-w-full md:max-w-[60rem]" data={post.content} enableGutter={false} />
           </MathJax>
