@@ -101,15 +101,11 @@ export default function Home() {
           })
         }}
       />
-      <div className="bg-standard flex-center w-full">
-        <div className="noisy w-full flex justify-center">
-          <main className="w-full min-h-screen flex-col flex justify-center text-black">
-            <Hero/>
-            <OmMig/>
-            <Kontakt/>
-          </main>
-        </div>
-      </div>
+        <main className="w-full min-h-screen flex-center flex-col justify-center text-black">
+          <Hero/>
+          <OmMig/>
+          <Kontakt/>
+        </main>
     </>
   );
 }

@@ -82,7 +82,7 @@ function Kontakt() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-white/10 shadow-lg ring-1 ring-white/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
+                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-blue-100/10 shadow-lg ring-1 ring-black/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
                 aria-label="Kontaktformular"
             >
                 <div>
@@ -97,7 +97,7 @@ function Kontakt() {
                         type="text"
                         name="name"
                         value={userInput.name}
-                        className="bg-white/20 backdrop-blur-sm border border-white/30 text-black/80 placeholder-black/60 rounded-xl px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-white/80"
+                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         onChange={handleChange}
                         required
                         aria-required="true"
@@ -115,7 +115,7 @@ function Kontakt() {
                         id="email"
                         type="email"
                         name="email"
-                        className="bg-white/20 backdrop-blur-sm border border-white/30 text-black/80 placeholder-black/60 rounded-xl px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-white/80"
+                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         value={userInput.email}
                         onChange={handleChange}
                         required
@@ -134,7 +134,7 @@ function Kontakt() {
                         id="message"
                         name="message"
                         rows={5}
-                        className="bg-white/20 backdrop-blur-sm border border-white/30 text-black/80 placeholder-black/60 rounded-xl px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-white/80"
+                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         value={userInput.message}
                         onChange={handleChange}
                         required

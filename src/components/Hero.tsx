@@ -1,155 +1,32 @@
-"use client";
-import {useGSAP} from "@gsap/react";
-import gsap from "gsap";
-import {ScrollTrigger} from "gsap/all";
-import {useRef} from "react";
-import Image from "next/image";
+"use client"
 
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image"
 
-const Hero = () => {
-    const main = useRef(null);
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    useGSAP(() => {
-        const ego = document.getElementById("ego");
-        gsap.to("#hand", {
-            rotate: 30,
-            duration: 0.3,
-            yoyo: true,
-            repeat: 11,
-            transformOrigin: "130% 130%",
-            ease: "power1.inOut",
-            onComplete: () => {gsap.to("#theghost", {
-                opacity: 0,
-                duration: 1,
-                ease: "power2.inOut",
-            })}
-        });
-        const tl = gsap.timeline({})
-        tl.to("#ego", {
-            rotate: 5,
-            scale: 2,
-            duration: 3,
-            yoyo: true,
-            repeat: 1,
-            transformOrigin: "130% 130%",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                trigger: "#hero",
-                start: "top top",
-                //markers: true,
-                endTrigger: "#avatar",
-                end: "+=50",
-                scrub: 4,
-                onEnter: () => {
-                    ego?.classList.add("text-gradient");
-                },
-                onScrubComplete: () => {
-
-                    ego?.classList.remove("text-gradient");
-                },
-            }
-        });
-
-
-
-    }, {scope: main});
-
+export default function Home() {
     return (
-        <>
-            <section 
-                ref={main} 
-                id="hero" 
-                className="w-full flex flex-col items-center text-center min-h-screen"
-                aria-label="Hovedsektion - Chresten Soelberg"
-            >
-                <div className="w-full" id="navtrigger">
-                    <div className="z-50 flex flex-col md:flex-row items-center min-h-screen justify-center text-center md:text-left gap-12 mx-auto md:ml-20 w-full">
-                        <div className="mt-20 md:mt-0 flex md:hidden">
-                            <div className="flex-1">
-                                <Image
-                                    src="/avatar.png"
-                                    alt="Chresten Soelberg - Frontend Udvikler"
-                                    width={200}
-                                    height={200}
-                                    className="flex md:hidden rounded-full w-50 h-50 object-fit mx-auto"
-                                    priority
-                                />
-                            </div>
-                        </div>
-                        <div className="flex-1">
-                            <header>
-                                <h2
-                                    id="theghost" 
-                                    className="hidden md:flex md:mb-5 md:text-2xl font-bold md:flex-row text-black/75"
-                                    aria-label="Hilsen"
-                                >
-                                    <span className="font-inter mr-5">Hej</span>
-                                    <span 
-                                        id="hand" 
-                                        role="img" 
-                                        aria-label="vinkende hånd"
-                                        className="inline-block"
-                                    >
-                                        👋🏻
-                                    </span>
-                                </h2>
-                                <h2 className="text-4xl md:text-7xl mb-10 pb-2 bg-gradient-to-br from-black from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] bg-clip-text font-bold leading-[1] tracking-tight text-transparent">
-                                    <span className="md:hidden">Hej, </span>
-                                    Jeg hedder{" "}
-                                    <span 
-                                        className="text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#A3F7BF] to-[#C5C9FF]" 
-                                        id="titlespan"
-                                        aria-label="Chresten Soelberg"
-                                    >
-                                        Chresten
-                                    </span>
-                                </h2>
-                            </header>
-                            <p className="text-2xl font-semibold text-black/90 mb-6 mx-10 md:mx-0">
-                                Jeg er en average og{" "}
-                                <span className="text-gradient-2 font-bold">kedelig</span>{" "}
-                                HTX&apos;er med for mange interesser og alt for{" "}
-                                <span 
-                                    id="ego" 
-                                    className="inline-block"
-                                    aria-label="stort ego"
-                                >
-                                    stort
-                                </span>{" "}
-                                ego.
-                            </p>
-                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                                <button 
-                                    className="rounded-md h-16 w-50 text-xl font-bold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-white/90 active:bg-black/30 active:text-white/90"
-                                    aria-label="Kontakt Chresten Soelberg"
-                                    onClick={() => {
-                                        document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
-                                    }}
-                                >
-                                    Giv mig et kald
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="flex-1">
-                            <Image
-                                src="/avatar.png"
-                                alt="Chresten Soelberg - Frontend Udvikler og HTX Elev"
-                                id="avatar"
-                                width={500}
-                                height={500}
-                                className="hidden md:flex w-125 h-125 object-fit mx-auto"
-                                priority
-                            />
-                        </div>
-                    </div>
+        <main
+            className="min-h-screen w-full max-w-[1200px] flex flex-col pt-64 pb-40 md:pt-24 px-8 md:px-20 md:grid md:grid-cols-2 md:items-start">
+            <div className="flex flex-col items-center justify-center h-80 -mt-8 md:mt-8">
+                <div className="md:hidden flex justify-center mb-12 md:mt-0">
+                    <Image src="/avatar.png" height={200} width={200} alt="Avatar" aria-placeholder="Avatar" />
                 </div>
-            </section>
-        </>
-    )
+                <h1 className="text-center text-black/80 text-4xl font-semibold bg-white/80 rounded-md p-2">
+                    Hej.
+                </h1>
+                <h1 className="mt-2 text-center text-black/80 text-4xl font-semibold bg-white/80 rounded-md p-2">
+                    Jeg hedder Chresten
+                </h1>
+                <p className="text-center mt-4 text-md text-neutral-500 bg-white/60 rounded-md p-1">
+                    Jeg er en average og kedelig HTX'er med for mange interesser og et alt for <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">stort</span> ego.
+                </p>
+                <button onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }} className="p-4 border-2 border-blue-500 rounded-2xl text-xl mt-8 text-black/80 cursor-pointer
+    font-semibold shadow-sm hover:shadow-md hover:bg-blue-500 hover:text-blue-50">
+                    Giv mig et kald
+                </button>
+            </div>
+            <div className="hidden md:flex justify-center mt-24 md:mt-0">
+                <Image src="/avatar.png" height={400} width={400} alt="Avatar" aria-placeholder="Avatar" />
+            </div>
+        </main>
+    );
 }
-
-export default Hero

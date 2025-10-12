@@ -56,7 +56,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
         <div className="skill-card">
             <div 
                 onClick={handleClick}
-                className="cursor-pointer flex-center space-x-2 p-4 bg-white/25 rounded-xl shadow-md hover:shadow-lg focus:shadow-lg group hover:bg-black/25 hover:text-white transition-all duration-200"
+                className="cursor-pointer border-1 border-black/20 flex-center space-x-2 p-4 bg-blue-100/25 rounded-xl shadow-sm hover:shadow-md focus:shadow-md group hover:bg-black/25 hover:text-white transition-all duration-200"
             >
                 <Icon icon={`${icon}`} width="24"/>
                 <p className="text-md font-medium">{name}</p>
@@ -69,7 +69,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
                     style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
                 >
                     <div 
-                        className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 max-w-md w-full shadow-2xl border border-white/20 transform transition-all duration-200"
+                        className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 max-w-md w-full shadow-2xl border border-black/20 transform transition-all duration-200"
                         onClick={(e) => e.stopPropagation()}
                         style={{ 
                             maxHeight: '90vh',
