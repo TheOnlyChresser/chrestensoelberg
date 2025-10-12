@@ -33,7 +33,7 @@ export default async function Page() {
       <PageClient />
       <div className="mt-10 mb-10 flex-center text-8xl text-gradient font-bold h-30">
         <div className="prose dark:prose-invert max-w-none">
-          <h1>Blog</h1>
+          <h1>Noter</h1>
         </div>
       </div>
 
@@ -52,6 +52,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Chrestens blog`,
+    title: `Chrestens noter`,
   }
 }
