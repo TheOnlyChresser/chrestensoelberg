@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://chrestensoelberg.dk'),
+  metadataBase: new URL('https://www.chrestensoelberg.dk'),
   alternates: {
     canonical: '/',
   },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'da_DK',
-    url: 'https://chrestensoelberg.dk',
+    url: 'https://www.chrestensoelberg.dk',
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
     siteName: 'Chresten Soelberg',
@@ -99,7 +99,6 @@ export default function RootLayout({
   return (
     <html lang="da">
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
         <link rel="icon" href="/avatar.png" />
         <link rel="apple-touch-icon" href="/avatar.png" />
         <meta name="theme-color" content="#000000" />
@@ -112,13 +111,13 @@ export default function RootLayout({
               "@type": "Website",
               "name": "Chresten Soelberg",
               "description": "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
-              "url": "https://chrestensoelberg.dk",
+              "url": "https://www.chrestensoelberg.dk",
               "author": {
                 "@type": "Person",
                 "name": "Chresten Soelberg",
                 "jobTitle": "Frontend Udvikler",
                 "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
-                "image": "https://chrestensoelberg.dk/avatar.png",
+                "image": "https://www.chrestensoelberg.dk/avatar.png",
                 "sameAs": [
                   "https://github.com/TheOnlyChresser",
                   "https://linkedin.com/in/chresten-soelberg-4577b2272"
@@ -146,7 +145,7 @@ export default function RootLayout({
               },
               "potentialAction": {
                 "@type": "ContactAction",
-                "target": "https://chrestensoelberg.dk#kontakt",
+                "target": "https://www.chrestensoelberg.dk#kontakt",
                 "description": "Kontakt Chresten Soelberg"
               }
             })
