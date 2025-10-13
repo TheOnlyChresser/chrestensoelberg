@@ -90,7 +90,7 @@ export default function BlogAnimations() {
                     delay: 0.2,
                     duration: 2,
                     ease: "expo.out",
-                    xPercent: -10,
+                    xPercent: -4,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: p,
@@ -104,7 +104,7 @@ export default function BlogAnimations() {
                 gsap.from(ol, {
                     duration: 1,
                     ease: "expo.out",
-                    xPercent: -10,
+                    xPercent: -4,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: ol,
@@ -118,7 +118,7 @@ export default function BlogAnimations() {
                 gsap.from(block, {
                     duration: 2,
                     ease: "expo.out",
-                    xPercent: -10,
+                    xPercent: -4,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: block,
