@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import OmMig from "@/components/OmMig";
 import Kontakt from "@/components/Kontakt";
 import Script from "next/script";
+import Quote from "@/components/Quote";
 
 export const metadata = {
   title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
@@ -103,6 +104,7 @@ export default function Home() {
       />
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black">
           <Hero/>
+          <Quote/>
           <OmMig/>
           <Kontakt/>
         </main>
