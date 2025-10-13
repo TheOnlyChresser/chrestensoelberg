@@ -20,16 +20,16 @@ export const home: (args: HomeArgs) => RequiredDataFromCollectionSlug<'pages'> =
           link: {
             type: 'custom',
             appearance: 'default',
-            label: 'All posts',
-            url: '/blog',
+            label: 'Alle noter',
+            url: '/noter',
           },
         },
         {
           link: {
             type: 'custom',
             appearance: 'outline',
-            label: 'Contact',
-            url: '/contact',
+            label: 'Kontakt',
+            url: '/kontakt',
           },
         },
       ],
