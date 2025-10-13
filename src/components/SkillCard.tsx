@@ -56,7 +56,7 @@ export default function SkillCard({name, icon, website, description}: SkillCardP
         <div className="skill-card">
             <div 
                 onClick={handleClick}
-                className="cursor-pointer border-1 border-black/20 flex-center space-x-2 p-4 bg-blue-100/25 rounded-xl shadow-sm hover:shadow-md focus:shadow-md group hover:bg-black/25 hover:text-white transition-all duration-200"
+                className="cursor-pointer border-1 border-black/20 flex-center space-x-2 p-4 bg-blue-100/25 rounded-xl shadow-sm hover:shadow-md focus:shadow-md group hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white transition-all duration-200"
             >
                 <Icon icon={`${icon}`} width="24"/>
                 <p className="text-md font-medium">{name}</p>
