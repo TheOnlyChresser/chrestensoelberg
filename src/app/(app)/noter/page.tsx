@@ -40,7 +40,7 @@ export default async function Page() {
 
       <CollectionArchive posts={posts.docs} />
 
-      <div className="container flex-center w-full">
+      <div className="container">
         {posts.totalPages > 1 && posts.page && (
           <Pagination page={posts.page} totalPages={posts.totalPages} />
         )}
