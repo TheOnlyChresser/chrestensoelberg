@@ -31,7 +31,7 @@ type PaginationLinkProps = {
 
 const PaginationLink = ({ className, isActive, size = 'icon', ...props }: PaginationLinkProps) => (
   <button
-    aria-current={isActive ? 'page' : undefined}
+    aria-current={isActive ? 'side' : undefined}
     className={cn(
       buttonVariants({
         size,
@@ -48,13 +48,13 @@ const PaginationPrevious = ({
   ...props
 }: React.ComponentProps<typeof PaginationLink>) => (
   <PaginationLink
-    aria-label="Go to previous page"
+    aria-label="Gå til siden før"
     className={cn('gap-1 pl-2.5', className)}
     size="default"
     {...props}
   >
     <ChevronLeft className="h-4 w-4" />
-    <span>Previous</span>
+    <span>Siden før</span>
   </PaginationLink>
 )
 
