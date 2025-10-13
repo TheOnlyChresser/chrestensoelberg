@@ -16,9 +16,7 @@ export default function BlogAnimations() {
         document.fonts.ready.then(() => {
             h1element.forEach((h1) => {
 
-                const h1split = new SplitText(h1, {type: "chars"})
-
-                gsap.from(h1split.chars, {
+                gsap.from(h1, {
                     duration: 2,
                     ease: "expo.out",
                     y: -40,
@@ -31,9 +29,8 @@ export default function BlogAnimations() {
                 })
             })
             h2element.forEach((h2) => {
-                const h2split = new SplitText(h2, {type: "chars"})
 
-                gsap.from(h2split.chars, {
+                gsap.from(h2, {
                     duration: 2,
                     ease: "expo.out",
                     y: -10,
@@ -46,9 +43,8 @@ export default function BlogAnimations() {
                 })
             })
             h3element.forEach((h3) => {
-                const h3split = new SplitText(h3, {type: "chars"})
 
-                gsap.from(h3split.chars, {
+                gsap.from(h3, {
                     duration: 2,
                     ease: "expo.out",
                     y: -10,
@@ -61,9 +57,8 @@ export default function BlogAnimations() {
                 })
             })
             h4element.forEach((h4) => {
-                const h4split = new SplitText(h4, {type: "chars"})
 
-                gsap.from(h4split.chars, {
+                gsap.from(h4, {
                     duration: 2,
                     ease: "expo.out",
                     y: -10,
@@ -76,9 +71,8 @@ export default function BlogAnimations() {
                 })
             })
             h5element.forEach((h5) => {
-                const h5split = new SplitText(h5, {type: "chars"})
 
-                gsap.from(h5split.chars, {
+                gsap.from(h5, {
                     duration: 2,
                     ease: "expo.out",
                     y: -10,
@@ -91,9 +85,8 @@ export default function BlogAnimations() {
                 })
             })
             pelement.forEach((p) => {
-                const psplit = new SplitText(p, {type: "lines"})
 
-                gsap.from(psplit.lines, {
+                gsap.from(p, {
                     delay: 0.2,
                     duration: 2,
                     ease: "expo.out",
@@ -107,9 +100,8 @@ export default function BlogAnimations() {
                 })
             })
             olelement.forEach((ol) => {
-                const olsplit = new SplitText(ol, {type: "elements"})
 
-                gsap.from(olsplit.elements, {
+                gsap.from(ol, {
                     duration: 1,
                     ease: "expo.out",
                     xPercent: -10,
