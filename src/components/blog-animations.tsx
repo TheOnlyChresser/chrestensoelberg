@@ -88,7 +88,7 @@ export default function BlogAnimations() {
 
                 gsap.from(p, {
                     delay: 0.2,
-                    duration: 2,
+                    duration: 1,
                     ease: "expo.out",
                     xPercent: -4,
                     autoAlpha: 0,
@@ -116,7 +116,7 @@ export default function BlogAnimations() {
             blockselement.forEach((block) => {
 
                 gsap.from(block, {
-                    duration: 2,
+                    duration: 1,
                     ease: "expo.out",
                     xPercent: -4,
                     autoAlpha: 0,
