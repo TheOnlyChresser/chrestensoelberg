@@ -17,7 +17,7 @@ export default function Home() {
                     Jeg hedder Chresten
                 </h1>
                 <p className="text-center mt-4 text-md text-neutral-500 bg-white/60 rounded-md p-1">
-                    Jeg er en average og kedelig HTX'er med for mange interesser og et alt for <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">stort</span> ego.
+                    Jeg er en average og <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">kedelig</span> HTX'er med for mange interesser.
                 </p>
                 <button onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }} className="p-4 border-2 border-blue-500 rounded-2xl text-xl mt-8 text-black/80 cursor-pointer
     font-semibold shadow-sm hover:shadow-md hover:bg-blue-500 hover:text-blue-50">
