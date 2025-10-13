@@ -2,7 +2,7 @@ import { Quote as QuoteIcon } from "lucide-react";
 
 export default function Quote() {
     return (
-        <section className="max-w-[1000px] px-40 pb-40 flex flex-col items-center text-center">
+        <section className="max-w-[1000px] px-4 md:px-40 pb-40 flex flex-col items-center text-center">
             <div className="relative">
                 <QuoteIcon className="absolute -top-8 -left-6 text-gray-300 w-12 h-12" />
                 <blockquote className="text-3xl md:text-4xl font-serif italic text-black/80 leading-relaxed">
