@@ -61,7 +61,7 @@ html, body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  @apply bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300 selection:text-white hyphens-auto;
+  @apply break-all bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300 selection:text-white hyphens-auto;
 }
 
 @utility font-arial {
@@ -147,10 +147,12 @@ html, body {
   .prose strong {
     @apply font-black text-black/85;
   }
+  .prose a {
+    @apply underline hover:no-underline active:no-underline decoration-2 decoration-sky-500;
+  }
   .prose {
     overflow-x: hidden;
     overflow-y: hidden;
-    @apply break-all;
   }
   .blocks {
 
