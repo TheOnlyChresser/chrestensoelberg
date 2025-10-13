@@ -148,7 +148,7 @@ html, body {
     @apply font-black text-black/85;
   }
   .prose a {
-    @apply underline underline-offset-1 hover:no-underline active:no-underline decoration-2 decoration-sky-500 text-black;
+    @apply underline hover:no-underline active:no-underline decoration-2 decoration-sky-500 text-black;
   }
   .prose {
     overflow-x: hidden;
