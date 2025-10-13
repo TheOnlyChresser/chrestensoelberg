@@ -11,6 +11,7 @@ import {
   OrderedListFeature,
   UnorderedListFeature,
   ParagraphFeature,
+  BlockquoteFeature,
 } from '@payloadcms/richtext-lexical'
 
 import { authenticated } from '../../access/authenticated'
@@ -105,6 +106,7 @@ export const Posts: CollectionConfig<'posts'> = {
                     ChecklistFeature(),
                     OrderedListFeature(),
                     UnorderedListFeature(),
+                    BlockquoteFeature(),
                   ]
                 },
               }),
