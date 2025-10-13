@@ -23,7 +23,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h1,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.01,
                 })
@@ -37,7 +37,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h2,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.02,
                 })
@@ -51,7 +51,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h3,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.02,
                 })
@@ -65,7 +65,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h4,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.02,
                 })
@@ -79,7 +79,7 @@ export default function BlogAnimations() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: h5,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.02,
                 })
@@ -90,11 +90,11 @@ export default function BlogAnimations() {
                     delay: 0.2,
                     duration: 1,
                     ease: "expo.out",
-                    xPercent: -4,
+                    xPercent: -2,
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: p,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.1,
                 })
@@ -108,7 +108,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: ol,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.01,
                 })
@@ -122,7 +122,7 @@ export default function BlogAnimations() {
                     autoAlpha: 0,
                     scrollTrigger: {
                         trigger: block,
-                        start: "center bottom"
+                        start: "top bottom"
                     },
                     stagger: 0.1,
                 })
