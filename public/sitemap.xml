@@ -1,42 +1,74 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.chrestensoelberg.dk/</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.chrestensoelberg.dk/projekter</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog/katalysatorer-og-inhibitorer</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter/skytten-p-aunsbjerg</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog/vektorer</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter/lille-claus-og-store-claus-samt-tvekampen-mellem-david-og-goliat</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog/ligningssystemer</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter/introduktion-til-programmering</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog/tailwindcss-mit-go-to-vrktj</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter/redoxreaktioner</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://www.chrestensoelberg.dk/blog/spil-rapport</loc>
-    <lastmod>2025-08-15T08:19:05+00:00</lastmod>
+    <loc>https://www.chrestensoelberg.dk/noter/reaktionshastighed</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://www.chrestensoelberg.dk/noter/genrebegrebet---fakta-og-fiktion</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.chrestensoelberg.dk/noter/katalysatorer-og-inhibitorer</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.chrestensoelberg.dk/noter/vektorer</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.chrestensoelberg.dk/noter/ligningssystemer</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.chrestensoelberg.dk/noter/spil-rapport</loc>
+    <lastmod>2025-10-13T14:05:31+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
 </urlset>
