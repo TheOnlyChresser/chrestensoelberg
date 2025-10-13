@@ -20,7 +20,7 @@ export default function Home() {
                     Jeg er en average og <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">kedelig</span> HTX'er med for mange interesser.
                 </p>
                 <button onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }} className="p-4 border-2 border-blue-500 rounded-2xl text-xl mt-8 text-black/80 cursor-pointer
-    font-semibold shadow-sm hover:shadow-md hover:bg-blue-500 hover:text-blue-50">
+    font-semibold shadow-sm hover:shadow-md hover:bg-blue-500 hover:text-blue-50 active:shadow-md active:bg-blue-500 active:text-blue-50">
                     Giv mig et kald
                 </button>
             </div>

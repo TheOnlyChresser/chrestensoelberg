@@ -32,7 +32,7 @@ export const Card: React.FC<{
   return (
     <article
       className={cn(
-        'group glass-box hover:cursor-pointer hover:bg-black/30 hover:border-black/80 hover:text-white active:bg-black/30 active:border-black/80 active:text-white overflow-hidden transition hover:scale-95',
+        'group glass-box hover:cursor-pointer hover:bg-black/30 hover:border-black/80 hover:text-white active:bg-black/30 active:border-black/80 active:text-white overflow-hidden transition hover:scale-95 active:scale-95',
         className,
       )}
       ref={card.ref}
@@ -41,7 +41,7 @@ export const Card: React.FC<{
         {titleToUse && (
           <div className="prose font-bold">
             <h3>
-              <Link className="not-prose text-black group-hover:text-white line-clamp-3 md:line-clamp-2" href={href} ref={link.ref}>
+              <Link className="not-prose text-black group-hover:text-white group-active:text-white line-clamp-3 md:line-clamp-2" href={href} ref={link.ref}>
                 {titleToUse}
               </Link>
             </h3>
@@ -58,7 +58,7 @@ export const Card: React.FC<{
                     return (
                         <span
                             key={index}
-                            className="bg-blue-500/10 group-hover:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
+                            className="bg-blue-500/10 group-hover:bg-white/10 group-active:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
                         >
                         {categoryTitle}
                       </span>
