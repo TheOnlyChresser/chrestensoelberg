@@ -97,7 +97,7 @@ function Kontakt() {
                         type="text"
                         name="name"
                         value={userInput.name}
-                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
+                        className="bg-blue-500/2 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         onChange={handleChange}
                         required
                         aria-required="true"
@@ -115,7 +115,7 @@ function Kontakt() {
                         id="email"
                         type="email"
                         name="email"
-                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
+                        className="bg-blue-500/2 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         value={userInput.email}
                         onChange={handleChange}
                         required
@@ -134,7 +134,7 @@ function Kontakt() {
                         id="message"
                         name="message"
                         rows={5}
-                        className="bg-black/4 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
+                        className="bg-blue-500/2 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80"
                         value={userInput.message}
                         onChange={handleChange}
                         required
