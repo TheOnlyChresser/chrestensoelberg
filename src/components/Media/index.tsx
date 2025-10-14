@@ -9,7 +9,10 @@ export const Media: React.FC<Props> = (props) => {
   const { className, htmlElement = 'div', resource } = props
 
   const isVideo = typeof resource === 'object' && resource?.mimeType?.includes('video')
-  const Tag = htmlElement || Fragment
+  const Tag =
+      htmlElement && typeof htmlElement === 'string' && /^[a-z]/.test(htmlElement)
+          ? htmlElement
+          : Fragment
 
   if (Tag === Fragment) {
     return <>{isVideo ? <VideoMedia {...props} /> : <ImageMedia {...props} />}</>
