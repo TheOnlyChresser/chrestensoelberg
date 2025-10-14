@@ -53,7 +53,7 @@ export const MediaBlock: React.FC<Props> = (props) => {
       {caption && (
         <div
           className={cn(
-            'mt-6',
+            '-mt-16',
             {
               container: !disableInnerContainer,
             },

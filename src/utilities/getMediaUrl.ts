@@ -13,7 +13,7 @@ export const getMediaUrl = (url: string | null | undefined, cacheTag?: string | 
     return cacheTag ? `${url}?${cacheTag}` : url
   }
 
-  const baseUrl = 'https://rsvaoleivebajgsczjre.storage.supabase.co/storage/v1/s3'
+  const baseUrl = 'https://rsvaoleivebajgsczjre.supabase.co/storage/v1/object/public/media'
   const normalizedUrl = url.replace(/^.*\/api\/media\/file/, '')
   return cacheTag ? `${baseUrl}${normalizedUrl}?${cacheTag}` : `${baseUrl}${normalizedUrl}`
 }
