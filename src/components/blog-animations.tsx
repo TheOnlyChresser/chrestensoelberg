@@ -5,7 +5,7 @@ import {ScrollTrigger} from "gsap/all"
 gsap.registerPlugin(ScrollTrigger)
 export default function BlogAnimations() {
     useGSAP(() => {
-        const pelement = document.querySelectorAll("p");
+        const pelement = document.querySelectorAll(".prose p");
         const h1element = document.querySelectorAll(".prose h1")
         const h2element = document.querySelectorAll(".prose h2")
         const h3element = document.querySelectorAll(".prose h3")
