@@ -2,9 +2,13 @@
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap"
 import {ScrollTrigger, SplitText} from "gsap/all"
+import {useEffect, useState} from "react";
 gsap.registerPlugin(ScrollTrigger, SplitText)
 export default function BlogAnimations() {
+    const [isClient, setIsClient] = useState<boolean>(false)
+    useEffect(() => setIsClient(true), [])
     useGSAP(() => {
+        if (!isClient) return
         const pelement = document.querySelectorAll(".prose p")
         const h1element = document.querySelectorAll(".prose h1")
         const h2element = document.querySelectorAll(".prose h2")
@@ -128,7 +132,7 @@ export default function BlogAnimations() {
                 })
             })
         })
-    })
+    }, [isClient])
     return(
         <></>
     )

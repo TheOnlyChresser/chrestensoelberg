@@ -66,7 +66,7 @@ export default async function Post({ params: paramsPromise }: Args) {
           <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 to-transparent" />
           <MathJaxContext>
             <MathJax>
-            <RichText className="max-w-full md:max-w-[60rem]" data={post.content as DefaultTypedEditorState} enableGutter={false} />
+              <RichText className="max-w-full md:max-w-[60rem]" data={post.content as DefaultTypedEditorState} enableGutter={false} />
             </MathJax>
           </MathJaxContext>
           <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
