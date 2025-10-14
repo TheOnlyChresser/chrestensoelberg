@@ -23,6 +23,7 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
+    suppressHydrationWarning: true,
     importMap: {
       baseDir: path.resolve(dirname),
     },
