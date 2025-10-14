@@ -43,7 +43,7 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
     banner: ({ node }) => <BannerBlock className="col-start-2 mb-4" {...node.fields} />,
     mediaBlock: ({ node }) => (
       <MediaBlock
-        className="p-8"
+        className="p-8 blocks"
         imgClassName="m-0"
         {...node.fields}
         captionClassName="mx-auto"
@@ -53,7 +53,7 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
     ),
     code: ({ node }) => <CodeBlock className="col-start-2" {...node.fields} />,
     cta: ({ node }) => <CallToActionBlock {...node.fields} />,
-    hr: () => <hr></hr>,
+    horizontalRule: () => <hr></hr>,
   },
 })
 
