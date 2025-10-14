@@ -3,6 +3,7 @@ import type { BannerBlock as BannerBlockProps } from '@/payload-types'
 import { cn } from '@/utilities/ui'
 import React from 'react'
 import RichText from '@/components/RichText'
+import {DefaultTypedEditorState} from "@payloadcms/richtext-lexical";
 
 type Props = {
   className?: string
@@ -19,7 +20,7 @@ export const BannerBlock: React.FC<Props> = ({ className, content, style }) => {
           'border-warning bg-warning/30': style === 'warning',
         })}
       >
-        <RichText data={content} enableGutter={false} enableProse={false} />
+        <RichText data={content as DefaultTypedEditorState} enableGutter={false} enableProse={false} />
       </div>
     </div>
   )
