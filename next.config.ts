@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     images: {
-        domains: [process.env.SUPABASE_S3_ENDPOINT||""],
+        domains: ["rsvaoleivebajgsczjre.storage.supabase.co"],
     },
     eslint: {
         ignoreDuringBuilds: true,
