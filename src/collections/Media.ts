@@ -5,6 +5,7 @@ import {
   InlineToolbarFeature,
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
+import { s3Adapter } from '@payloadcms/storage-s3'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -39,8 +40,19 @@ export const Media: CollectionConfig = {
     },
   ],
   upload: {
-    // Upload to the public/media directory in Next.js making them publicly accessible even outside of Payload
-    staticDir: path.resolve(dirname, '../../public/media'),
+    // s3 adapter for media
+    adapter: s3Adapter({
+      config: {
+        endpoint: process.env.SUPABASE_S3_ENDPOINT as string,
+        region: 'eu-north-1',
+        credentials: {
+          accessKeyId: process.env.SUPABASE_S3_ACCESS_KEY_ID as string,
+          secretAccessKey: process.env.SUPABASE_S3_SECRET_ACCESS_KEY as string,
+        },
+      },
+      bucket: process.env.SUPABASE_S3_BUCKET as string,
+      acl: 'public-read',
+    }),
     adminThumbnail: 'thumbnail',
     focalPoint: true,
     imageSizes: [
