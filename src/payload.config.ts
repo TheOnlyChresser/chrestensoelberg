@@ -16,6 +16,7 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 import {en} from "@payloadcms/translations/languages/en";
+import {s3Storage} from "@payloadcms/storage-s3";
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -60,7 +61,21 @@ export default buildConfig({
   cors: [getServerSideURL()].filter(Boolean),
   plugins: [
     ...plugins,
-    // storage-adapter-placeholder
+    s3Storage({
+      collections: {
+        media: true,
+      },
+      bucket: process.env.SUPABASE_S3_BUCKET ||"",
+      config: {
+        endpoint: process.env.SUPABASE_S3_ENDPOINT,
+        region: 'eu-north-1',
+        credentials: {
+          accessKeyId: process.env.SUPABASE_S3_ACCESS_KEY_ID||"",
+          secretAccessKey: process.env.SUPABASE_S3_SECRET_ACCESS_KEY||"",
+        },
+        forcePathStyle: true,
+      },
+    }),
   ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,
