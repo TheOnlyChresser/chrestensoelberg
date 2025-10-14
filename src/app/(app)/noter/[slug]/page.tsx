@@ -15,6 +15,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import {MathJax, MathJaxContext} from "better-react-mathjax";
+import {DefaultTypedEditorState} from "@payloadcms/richtext-lexical";
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -65,7 +66,7 @@ export default async function Post({ params: paramsPromise }: Args) {
         <div className="container">
           <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 to-transparent" />
           <MathJax>
-          <RichText className="max-w-full md:max-w-[60rem]" data={post.content as any} enableGutter={false} />
+          <RichText className="max-w-full md:max-w-[60rem]" data={post.content as DefaultTypedEditorState} enableGutter={false} />
           </MathJax>
           <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
