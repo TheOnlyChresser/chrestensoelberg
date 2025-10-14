@@ -52,7 +52,6 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
-    <MathJaxContext>
     <article className="max-w-full pt-16 pb-16 bg-white/80">
       <PageClient />
 
@@ -65,9 +64,11 @@ export default async function Post({ params: paramsPromise }: Args) {
       <div className="flex flex-col items-center gap-4 pt-8 relative">
         <div className="container">
           <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 to-transparent" />
-          <MathJax>
-          <RichText className="max-w-full md:max-w-[60rem]" data={post.content as DefaultTypedEditorState} enableGutter={false} />
-          </MathJax>
+          <MathJaxContext>
+            <MathJax>
+            <RichText className="max-w-full md:max-w-[60rem]" data={post.content as DefaultTypedEditorState} enableGutter={false} />
+            </MathJax>
+          </MathJaxContext>
           <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
@@ -78,7 +79,6 @@ export default async function Post({ params: paramsPromise }: Args) {
         </div>
       </div>
     </article>
-    </MathJaxContext>
   )
 }
 
