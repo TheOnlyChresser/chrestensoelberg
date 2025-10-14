@@ -9,12 +9,11 @@ import { getClientSideURL } from '@/utilities/getURL'
 export const getMediaUrl = (url: string | null | undefined, cacheTag?: string | null): string => {
   if (!url) return ''
 
-  // Check if URL already has http/https protocol
-  if (url.startsWith('http://') || url.startsWith('https://')) {
+  if (url.includes('rsvaoleivebajgsczjre.storage.supabase.co')) {
     return cacheTag ? `${url}?${cacheTag}` : url
   }
 
-  // Otherwise prepend client-side URL
-  const baseUrl = getClientSideURL() || ""
-  return cacheTag ? `${baseUrl}${url}?${cacheTag}` : `${baseUrl}${url}`
+  const baseUrl = 'https://rsvaoleivebajgsczjre.storage.supabase.co/storage/v1/s3'
+  const normalizedUrl = url.replace(/^.*\/api\/media\/file/, '')
+  return cacheTag ? `${baseUrl}${normalizedUrl}?${cacheTag}` : `${baseUrl}${normalizedUrl}`
 }
