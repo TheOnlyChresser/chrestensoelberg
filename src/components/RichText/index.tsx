@@ -21,7 +21,6 @@ import type {
 import { BannerBlock } from '@/blocks/Banner/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { cn } from '@/utilities/ui'
-import BlogAnimations from "@/components/blog-animations";
 
 type NodeTypes =
   | DefaultNodeTypes
@@ -67,7 +66,6 @@ export default function RichText(props: Props) {
   const { className, enableProse = true, enableGutter = true, ...rest } = props
   return (
       <>
-        <BlogAnimations/>
         <ConvertRichText
           converters={jsxConverters}
           className={cn(
@@ -75,7 +73,7 @@ export default function RichText(props: Props) {
             {
               container: enableGutter,
               'max-w-full': !enableGutter,
-              'mx-auto prose md:prose-md dark:prose-invert max-w-full': enableProse,
+              'mx-auto prose md:prose-md dark:prose-invert max-w-full mt-16': enableProse,
             },
             className,
           )}
