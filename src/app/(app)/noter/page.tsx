@@ -31,9 +31,9 @@ export default async function Page() {
     <div className="bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] flex-center w-full">
     <div className="min-h-screen w-full mb-20 md:mb-4 flex flex-col items-center">
       <PageClient />
-      <div className="mt-10 mb-10 flex-center text-8xl text-gradient font-bold h-30">
+      <div className="mt-16 md:mt-12 mb-10 flex-center text-8xl text-gradient font-bold h-30">
         <div className="prose dark:prose-invert max-w-none">
-          <h1>Noter</h1>
+          <h1 className="font-inter">Noter</h1>
         </div>
       </div>
 
