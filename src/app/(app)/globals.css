@@ -139,16 +139,16 @@ html, body {
     @apply text-black/85 mb-1 text-lg leading-8 mt-1 mx-5 text-wrap font-serif font-light md:font-normal;
   }
   .list-number li {
-    @apply text-black/85 leading-5 font-serif;
+    @apply text-black/85 leading-5 text-lg font-serif;
   }
   .list-number {
-    @apply mt-2 mb-1 mx-5 ml-15 list-decimal space-y-2;
+    @apply mt-2 mb-1 mx-5 ml-15 list-decimal text-lg space-y-2;
   }
   .prose strong {
-    @apply font-black text-black/85;
+    @apply font-black text-black/85 text-lg;
   }
   .prose a {
-    @apply underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black;
+    @apply underline text-lg hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black;
   }
   .prose {
     overflow-x: hidden;
