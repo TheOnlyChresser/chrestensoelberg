@@ -12,11 +12,13 @@ export default function Navbar () {
         gsap.to("nav", {
             backdropFilter: "blur(10px)",
             duration: 2,
+            borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
+            backgroundColor: "rgba(255, 255, 255, 0.05)",
             scrollTrigger: {
                 trigger: "#navtrigger",
                 start: "top top",
                 endTrigger: "#navtrigger",
-                end: "100% top",
+                end: "+=200",
                 scrub: 1,
             }
         })
