@@ -64,8 +64,16 @@ html, body {
   @apply bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300 selection:text-white hyphens-auto;
 }
 
+@font-face{
+  font-family: "Montserrat";
+  src: url('/fonts/Montserrat.ttf') format('truetype'), url('/fonts/Montserrat-Italic.ttf') format('truetype');
+}
+
 @utility font-arial {
   font-family: Arial, Helvetica, sans-serif;
+}
+@utility font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }
 @utility navLink {
   @apply text-black/80 px-2 text-base group-hover:text-black/50 font-semibold hover:!text-black transition-colors;
@@ -121,25 +129,25 @@ html, body {
 
 @layer base {
   .prose h1 {
-    @apply text-5xl font-bold text-gradient-subtle mb-7 mt-5 mx-5 ml-3 p-2 lg:text-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-5xl font-bold text-gradient-subtle mb-7 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h2 {
-    @apply text-4xl font-bold text-gradient-subtle mb-2 mt-5 mx-5 ml-3 p-2 lg:text-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-4xl font-bold text-gradient-subtle mb-2 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose2 h3 {
-    @apply text-3xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-3 p-2 lg:text-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-3xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h3 {
-    @apply text-3xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-3 p-2 lg:text-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-3xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose h4 {
-    @apply text-2xl font-bold text-gradient-subtle mt-5 mx-5 ml-3 p-2 lg:text-wrap break-words hyphens-auto lg:break-normal;
+    @apply text-2xl font-bold text-gradient-subtle mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose p {
-    @apply text-black/85 mb-1 text-lg leading-8 mt-1 mx-5 text-wrap font-serif font-light md:font-normal;
+    @apply text-black/85 text-lg leading-8 mx-5 p-1 text-wrap font-light md:font-normal;
   }
   .list-number li {
-    @apply text-black/85 leading-5 text-lg font-serif;
+    @apply text-black/85 leading-5 text-lg;
   }
   .list-number {
     @apply mt-2 mb-1 mx-5 ml-15 list-decimal text-lg space-y-2;
@@ -153,6 +161,7 @@ html, body {
   .prose {
     overflow-x: hidden;
     overflow-y: hidden;
+    @apply font-montserrat;
   }
   .blocks {
 
