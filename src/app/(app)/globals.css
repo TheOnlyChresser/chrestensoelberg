@@ -144,7 +144,7 @@ html, body {
     @apply text-2xl font-bold text-gradient-subtle mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose p {
-    @apply text-black/85 text-lg leading-8 mx-5 p-1 text-wrap font-light md:font-normal;
+    @apply text-black/85 text-lg leading-8 mx-5 p-1 text-wrap font-normal;
   }
   .list-number li {
     @apply text-black/85 leading-5 text-lg;
