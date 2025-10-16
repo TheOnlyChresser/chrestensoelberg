@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'medium',
       'max-snippet': -1,
     },
   },
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Chresten Soelberg - Frontend Udvikler & HTX Elev',
     description: 'Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.',
     images: [],

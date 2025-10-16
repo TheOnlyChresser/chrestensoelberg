@@ -38,22 +38,16 @@ export const metadata = {
     url: "https://www.chrestensoelberg.dk",
     siteName: "Chresten Soelberg",
     images: [
-      {
-        url: "/avatar.png",
-        width: 1000,
-        height: 1000,
-        alt: "Chresten Soelberg - Frontend Udvikler",
-      },
     ],
     locale: "da_DK",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
     description:
         "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.",
-    images: ["/avatar.png"],
+    images: [],
   },
   alternates: {
     canonical: "https://www.chrestensoelberg.dk",
@@ -74,7 +68,6 @@ export default function Home() {
             "jobTitle": "Frontend Udvikler",
             "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
             "url": "https://www.chrestensoelberg.dk",
-            "image": "https://www.chrestensoelberg.dk/avatar.png",
             "sameAs": [
               "https://github.com/chrestensoelberg",
               "https://linkedin.com/in/chrestensoelberg"
@@ -102,7 +95,7 @@ export default function Home() {
           })
         }}
       />
-        <main className="w-full min-h-screen flex-center flex-col justify-center text-black">
+        <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
           <Hero/>
           <Quote/>
           <OmMig/>
