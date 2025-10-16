@@ -110,11 +110,14 @@ export const Posts: CollectionConfig<'posts'> = {
                     TextStateFeature({
                       // prettier-ignore
                       state: {
-                        ...defaultColors,
                         color: {
+                          ...defaultColors.text,
                           // fancy gradients!
                           galaxy: { label: 'Galaxy', css: { background: 'linear-gradient(to right, #0000ff, #ff0000)', color: 'white' } },
                           sunset: { label: 'Sunset', css: { background: 'linear-gradient(to top, #ff5f6d, #6a3093)' } },
+                        },
+                        background: {
+                          ...defaultColors.background,
                         },
                         // You can have both colored and underlined text at the same time.
                         // If you don't want that, you should group them within the same key.
