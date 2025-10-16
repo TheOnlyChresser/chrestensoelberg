@@ -144,16 +144,16 @@ html, body {
     @apply text-2xl font-bold text-gradient-subtle mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose p {
-    @apply text-black/85 text-lg leading-8 mx-5 p-1 text-wrap font-normal;
+    @apply text-[#171717] text-lg leading-8 mx-5 p-1 text-wrap font-normal;
   }
   .list-number li {
-    @apply text-black/85 leading-5 text-lg;
+    @apply text-[#171717] leading-5 text-lg;
   }
   .list-number {
     @apply mt-2 mb-1 mx-5 ml-15 list-decimal text-lg space-y-2;
   }
   .prose strong {
-    @apply font-black text-black/85;
+    @apply font-black text-[#171717];
   }
   .prose a {
     @apply underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black;
