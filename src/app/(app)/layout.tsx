@@ -73,19 +73,13 @@ export const metadata: Metadata = {
     description: 'Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.',
     siteName: 'Chresten Soelberg',
     images: [
-      {
-        url: '/avatar.png',
-        width: 1200,
-        height: 630,
-        alt: 'Chresten Soelberg - Frontend Udvikler',
-      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Chresten Soelberg - Frontend Udvikler & HTX Elev',
     description: 'Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.',
-    images: ['/avatar.png'],
+    images: [],
     creator: '@theonlychresser',
   },
   category: 'technology',
