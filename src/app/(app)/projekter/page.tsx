@@ -28,7 +28,7 @@ export default function Page() {
                                 <Image
                                     src="/yatzy.png"
                                     alt="Yatzy Game"
-                                    className="rounded-lg object-contain"
+                                    className="rounded-md object-contain"
                                     width={500}
                                     height={100}
                                 />
