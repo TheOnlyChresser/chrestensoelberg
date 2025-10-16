@@ -21,11 +21,26 @@ import type {
 import { BannerBlock } from '@/blocks/Banner/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { cn } from '@/utilities/ui'
-import {StateValues, TextStateFeatureProps} from "@payloadcms/richtext-lexical/dist/features/textState/feature.server";
-
+import type {Prettify} from "ts-essentials";
+import type {PropertiesHyphenFallback} from "csstype";
 type NodeTypes =
   | DefaultNodeTypes
   | SerializedBlockNode<CTABlockProps | MediaBlockProps | BannerBlockProps | CodeBlockProps>
+
+type StyleObject = Prettify<{
+  [K in keyof PropertiesHyphenFallback]?: Extract<PropertiesHyphenFallback[K], string> | undefined;
+}>;
+type StateValues = {
+  [stateValue: string]: {
+    css: StyleObject;
+    label: string;
+  };
+};
+type TextStateFeatureProps = {
+  state: {
+    [stateKey: string]: StateValues;
+  };
+};
 
 const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
   const { value, relationTo } = linkNode.fields.doc!
