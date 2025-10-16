@@ -111,7 +111,6 @@ export default function RootLayout({
                 "name": "Chresten Soelberg",
                 "jobTitle": "Frontend Udvikler",
                 "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
-                "image": "https://www.chrestensoelberg.dk/avatar.png",
                 "sameAs": [
                   "https://github.com/TheOnlyChresser",
                   "https://linkedin.com/in/chresten-soelberg-4577b2272"

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image"
+import {Pointer} from "@/components/ui/pointer";
 
 export default function Page() {
     return (
@@ -47,12 +48,13 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute z-50 left-full top-1/2 -translate-y-1/2 ml-4 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg pointer-events-none">
-                            <p>
-                                Yatzy lavet med Flask og Next.js. Brugere kan oprette en server, dele et link og spille sammen online med live opdatering af point og et tur-system. Projektet kombinerer Python backend og NextJS frontend.
-                            </p>
-                            <div className="absolute left-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-b-2 border-l-2 border-sky-500 border-dashed"></div>
-                        </div>
+                        <Pointer>
+                            <div className="absolute -top-80 -left-20 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                <p>
+                                    Yatzy lavet med Flask og Next.js. Brugere kan oprette en server, dele et link og spille sammen online med live opdatering af point og et tur-system. Projektet kombinerer Python backend og NextJS frontend.
+                                </p>
+                            </div>
+                        </Pointer>
 
                     </Link>
                     <Link className="col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500" href="https://newtonsmethod.vercel.app/">
