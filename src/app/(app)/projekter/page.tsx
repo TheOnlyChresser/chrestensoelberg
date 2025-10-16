@@ -91,12 +91,13 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="z-100 absolute left-full top-1/2 -translate-y-1/2 ml-4 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg pointer-events-none">
-                            <p>
-                                En moderne hjemmeside lavet med NextJS som inkludere animationer og mere. Efter at udfylde de relevante parametre bliver man sendt til /resultater hvor du kan se nulpunktet for den givne funktion, en graf og meget mere.
-                            </p>
-                            <div className="absolute left-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-b-2 border-l-2 border-sky-500 border-dashed"></div>
-                        </div>
+                        <Pointer>
+                            <div className="absolute -top-88 -left-116 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                <p>
+                                    En moderne hjemmeside lavet med NextJS som inkludere animationer og mere. Efter at udfylde de relevante parametre bliver man sendt til /resultater hvor du kan se nulpunktet for den givne funktion, en graf og meget mere.
+                                </p>
+                            </div>
+                        </Pointer>
 
                     </Link>
                 </div>
