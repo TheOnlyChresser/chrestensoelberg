@@ -25,7 +25,7 @@ export default function Navbar () {
     })
     return (
         <nav className="fixed justify-center items-center w-full flex-col z-1000">
-            <div className="justify-between px-2 pt-2 items-center flex flex-row w-full">
+            <div className="justify-between px-2 pt-2 items-center flex flex-row w-full 2xl:px-[12.5vw]">
                 <Link href="/" className="mb-2 flex items-center justify-center cursor-pointer">
                     <Image
                     width={50}
