@@ -1,8 +1,8 @@
-import Hero from "@/components/ChresserComponents/Hero";
-import OmMig from "@/components/ChresserComponents/OmMig";
-import Kontakt from "@/components/ChresserComponents/Kontakt";
+import Hero from "@/components/ChresserComponents/sections/Hero";
+import OmMig from "@/components/ChresserComponents/sections/OmMig";
+import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import Script from "next/script";
-import Quote from "@/components/ChresserComponents/Quote";
+import Quote from "@/components/ChresserComponents/sections/Quote";
 
 export const metadata = {
   title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
@@ -97,7 +97,7 @@ export default function Home() {
       />
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
           <Hero/>
-          <Quote/>
+          <Quote person="Stephen Hawking">Videns største fjende er ikke uvidenhed, det er illusionen om viden.</Quote>
           <OmMig/>
           <Kontakt/>
         </main>
