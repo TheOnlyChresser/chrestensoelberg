@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image"
 import {Pointer} from "@/components/ui/pointer";
+import {CursorFollow, CursorProvider} from "@/components/ui/shadcn-io/animated-cursor";
 
 export default function Page() {
     return (
@@ -48,13 +49,15 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <Pointer>
-                            <div className="absolute -top-80 -left-20 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
-                                <p>
-                                    Yatzy lavet med Flask og Next.js. Brugere kan oprette en server, dele et link og spille sammen online med live opdatering af point og et tur-system. Projektet kombinerer Python backend og NextJS frontend.
-                                </p>
-                            </div>
-                        </Pointer>
+                        <CursorProvider>
+                            <CursorFollow>
+                                <div className="w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                    <p>
+                                        Yatzy lavet med Flask og Next.js. Brugere kan oprette en server, dele et link og spille sammen online med live opdatering af point og et tur-system. Projektet kombinerer Python backend og NextJS frontend.
+                                    </p>
+                                </div>
+                            </CursorFollow>
+                        </CursorProvider>
 
                     </Link>
                     <Link className="col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500" href="https://newtonsmethod.vercel.app/">
@@ -91,13 +94,15 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <Pointer>
-                            <div className="absolute -top-88 -left-116 w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
-                                <p>
-                                    En moderne hjemmeside lavet med NextJS som inkludere animationer og mere. Efter at udfylde de relevante parametre bliver man sendt til /resultater hvor du kan se nulpunktet for den givne funktion, en graf og meget mere.
-                                </p>
-                            </div>
-                        </Pointer>
+                        <CursorProvider>
+                            <CursorFollow>
+                                <div className="w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                    <p>
+                                        En moderne hjemmeside lavet med NextJS som inkludere animationer og mere. Efter at udfylde de relevante parametre bliver man sendt til /resultater hvor du kan se nulpunktet for den givne funktion, en graf og meget mere.
+                                    </p>
+                                </div>
+                            </CursorFollow>
+                        </CursorProvider>
 
                     </Link>
                 </div>
