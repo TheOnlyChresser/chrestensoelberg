@@ -26,7 +26,7 @@ export default function Page() {
                                     </span>
                                 </h3>
                             </div>
-                            <div className="flex w-full max-h-48 md:max-h-56 lg:max-h-64 group-hover:border group-active:border border-black group-active:border-sky-500 group-hover:border-sky-500 rounded-md">
+                            <div className="flex w-full max-h-48 md:max-h-56 lg:max-h-64 border border-gray-500 group-active:border-sky-500 group-hover:border-sky-500 rounded-md">
                                 <Image
                                     src="/yatzy.png"
                                     alt="Yatzy Game"
@@ -71,7 +71,7 @@ export default function Page() {
                                     </span>
                                 </h3>
                             </div>
-                            <div className="flex w-full max-h-48 md:max-h-56 lg:max-h-64 group-hover:border group-active:border group-active:border-sky-500 group-hover:border-sky-500 rounded-md">
+                            <div className="flex w-full max-h-48 md:max-h-56 lg:max-h-64 border border-gray-500 group-active:border-sky-500 group-hover:border-sky-500 rounded-md">
                                 <Image
                                     src="/newtonsmethod.png"
                                     alt="Newtons metode hjemmeside"
