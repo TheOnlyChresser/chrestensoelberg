@@ -26,7 +26,7 @@ export default function Navbar () {
     return (
         <nav className="fixed justify-center items-center w-full flex-col z-1000">
             <div className="justify-between px-2 pt-2 items-center flex flex-row w-full 2xl:px-[12.5vw]">
-                <Link href="/public" className="mb-2 flex items-center justify-center cursor-pointer">
+                <Link href="/" className="mb-2 flex items-center justify-center cursor-pointer">
                     <Image
                     width={50}
                     height={50}
@@ -38,8 +38,8 @@ export default function Navbar () {
                 <div className="group">
                     <Link href="/noter" className="navLink">Noter</Link>
                     <Link href="/projekter" className="navLink">Projekter</Link>
-                    <Link href="/public#skills" className="navLink" >Skills</Link>
-                    <Link href="/public#kontakt" className="navLink">Kontakt</Link>
+                    <Link href="/#skills" className="navLink" >Skills</Link>
+                    <Link href="/#kontakt" className="navLink">Kontakt</Link>
                 </div>
             </div>
         </nav>
