@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Button from "./ui/Button";
 
 export default function Home() {
     return (
@@ -19,10 +20,9 @@ export default function Home() {
                 <p className="text-center mt-4 text-md text-neutral-500 bg-white/60 rounded-md p-1">
                     Jeg er en average og <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">kedelig</span> HTX'er med for mange interesser.
                 </p>
-                <button onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }} className="p-4 border-2 border-blue-500 rounded-2xl text-xl mt-8 text-black/80 cursor-pointer
-    font-semibold shadow-sm hover:shadow-md hover:bg-blue-500 hover:text-blue-50 active:shadow-md active:bg-blue-500 active:text-blue-50">
+                <Button size="md" className="mt-8" onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }}>
                     Giv mig et kald
-                </button>
+                </Button>
             </div>
             <div className="hidden md:flex justify-center mt-24 md:mt-0">
                 <Image src="/avatar.png" height={400} width={400} alt="Avatar" aria-placeholder="Avatar" />

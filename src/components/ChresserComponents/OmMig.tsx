@@ -1,7 +1,7 @@
 "use client"
 
-import SkillCard from "@/components/SkillCard";
-import Animations from "@/components/animations";
+import SkillCard from "@/components/ChresserComponents/SkillCard";
+import Animations from "@/components/ChresserComponents/animations";
 import { Marquee } from "@/components/ui/marquee";
 
 export default function OmMig() {

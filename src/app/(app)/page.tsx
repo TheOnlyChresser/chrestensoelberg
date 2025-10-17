@@ -1,8 +1,8 @@
-import Hero from "@/components/Hero";
-import OmMig from "@/components/OmMig";
-import Kontakt from "@/components/Kontakt";
+import Hero from "@/components/ChresserComponents/Hero";
+import OmMig from "@/components/ChresserComponents/OmMig";
+import Kontakt from "@/components/ChresserComponents/Kontakt";
 import Script from "next/script";
-import Quote from "@/components/Quote";
+import Quote from "@/components/ChresserComponents/Quote";
 
 export const metadata = {
   title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
