@@ -15,7 +15,7 @@ export default function Page() {
                 </div>
 
                 <div className="mx-4 sm:mx-8 lg:mx-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-y-4 gap-x-4 lg:gap-y-8 lg:gap-x-8 xl:gap-x-8">
-                    <Link className="z-50 col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500" href="https://jatzy.vercel.app/">
+                    <Link className="z-50 col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500/40" href="https://jatzy.vercel.app/">
                         <div className="p-4 pt-0">
                             <div className="prose font-bold mb-4">
                                 <h3>
@@ -60,7 +60,7 @@ export default function Page() {
                         </CursorProvider>
 
                     </Link>
-                    <Link className="col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500" href="https://newtonsmethod.vercel.app/">
+                    <Link className="col-span-3 group relative glass-box hover:cursor-pointer hover:bg-sky-500/40 hover:border-sky-500/80 hover:text-white overflow-visible transition-transform hover:scale-[0.98] hover:shadow-sky-500/40" href="https://newtonsmethod.vercel.app/">
                         <div className="p-4 pt-0">
                             <div className="prose font-bold mb-4">
                                 <h3>
