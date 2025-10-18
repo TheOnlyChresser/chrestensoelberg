@@ -1,6 +1,12 @@
 import Button from "../ui/Button";
 import Feature from "@/components/ChresserComponents/ui/Features";
 import Quote from "@/components/ChresserComponents/sections/Quote";
+import {
+    PriceBlockWrappper,
+    PriceBlockTitle,
+    PriceBlockFeatures,
+    PriceBlockUndertitle, PriceBlockTextWrapper
+} from "@/components/ChresserComponents/ui/Priceblock";
 
 export default function Hero() {
     return (
@@ -23,8 +29,72 @@ export default function Hero() {
                     <Feature overskrift="Service">Du får 2 timers gratis support m.m. til de små justeringer.</Feature>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-center mb-80">
+            <div className="flex flex-col items-center justify-center mb-20">
             <Quote person="eksempel.dk">Jeg har aldrig haft problemer siden jeg købte min hjemmeside hos ham</Quote>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+            <div className="mb-40 grid grid-cols-1 md:grid-cols-3 px-8 place-content-center place-items-center w-[92vw]">
+                <PriceBlockWrappper>
+                    <PriceBlockTextWrapper>
+                    <PriceBlockTextWrapper>
+                        <PriceBlockTitle>
+                            Klippekort
+                        </PriceBlockTitle>
+                        <PriceBlockUndertitle>
+                            Et klippekort af 10 sessioner af en varighed på et kvarter
+                        </PriceBlockUndertitle>
+                    </PriceBlockTextWrapper>
+                    <PriceBlockFeatures>
+                        <li>Værdi for pengene</li>
+                        <li>10 klip</li>
+                        <li>Gyldigt i tre år</li>
+                        <li>Fleksibel booking</li>
+                        <li>Telefonsamtaler eller chat</li>
+                    </PriceBlockFeatures>
+                    </PriceBlockTextWrapper>
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">Køb for 500kr</Button>
+                </PriceBlockWrappper>
+                <PriceBlockWrappper>
+                <PriceBlockTextWrapper>
+                    <PriceBlockTextWrapper>
+                        <PriceBlockTitle>
+                            Online visitkort
+                        </PriceBlockTitle>
+                        <PriceBlockUndertitle>
+                            Et online visitkort for at styrke din synlighed online
+                        </PriceBlockUndertitle>
+                    </PriceBlockTextWrapper>
+                    <PriceBlockFeatures>
+                        <li>Responsivt design</li>
+                        <li>Skræddersyet design</li>
+                        <li>1-2 sider</li>
+                        <li>Kontaktformular</li>
+                        <li>SEO optimeret</li>
+                    </PriceBlockFeatures>
+            </PriceBlockTextWrapper>
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">Køb for 989 kr</Button>
+                </PriceBlockWrappper>
+                <PriceBlockWrappper>
+                <PriceBlockTextWrapper>
+                    <PriceBlockTextWrapper>
+                        <PriceBlockTitle>
+                            Hjemmeside
+                        </PriceBlockTitle>
+                        <PriceBlockUndertitle>
+                            En komplet hjemmeside til virksomhed eller privatperson
+                        </PriceBlockUndertitle>
+                    </PriceBlockTextWrapper>
+                    <PriceBlockFeatures>
+                        <li>Responsivt design</li>
+                        <li>Skræddersyet design</li>
+                        <li>Op til 10 sider og CMS</li>
+                        <li>Kontaktformular</li>
+                        <li>SEO optimeret</li>
+                    </PriceBlockFeatures>
+            </PriceBlockTextWrapper>
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">Kontakt for pris</Button>
+                </PriceBlockWrappper>
+            </div>
             </div>
         </main>
     )
