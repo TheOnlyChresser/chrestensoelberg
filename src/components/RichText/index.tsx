@@ -85,7 +85,7 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
     mediaBlock: ({ node }) => (
       <MediaBlock
         className="p-8 blocks"
-        imgClassName="m-1"
+        imgClassName="m-0"
         {...node.fields}
         captionClassName="mx-auto"
         enableGutter={false}
