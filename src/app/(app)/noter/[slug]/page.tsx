@@ -69,7 +69,7 @@ export default async function Post({ params: paramsPromise }: Args) {
               <RichText className="max-w-full md:max-w-[75vw] relative mt-4" data={post.content as DefaultTypedEditorState} enableGutter={false} />
             </MathJax>
           </MathJaxContext>
-          <h1 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h1>
+          <h2 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h2>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
               className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr] mx-4"
