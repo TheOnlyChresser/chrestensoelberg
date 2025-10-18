@@ -43,7 +43,7 @@ export default function Button ({className = "", children, color = "blue", size 
             case "reverse":
                 return `${basecolor.border} ${basecolor.bg} ${basecolor.text} hover:bg-transparent active:bg-transparent hover:text-black/80 active:text-black/80`
             case "animated":
-                return `text-black/80 ${basecolor.border} hover:${basecolor.bg} hover:duration-500 hover:scale-[1.02] active:scale-[0.98] transition-transform duration-300 ease-out hover:${basecolor.text}`
+                return `text-black/80 ${basecolor.border} hover:${basecolor.bg} hover:duration-500 hover:scale-102 active:scale-98 transition-transform duration-300 ease-out hover:${basecolor.text}`
         }
 
     }
