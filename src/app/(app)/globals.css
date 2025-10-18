@@ -146,6 +146,12 @@ html, body {
   .prose p {
     @apply text-[#171717] text-lg leading-8 mx-5 p-1 text-wrap font-normal;
   }
+  .list-bullet li {
+    @apply text-[#171717] text-lg leading-8 mx-5 p-1 text-wrap font-normal;
+  }
+  .list-bullet {
+    @apply mt-2 mb-1 mx-5 ml-15 list-disc text-lg space-y-2;
+  }
   .list-number li {
     @apply text-[#171717] leading-5 text-lg;
   }
