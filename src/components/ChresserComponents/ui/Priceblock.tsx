@@ -1,6 +1,4 @@
-//TODO: tilføj tag som f.eks. "MEST POPULÆRE" eller "MEST VÆRDI"
-
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
 type PriceBlockWrapperProps = HTMLAttributes<HTMLDivElement> & {
     children: ReactNode;
@@ -22,17 +20,17 @@ type PriceBlockUndertitleProps = HTMLAttributes<HTMLParagraphElement> & {
     className?: string;
 }
 
-export function PriceBlockWrappper({children, className = "", ...props}: PriceBlockWrapperProps) {
+export function PriceBlockWrappper({ children, className = "", ...props }: PriceBlockWrapperProps) {
     return (
-        <div className={`flex flex-col rounded-sm bg-gray-100 w-[28vw] h-[64vh] border-2 shadow-md border-black/80 items-center justify-between p-4 ${className}`} {...props}>
+        <div className={`flex flex-col rounded-xl bg-white w-full md:w-[28vw] min-h-[40vh] md:min-h-[65vh] border border-gray-200 shadow-lg items-center justify-between p-6 transition hover:scale-102 hover:shadow-xl ${className}`}{...props}>
             {children}
         </div>
     )
 }
 
-export function PriceBlockTitle({children, className = "", ...props}: PriceBlockWrapperProps) {
+export function PriceBlockTitle({children, className = "", ...props}: PriceBlockTitleProps) {
     return (
-        <div className={`flex flex-col w-full text-2xl pt-4 text-black/80 text-center font-bold ${className}`} {...props}>
+        <div className={`w-full text-3xl font-semibold text-center text-gray-800 ${className}`} {...props}>
             <h2>{children}</h2>
         </div>
     )
@@ -40,8 +38,8 @@ export function PriceBlockTitle({children, className = "", ...props}: PriceBlock
 
 export function PriceBlockFeatures({children, className = "", ...props}: PriceBlockFeaturesProps) {
     return (
-        <div className="px-8 py-4 flex items-start justify-between w-full">
-            <ul className={`list-disc marker:text-sky-500 list-inside text-lg ${className}`} {...props}>
+        <div className="px-4 py-4 w-full">
+            <ul className={`list-disc list-inside marker:text-sky-500 text-base text-gray-700 space-y-1 ${className}`} {...props}>
                 {children}
             </ul>
         </div>
@@ -50,7 +48,7 @@ export function PriceBlockFeatures({children, className = "", ...props}: PriceBl
 
 export function PriceBlockUndertitle({children, className = "", ...props}: PriceBlockUndertitleProps) {
     return (
-        <p className={`text-center text-gray-500 pb-2 ${className}`} {...props}>
+        <p className={`text-center text-gray-500 text-sm pt-2 ${className}`} {...props}>
             {children}
         </p>
     )
@@ -58,7 +56,7 @@ export function PriceBlockUndertitle({children, className = "", ...props}: Price
 
 export function PriceBlockTextWrapper({children, className = "", ...props}: PriceBlockWrapperProps) {
     return (
-        <div className={`space-y-2 justify-start ${className}`} {...props}>
+        <div className={`space-y-2 w-full ${className}`} {...props}>
             {children}
         </div>
     )
