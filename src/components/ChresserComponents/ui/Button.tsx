@@ -8,7 +8,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 type ButtonColor = "blue" | "black" | "green" | "red";
-type ButtonSize = "sm" | "md" | "lg" | "xl";
+type ButtonSize = "sm" | "md" | "lg" | "xl" | "form-md";
 
 export default function Button ({className = "", children, color = "blue", size = "md", ...props}: ButtonProps) {
     const colorClass: Record<ButtonColor, string> = {

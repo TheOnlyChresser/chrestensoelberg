@@ -18,11 +18,12 @@ export default function Home() {
                     Jeg hedder Chresten
                 </h1>
                 <p className="text-center mt-4 text-md text-neutral-500 bg-white/60 rounded-md p-1">
-                    Jeg er en average og <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">kedelig</span> HTX'er med for mange interesser.
+                    Jeg er en average og <span className="bg-clip-text bg-gradient-to-tr from-red-500 to-purple-500 text-transparent font-semibold">"kedelig"</span> HTX'er med for mange interesser.
                 </p>
                 <Button size="md" className="mt-8" onClick={() => { document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' }); }}>
                     Giv mig et kald
                 </Button>
+
             </div>
             <div className="hidden md:flex justify-center mt-24 md:mt-0">
                 <Image src="/avatar.png" height={400} width={400} alt="Avatar" aria-placeholder="Avatar" />
