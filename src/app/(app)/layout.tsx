@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Chresten Soelberg - Frontend Udvikler & HTX'er",
+    template: "%s"
   },
   description: "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
   keywords: [
