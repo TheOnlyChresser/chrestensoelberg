@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all"
 import gsap from "gsap";
+import Button from "@/components/ChresserComponents/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -143,13 +144,9 @@ function Kontakt() {
                     />
                 </div>
                 <div className="w-full flex-center">
-                    <button
-                        type="submit"
-                        className="rounded-md h-10 text-center w-60 text-xl font-bold cursor-pointer transition delay-[25ms] bg-white/30 backdrop-blur-2xl border-black/30 border-1 text-black/90 hover:bg-black/30 hover:text-white/90 active:bg-black/30 active:text-white/90"
-                        aria-label="Send besked til Chresten Soelberg"
-                    >
-                        Send Besked
-                    </button>
+                    <Button color="black" button="reverse" type="submit" aria-label="Send besked til Chresten Soelberg" size="form-md" className="mt-8">
+                        Send besked
+                    </Button>
                 </div>
             </form>
         </section>
