@@ -24,14 +24,20 @@ export const generateMeta = async (args: {
 }): Promise<Metadata> => {
   const { doc } = args
 
+  const serverUrl = getServerSideURL()
   const ogImage = getImageURL(doc?.meta?.image)
 
   const title = doc?.meta?.title
     ? doc?.meta?.title + ''
     : ''
+  const slug = Array.isArray(doc?.slug) ? doc.slug.join('/') : doc?.slug || ''
+  const url = `${serverUrl}/noter/${slug}`
 
   return {
     description: doc?.meta?.description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: mergeOpenGraph({
       description: doc?.meta?.description || '',
       images: ogImage
