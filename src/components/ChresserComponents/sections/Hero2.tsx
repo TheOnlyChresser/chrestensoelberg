@@ -11,7 +11,7 @@ import {
     PriceBlockWrappper,
     PriceBlockTitle,
     PriceBlockFeatures,
-    PriceBlockUndertitle, PriceBlockTextWrapper, PriceBlockPrice
+    PriceBlockUndertitle, PriceBlockTextWrapper, PriceBlockPrice, PriceBlockExtra
 } from "@/components/ChresserComponents/ui/Priceblock";
 import {BlurFade} from "@/components/ui/blur-fade";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
@@ -41,7 +41,7 @@ export default function Hero() {
 
 
     return (
-        <main className="font-montserrat min-h-screen w-full items-center bg-white">
+        <main className="font-dm-sans min-h-screen w-full items-center bg-white">
             <div className="bg-[hsla(82,0%,100%,1)] bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)] px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
                 <BlurFade delay={0.25*4} inView>
                 <span onClick={() => setOpen(true)} className="cursor-pointer bg-gradient-to-r from-lime-100 via-emerald-100 to-teal-100 text-emerald-900 border border-emerald-400 px-4 py-2 rounded-md text-sm md:text-base font-semibold shadow-sm tracking-wide animate-pulse text-center hover:animate-none text-wrap">🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT ×2 🎉</span>
@@ -140,9 +140,12 @@ export default function Hero() {
                     </PriceBlockTextWrapper>
                     <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">Bestil</Button>
                 </PriceBlockWrappper>
-                <PriceBlockWrappper className="scale-102">
+                <PriceBlockWrappper className="scale-104">
                 <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
+                        <PriceBlockExtra>
+                            Mest populære
+                        </PriceBlockExtra>
                         <PriceBlockTitle>
                             Online visitkort
                         </PriceBlockTitle>
@@ -160,7 +163,6 @@ export default function Hero() {
                         <li>Animationer m.m.</li>
                         <li>SEO optimeret</li>
                         <li>Maks 200 ord</li>
-                        <li>Betal først efter du har set det færdige design</li>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
                     <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">Bestil</Button>

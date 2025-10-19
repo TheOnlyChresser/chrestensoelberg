@@ -69,6 +69,15 @@ html, body {
   src: url('/fonts/Montserrat.ttf') format('truetype'), url('/fonts/Montserrat-Italic.ttf') format('truetype');
 }
 
+@font-face{
+  font-family: "DM-Sans";
+  src: url('/fonts/DMSans.ttf') format('truetype'), url('/fonts/DMSans-Italic.ttf') format('truetype');
+}
+
+@utility font-dm-sans {
+  font-family: 'DM-Sans', "sans-serif";
+}
+
 @utility font-arial {
   font-family: Arial, Helvetica, sans-serif;
 }
