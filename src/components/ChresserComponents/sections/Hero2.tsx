@@ -144,7 +144,7 @@ export default function Hero() {
                 <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
                         <PriceBlockExtra>
-                            Mest populære
+                            Anbefalet
                         </PriceBlockExtra>
                         <PriceBlockTitle>
                             Online visitkort
