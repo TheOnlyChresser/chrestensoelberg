@@ -22,7 +22,6 @@ type PriceBlockUndertitleProps = HTMLAttributes<HTMLParagraphElement> & {
 
 type PriceBlockPriceProps = HTMLAttributes<HTMLDivElement> & {
     children: ReactNode;
-    amount: string | number;
     currency?: string;
     className?: string;
 }

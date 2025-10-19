@@ -1,3 +1,4 @@
+"use client"
 //TODO: tilføj "typer" til priceblocks så der står f.eks. ORD i siden ligesom tabeller
 //TODO: find ud af hvor mange af top 100 virksomheder som bruger samme framework/tailwind til hjemmeside
 //TODO: tilføj styling til dark mode
@@ -16,13 +17,41 @@ import {BlurFade} from "@/components/ui/blur-fade";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {AsideWrapper, AsideText, AsideImage} from "@/components/ChresserComponents/ui/Aside";
 import Timeline from "../ui/Timeline"
+import {useState} from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 
 export default function Hero() {
+    const [open, setOpen] = useState(false);
+    const [formData, setFormData] = useState({ name: "", email: "" });
+    const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true)
+        const { error } = await supabase
+            .from("signups")
+            .insert([{ name: formData.name, email: formData.email }]);
+        if (error) {
+            console.error(error);
+            setLoading(false)
+        } else {
+            setSubmitted(true);
+            setLoading(false)
+        }
+    };
+
     return (
-        <main className="font-montserrat min-h-screen w-full items-center md:bg-[hsla(82,0%,100%,1)] md:bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)]">
+        <main className="font-montserrat min-h-screen w-full items-center bg-white">
             <div className="bg-[hsla(82,0%,100%,1)] bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)] px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
                 <BlurFade delay={0.25*4} inView>
-                <span className="cursor-pointer bg-gradient-to-r from-lime-100 via-emerald-100 to-teal-100 text-emerald-900 border border-emerald-400 px-4 py-2 rounded-md text-sm md:text-base font-semibold shadow-sm tracking-wide animate-pulse text-center hover:animate-none text-wrap">🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT ×2 🎉</span>
+                <span onClick={() => setOpen(true)} className="cursor-pointer bg-gradient-to-r from-lime-100 via-emerald-100 to-teal-100 text-emerald-900 border border-emerald-400 px-4 py-2 rounded-md text-sm md:text-base font-semibold shadow-sm tracking-wide animate-pulse text-center hover:animate-none text-wrap">🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT ×2 🎉</span>
                 </BlurFade>
                 <BlurFade delay={0.25} inView>
                     <h1 className="text-5xl px-4 md:text-7xl font-bold leading-tight tracking-tight text-center md:max-w-[60vw]">Hjemmesider, som passer til dig</h1>
@@ -37,6 +66,7 @@ export default function Hero() {
                     </div>
                 </BlurFade>
             </div>
+            <section className="md:bg-[hsla(82,0%,100%,1)] md:bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_20%_21%,hsla(155,100%,85%,1)_0px,transparent_40%)]">
             <div className="flex flex-col items-center mb-40 bg-gray-100/40 py-8 w-full">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-8 w-full">
                     <Feature overskrift="Billig">Det koster blot 989kr for en hjemmeside! Den har også billig vedligholdelse.</Feature>
@@ -47,6 +77,7 @@ export default function Hero() {
                     <Feature overskrift="Service">Du får 2 timers gratis support m.m. til de små justeringer.</Feature>
                 </div>
             </div>
+            </section>
             <div className="flex flex-col items-center justify-center mb-20">
             <Quote person="Chresten Soelberg">Jeg stræber efter at give dig den bedste oplevelse</Quote>
             </div>
@@ -92,7 +123,7 @@ export default function Hero() {
             </AsideWrapper>
 
             <div className="flex flex-col items-center justify-center">
-            <div className="min-h-screen scroll-mt-24 bg-gray-100/40 mb-40 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
+            <div className="min-h-screen scroll-mt-8 bg-gray-100/40 mb-40 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
                 <PriceBlockWrappper>
                     <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
@@ -239,6 +270,47 @@ export default function Hero() {
                     </AccordionItem>
                 </Accordion>
             </section>
+            {open && !submitted && (
+                <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="bg-white rounded-2xl p-6 shadow-lg w-80"
+                    >
+                        <h2 className="text-lg font-semibold mb-3 text-center">
+                            Tilmeld kampagnen 🎉
+                        </h2>
+                        <input
+                            type="text"
+                            placeholder="Dit navn"
+                            className="w-full border rounded-md p-2 mb-2"
+                            value={formData.name}
+                            onChange={(e) =>
+                                setFormData({ ...formData, name: e.target.value })
+                            }
+                            required
+                        />
+                        <input
+                            type="email"
+                            placeholder="Din email"
+                            className="w-full border rounded-md p-2 mb-4"
+                            value={formData.email}
+                            onChange={(e) =>
+                                setFormData({ ...formData, email: e.target.value })
+                            }
+                            required
+                        />
+                        <Button
+                            type="submit"
+                            disabled={loading}
+                            className="px-4 py-2"
+                            button="normal"
+                            size="form-md"
+                        >
+                            {submitted ? "Tilmeldt ✅" : "Tilmeld"}
+                        </Button>
+                    </form>
+                </div>
+            )}
         </main>
     )
 }
