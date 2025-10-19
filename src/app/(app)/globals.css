@@ -116,7 +116,7 @@ html, body {
 }
 
 @utility glass-box {
-  @apply border-1 border-black/80 bg-white/20 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
+  @apply border-1 border-black/20 bg-white/20 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
 }
 
 @utility text-gradient-subtle {
@@ -124,7 +124,7 @@ html, body {
 }
 
 @utility glass-box-2 {
-  @apply text-black border-1 border-black/75 bg-black/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
+  @apply text-black border-1 border-black/20 bg-black/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
 }
 
 @layer base {

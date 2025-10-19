@@ -83,7 +83,7 @@ function Kontakt() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-blue-100/10 shadow-lg ring-1 ring-black/80 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
+                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-blue-100/10 shadow-lg ring-1 ring-black/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
                 aria-label="Kontaktformular"
             >
                 <div>
