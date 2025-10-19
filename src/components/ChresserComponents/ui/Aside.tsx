@@ -1,4 +1,5 @@
 import NextImage from "next/image";
+import {HTMLAttributes, ReactNode} from "react";
 
 type AsideProps = HTMLAttributes<HTMLDivElement> & {
     className?: string;
@@ -15,7 +16,7 @@ type BackgroundColor = "white" | "black" | "blue" | "green";
 
 export function AsideWrapper({children, className = "", color = "white", ...props}: AsideProps) {
 
-    const colorClass: Record<ButtonColor, ButtonColorTypes> = {
+    const colorClass: Record<BackgroundColor, string> = {
         white: "bg-white",
         black: "bg-gray-100/40",
         blue: "bg-blue-100/40",

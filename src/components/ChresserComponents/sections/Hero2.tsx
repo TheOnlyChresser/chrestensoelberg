@@ -18,13 +18,6 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 import {AsideWrapper, AsideText, AsideImage} from "@/components/ChresserComponents/ui/Aside";
 import Timeline from "../ui/Timeline"
 import {useState} from "react";
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl: string = process.env.SUPABASE_URL || "";
-const supabaseAnonKey: string = process.env.SUPABASE_ANON_KEY || "";
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
 
 export default function Hero() {
     const [open, setOpen] = useState(false);
@@ -34,18 +27,18 @@ export default function Hero() {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        setLoading(true)
-        const { error } = await supabase
-            .from("signups")
-            .insert([{ name: formData.name, email: formData.email }]);
-        if (error) {
-            console.error(error);
-            setLoading(false)
-        } else {
-            setSubmitted(true);
-            setLoading(false)
-        }
+        setLoading(true);
+        const res = await fetch("/api/kampagne/tilslut", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        if (data.error) console.error(data.error);
+        else setSubmitted(true);
+        setLoading(false);
     };
+
 
     return (
         <main className="font-montserrat min-h-screen w-full items-center bg-white">
