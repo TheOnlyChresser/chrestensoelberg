@@ -20,8 +20,8 @@ import Timeline from "../ui/Timeline"
 import {useState} from "react";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+const supabaseUrl: string = process.env.SUPABASE_URL || "";
+const supabaseAnonKey: string = process.env.SUPABASE_ANON_KEY || "";
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
@@ -32,7 +32,7 @@ export default function Hero() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault();
         setLoading(true)
         const { error } = await supabase
