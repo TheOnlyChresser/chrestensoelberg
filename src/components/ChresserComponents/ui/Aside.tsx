@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import {HTMLAttributes, ImgHTMLAttributes, ReactNode} from "react";
+import {ComponentProps, HTMLAttributes, ReactNode} from "react";
 
 type AsideProps = HTMLAttributes<HTMLDivElement> & {
     className?: string;
@@ -7,7 +7,7 @@ type AsideProps = HTMLAttributes<HTMLDivElement> & {
     color?: BackgroundColor
 }
 
-type AsideImage = ImgHTMLAttributes<HTMLImageElement> & {
+type AsideImage = ComponentProps<typeof NextImage> & {
     className?: string;
     children?: ReactNode
 }
