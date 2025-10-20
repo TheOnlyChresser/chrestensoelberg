@@ -131,7 +131,7 @@ html, body {
 }
 
 @utility glass-box-2 {
-  @apply text-black border-1 border-black/20 bg-black/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
+  @apply text-black dark:text-white border-1 dark:border-white/20 border-black/20 bg-black/5 dark:bg-white/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
 }
 
 @layer base {
@@ -151,25 +151,25 @@ html, body {
     @apply text-2xl font-bold text-gradient-subtle mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
   }
   .prose p {
-    @apply text-[#171717] text-lg leading-8 mx-5 p-1 text-wrap font-normal;
+    @apply text-[#171717] text-lg leading-8 mx-5 p-1 text-wrap font-normal dark:text-white/80;
   }
   .list-bullet li {
-    @apply text-[#171717] text-lg leading-5 p-1 text-wrap font-normal;
+    @apply text-[#171717] text-lg leading-5 p-1 text-wrap font-normal dark:text-white/80;
   }
   .list-bullet {
     @apply mt-2 mb-1 mx-5 ml-15 list-disc text-lg space-y-2 marker:text-sky-500;
   }
   .list-number li {
-    @apply text-[#171717] leading-5 text-lg p-1 text-wrap font-normal;
+    @apply text-[#171717] leading-5 text-lg p-1 text-wrap font-normal dark:text-white/80;
   }
   .list-number {
     @apply mt-2 mb-1 mx-5 ml-15 list-decimal text-lg space-y-2;
   }
   .prose strong {
-    @apply font-black text-[#171717];
+    @apply font-black text-[#171717] dark:text-white/80;
   }
   .prose a {
-    @apply underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black;
+    @apply underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80;
   }
   .prose {
     overflow-x: hidden;

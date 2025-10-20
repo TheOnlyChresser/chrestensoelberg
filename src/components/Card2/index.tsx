@@ -41,7 +41,7 @@ export const Card: React.FC<{
           {titleToUse && (
               <div className="text-3xl font-bold">
                 <h3 className="!p-0">
-                  <Link className="font-inter no-underline break-all not-prose text-black group-hover:text-white group-active:text-white line-clamp-3 md:line-clamp-2" href={href} ref={link.ref}>
+                  <Link className="font-inter no-underline break-all not-prose text-black dark:text-white group-hover:text-white group-active:text-white line-clamp-3 md:line-clamp-2" href={href} ref={link.ref}>
                     {titleToUse}
                   </Link>
                 </h3>
@@ -58,7 +58,7 @@ export const Card: React.FC<{
                       return (
                           <span
                               key={index}
-                              className="font-inter bg-blue-500/10 group-hover:bg-white/10 group-active:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
+                              className="font-inter bg-blue-500/10 dark:bg-blue-400/20 dark:text-white/80 dark:border-white/20 group-hover:bg-white/10 group-active:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
                           >
                         {categoryTitle}
                       </span>
@@ -68,7 +68,7 @@ export const Card: React.FC<{
                 </div>
               </div>
           )}
-          {description && <div className="mt-1 font-inter">{description && <p>{sanitizedDescription}</p>}</div>}
+          {description && <div className="mt-1 font-inter dark:text-white/80">{description && <p>{sanitizedDescription}</p>}</div>}
         </div>
       </article>
   )
