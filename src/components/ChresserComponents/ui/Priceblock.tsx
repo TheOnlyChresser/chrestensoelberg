@@ -28,7 +28,7 @@ type PriceBlockPriceProps = HTMLAttributes<HTMLDivElement> & {
 
 export function PriceBlockWrappper({ children, className = "", ...props }: PriceBlockWrapperProps) {
     return (
-        <div className={`group flex flex-col rounded-xl bg-white dark:bg-gray-950 w-full md:w-[28vw] min-h-[40vh] md:min-h-[65vh] border border-gray-200 dark:border-gray-800 shadow-lg items-center justify-between p-6 transition-transform hover:scale-105 hover:shadow-xl ${className}`} {...props}>
+        <div className={`group flex flex-col rounded-xl bg-white dark:bg-gray-900 w-full md:w-[28vw] min-h-[40vh] md:min-h-[65vh] border border-gray-200 dark:border-gray-800 shadow-lg items-center justify-between p-6 transition-transform hover:scale-105 hover:shadow-xl ${className}`} {...props}>
             {children}
         </div>
     )
@@ -44,7 +44,7 @@ export function PriceBlockTitle({children, className = "", ...props}: PriceBlock
 
 export function PriceBlockPrice({ children, currency = "kr", className = "", ...props }: PriceBlockPriceProps) {
     return (
-        <div className={`text-center text-xl font-bold text-gray-900 dark:text-gray-100 mt-0 mb-1 ${className}`} {...props}>
+        <div className={`text-center text-xl font-bold text-gray-900 dark:text-gray-50 mt-0 mb-1 ${className}`} {...props}>
             {children}{currency}
         </div>
     )
@@ -53,7 +53,7 @@ export function PriceBlockPrice({ children, currency = "kr", className = "", ...
 export function PriceBlockFeatures({children, className = "", ...props}: PriceBlockFeaturesProps) {
     return (
         <div className="px-4 py-4 w-full flex-1">
-            <ul className={`list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-300 space-y-1 ${className}`} {...props}>
+            <ul className={`list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-200 space-y-1 ${className}`} {...props}>
                 {children}
             </ul>
         </div>

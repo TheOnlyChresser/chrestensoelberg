@@ -73,16 +73,16 @@ export default function Timeline () {
                     <div></div>,
                     <li key={index} className="mb-24 col-start-2 relative timeline-item">
                         <div className="w-12 -ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
-                        <h3 className="dark:text-white ml-6 text-3xl font-bold">{item.title}</h3>
-                        <p className="ml-6 mt-2 text-gray-700 dark:text-gray-300 text-lg">{item.description}</p>
+                        <h3 className="dark:text-gray-50 ml-6 text-3xl font-bold">{item.title}</h3>
+                        <p className="ml-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
                     </li>
                 ]}
                 else {
                     return [
                         <li key={index} className="mb-24 col-start-1 relative timeline-item">
                             <div className="w-12 -mr-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl right-0"></div>
-                            <h3 className="dark:text-white mr-6 text-3xl font-bold">{item.title}</h3>
-                            <p className="mr-6 mt-2 text-gray-700 dark:text-gray-300 text-lg">{item.description}</p>
+                            <h3 className="dark:text-gray-50 mr-6 text-3xl font-bold">{item.title}</h3>
+                            <p className="mr-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
                         </li>,
                         <div></div>
                     ]

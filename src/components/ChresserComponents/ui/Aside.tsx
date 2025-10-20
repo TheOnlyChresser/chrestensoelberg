@@ -18,9 +18,9 @@ export function AsideWrapper({children, className = "", color = "white", ...prop
 
     const colorClass: Record<BackgroundColor, string> = {
         white: "bg-white dark:bg-gray-950",
-        black: "bg-gray-100/40 dark:bg-gray-900/40",
-        blue: "bg-blue-100/40",
-        green: "bg-green-100/40",
+        black: "bg-gray-100/40 dark:bg-gray-900/40 dark:backdrop-blur-sm",
+        blue: "bg-blue-100/40 dark:bg-blue-900/50",
+        green: "bg-green-100/40 dark:bg-green-900/50",
     }
 
     return (

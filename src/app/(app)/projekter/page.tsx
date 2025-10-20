@@ -20,7 +20,7 @@ export default function Page() {
                             <div className="prose font-bold mb-4">
                                 <h3>
                                     <span
-                                        className="-m-4 font-inter no-underline break-all not-prose text-black group-hover:text-white line-clamp-3 md:line-clamp-2 p-1"
+                                        className="-m-4 font-inter no-underline break-all not-prose text-black dark:text-gray-50 group-hover:text-white line-clamp-3 md:line-clamp-2 p-1"
                                     >
                                         Yatzy
                                     </span>
@@ -41,7 +41,7 @@ export default function Page() {
                                     {["HTX", "Programmering", "NextJS", "Flask", "Typescript", "Python", "SQL", "Supabase", "Multiplayer"].map((tag) => (
                                         <span
                                             key={tag}
-                                            className="font-inter bg-blue-500/10 group-hover:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
+                                            className="dark:text-gray-200 font-inter bg-blue-500/10 dark:bg-blue-400/20 group-hover:bg-white/10 border border-black/20 dark:border-white/20 rounded-full px-3 py-1 text-xs uppercase italic"
                                         >
                                             {tag}
                                         </span>
@@ -51,7 +51,7 @@ export default function Page() {
                         </div>
                         <CursorProvider>
                             <CursorFollow>
-                                <div className="w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                <div className="w-64 dark:bg-black dark:text-gray-50 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
                                     <p>
                                         Yatzy lavet med Flask og Next.js. Brugere kan oprette en server, dele et link og spille sammen online med live opdatering af point og et tur-system. Projektet kombinerer Python backend og NextJS frontend.
                                     </p>
@@ -65,7 +65,7 @@ export default function Page() {
                             <div className="prose font-bold mb-4">
                                 <h3>
                                     <span
-                                        className="-m-4 font-inter no-underline break-all not-prose text-black group-hover:text-white line-clamp-3 md:line-clamp-2 p-1"
+                                        className="-m-4 font-inter no-underline break-all not-prose text-black dark:text-gray-50 group-hover:text-white line-clamp-3 md:line-clamp-2 p-1"
                                     >
                                         Newtons metode
                                     </span>
@@ -86,7 +86,7 @@ export default function Page() {
                                     {["HTX", "Matematik", "Programmering", "SRC", "NextJS", "MathJax", "Typescript", "MathJS", "GSAP", "MUI X Charts"].map((tag) => (
                                         <span
                                             key={tag}
-                                            className="font-inter bg-blue-500/10 group-hover:bg-white/10 border border-black/20 rounded-full px-3 py-1 text-xs uppercase italic"
+                                            className="dark:text-gray-200 font-inter bg-blue-500/10 dark:bg-blue-400/20 group-hover:bg-white/10 border border-black/20 dark:border-white/20 rounded-full px-3 py-1 text-xs uppercase italic"
                                         >
                                             {tag}
                                         </span>
@@ -96,7 +96,7 @@ export default function Page() {
                         </div>
                         <CursorProvider>
                             <CursorFollow>
-                                <div className="w-64 bg-white border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
+                                <div className="w-64 bg-white dark:bg-black dark:text-gray-50 border-2 border-sky-500 border-dashed text-sm text-black rounded-lg p-4 ">
                                     <p>
                                         En moderne hjemmeside lavet med NextJS som inkludere animationer og mere. Efter at udfylde de relevante parametre bliver man sendt til /resultater hvor du kan se nulpunktet for den givne funktion, en graf og meget mere.
                                     </p>

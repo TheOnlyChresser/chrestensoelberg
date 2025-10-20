@@ -89,7 +89,7 @@ function Kontakt() {
                 <div>
                     <label
                         htmlFor="name"
-                        className="text-black/80 dark:text-white/80 font-semibold mb-1 block"
+                        className="text-black/80 dark:text-gray-200 font-semibold mb-1 block"
                     >
                         Dit navn:
                     </label>
@@ -98,7 +98,7 @@ function Kontakt() {
                         type="text"
                         name="name"
                         value={userInput.name}
-                        className="bg-blue-500/2 dark:text-white/80 dark:placeholder-white/60 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
+                        className="bg-blue-500/2 dark:text-gray-200 dark:placeholder-white/60 backdrop-blur-sm border dark:border-white/30 border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
                         onChange={handleChange}
                         required
                         aria-required="true"
@@ -108,7 +108,7 @@ function Kontakt() {
                 <div>
                     <label
                         htmlFor="email"
-                        className="text-black/80 dark:text-white/80 font-semibold mb-1 block"
+                        className="text-black/80 dark:text-gray-200 font-semibold mb-1 block"
                     >
                         Din email:
                     </label>
@@ -116,7 +116,7 @@ function Kontakt() {
                         id="email"
                         type="email"
                         name="email"
-                        className="bg-blue-500/2 dark:text-white/80 dark:placeholder-white/60 backdrop-blur-sm border border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
+                        className="bg-blue-500/2 dark:text-gray-200 dark:placeholder-white/60 backdrop-blur-sm border dark:border-white/30 border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
                         value={userInput.email}
                         onChange={handleChange}
                         required
@@ -127,7 +127,7 @@ function Kontakt() {
                 <div>
                     <label
                         htmlFor="message"
-                        className="text-black/80 dark:text-white/80 font-semibold mb-1 block"
+                        className="text-black/80 dark:text-gray-200 font-semibold mb-1 block"
                     >
                         Din besked:
                     </label>
@@ -135,7 +135,7 @@ function Kontakt() {
                         id="message"
                         name="message"
                         rows={5}
-                        className="resize-none dark:text-white/80 bg-blue-500/2 backdrop-blur-sm border border-black/30 dark:border-white/30 text-black/80 placeholder-black/60 dark:placeholder-white/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
+                        className="resize-none dark:text-gray-200 bg-blue-500/2 backdrop-blur-sm border border-black/30 dark:border-white/30 text-black/80 placeholder-black/60 dark:placeholder-white/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
                         value={userInput.message}
                         onChange={handleChange}
                         required

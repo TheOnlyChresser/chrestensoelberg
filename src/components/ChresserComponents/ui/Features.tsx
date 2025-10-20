@@ -112,7 +112,7 @@ export default function Feature ({className = "", children, color = "green", siz
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-12">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
             </svg>
-            <h3 className="text-lg font-bold text-black/80 dark:text-white/80 text-center">
+            <h3 className="text-lg font-bold text-black/80 dark:text-gray-200 text-center">
                 {overskrift}
             </h3>
             <p className="mt-1 text-gray-500 dark:text-gray-400 text-center max-w-[40vw] md:max-w-[20vw]">
