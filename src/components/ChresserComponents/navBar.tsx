@@ -25,8 +25,8 @@ export default function Navbar () {
         })
     })
     return (
-        <nav className="fixed justify-center items-center w-full flex-col z-1000 font-montserrat py-2">
-            <div className="justify-between px-2 pt-2 items-center flex flex-row w-full 2xl:px-[12.5vw]">
+        <nav className="fixed justify-center items-center w-full flex-col z-1000 font-dm-sans py-2">
+            <div className="justify-between px-2 md:px-4 pt-2 items-center flex flex-row w-full 2xl:px-[12.5vw]">
                 <Link href="/" className="mb-2 flex items-center justify-center cursor-pointer">
                     <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 transition-transform duration-300 hover:scale-105 cursor-pointer dark:text-gray-50">Chresten</h2>
                 </Link>

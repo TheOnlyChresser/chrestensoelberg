@@ -45,8 +45,8 @@ export default function Hero() {
 
     return (
         <main className="font-dm-sans min-h-screen w-full items-center bg-white dark:bg-gray-950">
-            <div className="bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-950 dark:to-gray-950
- px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
+            <div className="bg-white bg-[hsla(82,0%,100%,1)] bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)] dark:bg-none w-full">
+            <div className="dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
                 <BlurFade delay={0.25*4} inView>
                     <AttentionSpan onClick={() => setOpen(true)} color="green" size="lg" >
                         🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT 🎉
@@ -73,6 +73,7 @@ export default function Hero() {
                         </a>
                     </div>
                 </BlurFade>
+            </div>
             </div>
             <section className="">
                 <div className="flex flex-col items-center mb-40 bg-gray-100/64 dark:bg-gray-900/64 py-24 w-full relative">
