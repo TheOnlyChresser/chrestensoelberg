@@ -239,20 +239,6 @@ export default function Hero() {
                     Ofte stillede spørgsmål
                 </h2>
                 <Accordion type="single" collapsible className="w-full max-w-5xl mx-auto px-6 md:px-16 lg:px-32">
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger className="dark:text-white text-2xl font-semibold dark:hover:text-white/60 hover:text-primary transition-colors">
-                            Hvorfor er det så billigt?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-[#171717] text-lg dark:text-white/80 leading-relaxed p-2">
-                            <p>
-                                Det er fordi jeg er ung og endnu ikke har mange års erfaring.
-                            </p>
-                            <p>
-                                Du får derfor mere for pengene — kvalitet til en lavere pris.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
-
                     <AccordionItem value="item-2">
                         <AccordionTrigger className="dark:text-white text-2xl font-semibold dark:hover:text-white/60 hover:text-primary transition-colors">
                             Hvad bruger du til at lave hjemmesider?
