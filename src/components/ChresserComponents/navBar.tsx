@@ -25,16 +25,10 @@ export default function Navbar () {
         })
     })
     return (
-        <nav className="fixed justify-center items-center w-full flex-col z-1000">
+        <nav className="fixed justify-center items-center w-full flex-col z-1000 font-montserrat">
             <div className="justify-between px-2 pt-2 items-center flex flex-row w-full 2xl:px-[12.5vw]">
                 <Link href="/" className="mb-2 flex items-center justify-center cursor-pointer">
-                    <Image
-                    width={50}
-                    height={50}
-                    src="/avatar.png"
-                    alt="Chresten Avatar"
-                    className="w-15 h-15"
-                    />
+                    <h2 className="text-3xl font-bold dark:text-white">Chresten</h2>
                 </Link>
                 <div className="group">
                     { usePathname() === "/noter" || usePathname().startsWith("/noter/") &&
