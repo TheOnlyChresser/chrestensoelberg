@@ -70,7 +70,7 @@ export default function Timeline () {
             <div className="absolute h-full w-2 bg-blue-500 dark:bg-blue-700 rounded-xl"/>
             <ul className="border-gray-300 dark:border-gray-700 w-full grid grid-cols-2 gap-16">
                 {items.map((item, index) => { if (index % 2 === 0) { return [
-                    <div></div>,
+                    <div key={index+100}></div>,
                     <li key={index} className="mb-24 col-start-2 relative timeline-item">
                         <div className="w-12 -ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
                         <h3 className="dark:text-gray-50 ml-6 text-3xl font-bold">{item.title}</h3>
@@ -84,7 +84,7 @@ export default function Timeline () {
                             <h3 className="dark:text-gray-50 mr-6 text-3xl font-bold">{item.title}</h3>
                             <p className="mr-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
                         </li>,
-                        <div></div>
+                        <div key={index+100}></div>
                     ]
                 }
                 })}
