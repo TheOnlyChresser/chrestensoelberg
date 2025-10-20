@@ -19,7 +19,7 @@ type ButtonColorTypes = {
 export default function Button ({className = "", children, color = "blue", size = "md", button="outline", ...props}: ButtonProps) {
     const colorClass: Record<ButtonColor, ButtonColorTypes> = {
         blue: {border: "border-blue-500", bg: "bg-blue-500", text: "text-blue-50"},
-        black: {border: "border-black/80", bg: "bg-black", text: "text-gray-50"},
+        black: {border: "border-black/80 dark:border-white/80", bg: "bg-black dark:bg-white", text: "text-gray-50 dark:text-gray-950"},
         green: {border: "border-green-500", bg: "bg-green-500", text: "text-green-50"},
         red: {border: "border-red-500", bg: "bg-red-500", text: "text-red-50"},
     }
@@ -41,7 +41,7 @@ export default function Button ({className = "", children, color = "blue", size 
             case "outline":
                 return `${basecolor.border} hover:${basecolor.bg} hover:${basecolor.text} active:${basecolor.bg} active:${basecolor.text}`
             case "reverse":
-                return `${basecolor.border} ${basecolor.bg} ${basecolor.text} hover:bg-transparent active:bg-transparent hover:text-black/80 active:text-black/80`
+                return `${basecolor.border} ${basecolor.bg} ${basecolor.text} hover:bg-transparent active:bg-transparent hover:text-black/80 dark:hover:text-white/80 active:text-black/80 dark:active:text-white/80`
             case "animated":
                 return `text-black/80 ${basecolor.border} hover:${basecolor.bg} hover:duration-500 hover:scale-102 active:scale-98 transition-transform duration-300 ease-out hover:${basecolor.text}`
         }

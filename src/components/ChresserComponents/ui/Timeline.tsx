@@ -67,22 +67,22 @@ export default function Timeline () {
 
     return (
         <div className="min-h-[200vh] flex items-center justify-center p-8 relative my-20">
-            <div className="absolute h-full w-2 bg-blue-500 rounded-xl"/>
-            <ul className="border-gray-300 w-full grid grid-cols-2 gap-16">
+            <div className="absolute h-full w-2 bg-blue-500 dark:bg-blue-700 rounded-xl"/>
+            <ul className="border-gray-300 dark:border-gray-700 w-full grid grid-cols-2 gap-16">
                 {items.map((item, index) => { if (index % 2 === 0) { return [
                     <div></div>,
                     <li key={index} className="mb-24 col-start-2 relative timeline-item">
-                        <div className="w-12 -ml-8 mt-4 h-2 bg-blue-500 absolute rounded-xl"></div>
-                        <h3 className="ml-6 text-3xl font-bold">{item.title}</h3>
-                        <p className="ml-6 mt-2 text-gray-700 text-lg">{item.description}</p>
+                        <div className="w-12 -ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
+                        <h3 className="dark:text-white ml-6 text-3xl font-bold">{item.title}</h3>
+                        <p className="ml-6 mt-2 text-gray-700 dark:text-gray-300 text-lg">{item.description}</p>
                     </li>
                 ]}
                 else {
                     return [
                         <li key={index} className="mb-24 col-start-1 relative timeline-item">
-                            <div className="w-12 -mr-8 mt-4 h-2 bg-blue-500 absolute rounded-xl right-0"></div>
-                            <h3 className="mr-6 text-3xl font-bold">{item.title}</h3>
-                            <p className="mr-6 mt-2 text-gray-700 text-lg">{item.description}</p>
+                            <div className="w-12 -mr-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl right-0"></div>
+                            <h3 className="dark:text-white mr-6 text-3xl font-bold">{item.title}</h3>
+                            <p className="mr-6 mt-2 text-gray-700 dark:text-gray-300 text-lg">{item.description}</p>
                         </li>,
                         <div></div>
                     ]

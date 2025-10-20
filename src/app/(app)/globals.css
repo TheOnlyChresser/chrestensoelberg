@@ -2,8 +2,6 @@
 
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:is(.dark *));
-
 @font-face {
   font-family: InterVariable;
   font-style: normal;
@@ -129,7 +127,7 @@ html, body {
 }
 
 @utility text-gradient-subtle {
-  @apply bg-gradient-to-br from-black via-[#1f1f2e] to-[#2a2a36] bg-clip-text text-transparent
+  @apply bg-gradient-to-br from-black via-[#1f1f2e] to-[#2a2a36] dark:from-white dark:via-[#d1d1e0] dark:to-[#c8c8d5] bg-clip-text text-transparent
 }
 
 @utility glass-box-2 {

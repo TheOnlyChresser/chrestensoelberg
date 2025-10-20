@@ -20,17 +20,9 @@ type FeatureSize = "sm" | "md" | "lg" | "xl";
 
 export default function Feature ({className = "", children, color = "green", size = "md", overskrift, ...props}: FeatureProps) {
     useGSAP(()=>{
-        const featureElement = document.querySelectorAll(".feature")
-        const svgElement = document.querySelectorAll(".feature svg")
-        const h3Element = document.querySelectorAll(".feature h3")
-        const pElement = document.querySelectorAll(".feature p")
-
         const features = gsap.utils.toArray<HTMLElement>(".feature");
         const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".feature",
-                start: "top 90%",
-            }
+            scrollTrigger: "feature",
         });
 
         tl.fromTo(features,
@@ -106,7 +98,7 @@ export default function Feature ({className = "", children, color = "green", siz
     const colorClass: Record<FeatureColor, string> = {
         blue: "text-blue-500",
         black: "text-black/80",
-        green: "text-green-500",
+        green: "text-green-500 dark:text-green-600",
         red: "text-red-500",
     }
     const sizeClass: Record<FeatureSize, string> = {
@@ -117,12 +109,15 @@ export default function Feature ({className = "", children, color = "green", siz
     }
     return (
         <div className={`flex items-center flex-col feature ${colorClass[color]} ${sizeClass[size]} ${className}`} {...props}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                 stroke="currentColor" className="size-12">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-12">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
             </svg>
-            <h3 className="text-lg font-bold text-black/80 text-center">{overskrift}</h3>
-            <p className="mt-1 text-gray-500 text-center max-w-[40vw] md:max-w-[20vw]">{children}</p>
+            <h3 className="text-lg font-bold text-black/80 dark:text-white/80 text-center">
+                {overskrift}
+            </h3>
+            <p className="mt-1 text-gray-500 dark:text-gray-400 text-center max-w-[40vw] md:max-w-[20vw]">
+                {children}
+            </p>
         </div>
     )
 }

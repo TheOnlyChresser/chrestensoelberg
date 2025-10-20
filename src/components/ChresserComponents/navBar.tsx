@@ -5,6 +5,7 @@ import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all"
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 export default function Navbar () {
     gsap.registerPlugin(ScrollTrigger)
@@ -36,9 +37,10 @@ export default function Navbar () {
                     />
                 </Link>
                 <div className="group">
-                    <Link href="/noter" className="navLink">Noter</Link>
+                    { usePathname() === "/noter" || usePathname().startsWith("/noter/") &&
+                        (<Link href="/noter" className="navLink">Noter</Link>)}
                     <Link href="/projekter" className="navLink">Projekter</Link>
-                    <Link href="/#skills" className="navLink" >Skills</Link>
+                    <Link href="/#priser" className="navLink" >Priser</Link>
                     <Link href="/#kontakt" className="navLink">Kontakt</Link>
                 </div>
             </div>

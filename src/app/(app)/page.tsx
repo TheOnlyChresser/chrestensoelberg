@@ -1,4 +1,4 @@
-import Hero from "@/components/ChresserComponents/sections/Hero";
+import Hero from "@/components/ChresserComponents/sections/Hero2";
 import OmMig from "@/components/ChresserComponents/sections/OmMig";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import Script from "next/script";
@@ -97,9 +97,6 @@ export default function Home() {
       />
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
           <Hero/>
-          <Quote person="Stephen Hawking">Videns største fjende er ikke uvidenhed, det er illusionen om viden.</Quote>
-          <OmMig/>
-          <Kontakt/>
         </main>
     </>
   );
