@@ -101,11 +101,6 @@ export default function Hero() {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col items-center justify-center mb-20">
-            <Quote person="Chresten Soelberg">
-                Jeg stræber efter at give dig den bedste oplevelse
-            </Quote>
-            </section>
             <section id="tekstsektion">
                 <AsideWrapper color="black">
                     <AsideImage src="/happy.png" alt="avatar" className="md:hidden" />
