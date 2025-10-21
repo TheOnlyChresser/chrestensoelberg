@@ -1,14 +1,14 @@
 import React from 'react'
 
 const defaultLabels = {
-  plural: 'Docs',
-  singular: 'Doc',
+  plural: 'Noter',
+  singular: 'Note',
 }
 
 const defaultCollectionLabels = {
   posts: {
-    plural: 'Posts',
-    singular: 'Post',
+    plural: 'Noter',
+    singular: 'Note',
   },
 }
 
@@ -45,11 +45,11 @@ export const PageRange: React.FC<{
     {}
 
   return (
-    <div className={[className, 'font-semibold'].filter(Boolean).join(' ')}>
-      {(typeof totalDocs === 'undefined' || totalDocs === 0) && 'Search produced no results.'}
+    <div className={[className, 'font-semibold flex items-center justify-center'].filter(Boolean).join(' ')}>
+      {(typeof totalDocs === 'undefined' || totalDocs === 0) && 'Søgning gav ingen resultater'}
       {typeof totalDocs !== 'undefined' &&
         totalDocs > 0 &&
-        `Showing ${indexStart}${indexStart > 0 ? ` - ${indexEnd}` : ''} of ${totalDocs} ${
+        `Viser ${indexStart}${indexStart > 0 ? ` - ${indexEnd}` : ''} af ${totalDocs} ${
           totalDocs > 1 ? plural : singular
         }`}
     </div>
