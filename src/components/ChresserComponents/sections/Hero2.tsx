@@ -7,7 +7,6 @@
 
 import Button from "../ui/Button";
 import Feature from "@/components/ChresserComponents/ui/Features";
-import Quote from "@/components/ChresserComponents/sections/Quote";
 import {
     PriceBlockWrappper,
     PriceBlockTitle,
@@ -230,7 +229,10 @@ export default function Hero() {
                     <Timeline/>
                 </section>
             </div>
-            <section id="faq" className="px-8 w-full mb-40">
+            <section className="pt-40">
+                <Kontakt/>
+            </section>
+            <section id="faq" className="px-8 w-full mb-24">
                 <h2 className="text-gradient-subtle text-5xl font-bold text-center p-2 mb-12 tracking-tight">
                     Ofte stillede spørgsmål
                 </h2>
@@ -281,9 +283,6 @@ export default function Hero() {
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
-            </section>
-            <section className="pt-40">
-                <Kontakt/>
             </section>
             {open && !submitted && (
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center">
