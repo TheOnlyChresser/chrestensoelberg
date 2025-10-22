@@ -31,7 +31,7 @@ export default function Navbar () {
                     <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 transition-transform duration-300 hover:scale-105 cursor-pointer dark:text-gray-50">Chresten</h2>
                 </Link>
                 <div className="group">
-                    { usePathname() === "/noter" || usePathname().startsWith("/noter/") &&
+                    { usePathname() === "/noter" || usePathname().startsWith("/noter") &&
                         (<Link href="/noter" className="navLink">Noter</Link>)}
                     <Link href="/projekter" className="navLink">Projekter</Link>
                     <Link href="/#priser" className="navLink" >Priser</Link>
