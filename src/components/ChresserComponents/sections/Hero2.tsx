@@ -119,7 +119,7 @@ export default function Hero() {
                             <li>Telefonsamtaler eller chat</li>
                         </ul>
                     </AsideText>
-                    <AsideImage src="/happy.png" alt="avatar" className="hidden md:flex" />
+                    <AsideImage src="/happy.png" alt="avatar" type="right" className="hidden md:flex" />
                 </AsideWrapper>
 
                 <AsideWrapper>

@@ -25,8 +25,10 @@ export default function AttentionSpan({children, className = "", color = "green"
     }
 
     return (
-        <span className={`cursor-pointer font-semibold tracking-wide animate-pulse text-center group-hover:animate-none hover:animate-none text-wrap ${className} ${colorStyle[color]} ${sizeStyle[size]}`} {...props}>
+        <div className={`text-center cursor-pointer font-semibold tracking-wide animate-pulse text-center group-hover:animate-none hover:animate-none ${className} ${colorStyle[color]} ${sizeStyle[size]}`}>
+        <span className={`w-full`} {...props}>
             {children}
         </span>
+        </div>
     )
 }

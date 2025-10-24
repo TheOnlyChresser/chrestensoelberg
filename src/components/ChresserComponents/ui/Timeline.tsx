@@ -66,13 +66,13 @@ export default function Timeline () {
     ];
 
     return (
-        <div className="min-h-[200vh] flex items-center justify-center p-8 relative my-20">
+        <div className="relative min-h-[200vh] flex md:items-center md:justify-center p-8 my-20">
             <div className="absolute h-full w-2 bg-blue-500 dark:bg-blue-700 rounded-xl"/>
-            <ul className="border-gray-300 dark:border-gray-700 w-full grid grid-cols-2 gap-16">
+            <ul className="border-gray-300 dark:border-gray-700 w-full md:grid md:grid-cols-2 gap-16">
                 {items.map((item, index) => { if (index % 2 === 0) { return [
                     <div key={index+100}></div>,
                     <li key={index} className="mb-24 col-start-2 relative timeline-item">
-                        <div className="w-12 -ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
+                        <div className="md:w-12 w-4 md:-ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
                         <h3 className="dark:text-gray-50 ml-6 text-3xl font-bold">{item.title}</h3>
                         <p className="ml-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
                     </li>
@@ -80,9 +80,9 @@ export default function Timeline () {
                 else {
                     return [
                         <li key={index} className="mb-24 col-start-1 relative timeline-item">
-                            <div className="w-12 -mr-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl right-0"></div>
-                            <h3 className="dark:text-gray-50 mr-6 text-3xl font-bold">{item.title}</h3>
-                            <p className="mr-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
+                            <div className="w-4 md:w-12 md:-mr-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl md:right-0"></div>
+                            <h3 className="dark:text-gray-50 ml-6 md:mr-6 md:ml-0 text-3xl font-bold">{item.title}</h3>
+                            <p className="md:mr-6 ml-6 md:ml-0 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
                         </li>,
                         <div key={index+100}></div>
                     ]
