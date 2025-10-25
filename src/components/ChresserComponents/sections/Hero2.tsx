@@ -230,7 +230,7 @@ export default function Hero() {
             <section className="pt-40">
                 <Kontakt/>
             </section>
-            <section id="faq" className="px-8 w-full mb-24">
+            <section id="faq" className="md:px-8 px-4 w-full mb-24">
                 <h2 className="text-gradient-subtle text-5xl font-bold text-center p-2 mb-12 tracking-tight">
                     Ofte stillede spørgsmål
                 </h2>
