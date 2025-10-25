@@ -107,7 +107,7 @@ export default function Hero() {
                         </h3>
                         <p className="text-lg mb-4 px-4">
                             Jeg fokuserer på gennemsigtighed og selvfølgelig kvalitet. Ingen skjulte gebyrer og ingen hurtige løsninger –
-                            kun håndskreven kode og design, så du kan bruge din tid, hvor den virkelig tæller.
+                            kun <strong>håndskreven kode</strong> og design, så du kan bruge din tid, hvor den virkelig tæller.
                         </p>
                         <ul className="list-disc pl-8 space-y-1">
                             <li>Værdi for pengene</li>
@@ -128,7 +128,7 @@ export default function Hero() {
                         </h3>
                         <p className="text-lg mb-4 px-4">
                             Jeg bygger alt fra bunden med fokus på ydeevne, sikkerhed og design, der afspejler din identitet.
-                            Du får ikke en færdiglavet skabelon, men et unikt produkt, som er lavet til at vokse sammen med dig.
+                            Du får ikke en færdiglavet skabelon, men et <strong>unikt produkt</strong>, som er lavet til at vokse sammen med dig.
                         </p>
                         <ul className="list-disc pl-8 space-y-1">
                             <li>Responsivt design, der virker overalt</li>
@@ -139,9 +139,54 @@ export default function Hero() {
                         </ul>
                     </AsideText>
                 </AsideWrapper>
+                <AsideWrapper color="black">
+                    <AsideImage src="/code.jpg" alt="WordPress vs Next.js illustration" className="md:hidden" />
+                    <AsideText>
+                        <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
+                            WordPress vs. Next.js
+                        </h3>
+                        <p className="text-lg mb-4 px-4">
+                            Mange hjemmesider bygges stadig i <strong>WordPress</strong> som er et meget populært system med tusindvis af plugins.
+                            Men i dag vælger flere og flere moderne virksomheder, såsom Nike og Starbucks, <strong>Next.js</strong> for bedre ydeevne, sikkerhed og fleksibilitet.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 mt-6">
+                            <div className="bg-white/60 dark:bg-gray-900/60 p-4 rounded-xl shadow-sm">
+                                <h4 className="font-semibold text-2xl mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" className="inline-block"><path fill="#fff" d="M24 4.050000000000001A19.95 19.95 0 1 0 24 43.95A19.95 19.95 0 1 0 24 4.050000000000001Z"/><path fill="#01579b" d="M8.001,24c0,6.336,3.68,11.806,9.018,14.4L9.385,17.488C8.498,19.479,8.001,21.676,8.001,24z M34.804,23.194c0-1.977-1.063-3.35-1.67-4.412c-0.813-1.329-1.576-2.437-1.576-3.752c0-1.465,1.471-2.84,3.041-2.84 c0.071,0,0.135,0.006,0.206,0.008C31.961,9.584,28.168,8,24.001,8c-5.389,0-10.153,2.666-13.052,6.749 c0.228,0.074,0.307,0.039,0.611,0.039c1.669,0,4.264-0.2,4.264-0.2c0.86-0.057,0.965,1.212,0.099,1.316c0,0-0.864,0.105-1.828,0.152 l5.931,17.778l3.5-10.501l-2.603-7.248c-0.861-0.046-1.679-0.152-1.679-0.152c-0.862-0.056-0.762-1.375,0.098-1.316 c0,0,2.648,0.2,4.217,0.2c1.675,0,4.264-0.2,4.264-0.2c0.861-0.057,0.965,1.212,0.104,1.316c0,0-0.87,0.105-1.832,0.152l5.891,17.61 l1.599-5.326C34.399,26.289,34.804,24.569,34.804,23.194z M24.281,25.396l-4.8,13.952c1.436,0.426,2.95,0.652,4.52,0.652 c1.861,0,3.649-0.324,5.316-0.907c-0.04-0.071-0.085-0.143-0.118-0.22L24.281,25.396z M38.043,16.318 c0.071,0.51,0.108,1.059,0.108,1.645c0,1.628-0.306,3.451-1.219,5.737l-4.885,14.135C36.805,35.063,40,29.902,40,24 C40,21.219,39.289,18.604,38.043,16.318z"/><path fill="#01579b" d="M4,24c0,11.024,8.97,20,19.999,20C35.03,44,44,35.024,44,24S35.03,4,24,4S4,12.976,4,24z M5.995,24 c0-9.924,8.074-17.999,18.004-17.999S42.005,14.076,42.005,24S33.929,42.001,24,42.001C14.072,42.001,5.995,33.924,5.995,24z"/></svg> WordPress</h4>
+                                <ul className="list-disc pl-6 space-y-1 text-lg">
+                                    <li>Bruger PHP og plugins</li>
+                                    <li>Kræver et dyrt Webhotel</li>
+                                    <li>Afhængig af temaer og tredjepart</li>
+                                    <li>Kan blive langsom med mange tilføjelser</li>
+                                    <li>Kræver løbende opdatering og vedligeholdelse</li>
+                                    <li>Let at starte men svært at skalere</li>
+                                </ul>
+                            </div>
+                            <div className="bg-green-100/60 dark:bg-green-900/40 p-4 rounded-xl shadow-sm">
+                                <h4 className="font-semibold text-2xl mb-2">
+                                    <svg className="inline-block" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#212121" d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"/></svg> Next.js</h4>
+                                <ul className="list-disc pl-6 space-y-1 text-lg">
+                                    <li>Bygget på React og moderne JavaScript</li>
+                                    <li>Billigere at holde kørende</li>
+                                    <li>Ingen tunge plugins, alt er skræddersyet</li>
+                                    <li>Meget hurtigere loadtider (godt for SEO)</li>
+                                    <li>Bedre sikkerhed og stabilitet</li>
+                                    <li>Perfekt til skræddersyede løsninger</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p className="text-lg mt-6 px-4">
+                            Hos mig får du en <strong>Next.js-hjemmeside</strong>, der er bygget fra bunden uden alle de unødige plugins, hurtig som lynet
+                            og optimeret til Google. Det betyder din hjemmeside kræver er billigere at vedligeholde, har højere hastighed og bedre synlighed online.
+                            Du kan læse mere om NextJS <a href="https://nextjs.org/" className="underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80">her</a> og mere om Wordpress <a href="https://wordpress.com/" className="underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80">her</a>
+                        </p>
+                    </AsideText>
+                    <AsideImage src="/code.jpg" alt="WordPress vs Next.js illustration" type="right" className="hidden md:flex" />
+                </AsideWrapper>
+
             </section>
             <div className="flex flex-col items-center justify-center">
-            <section className="min-h-screen scroll-mt-8 bg-gray-100/40 dark:bg-gray-900/40 mb-40 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
+            <section className="min-h-screen scroll-mt-8 mb-40 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
                 <PriceBlockWrappper>
                     <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
@@ -223,11 +268,11 @@ export default function Hero() {
                     </Button>
                 </PriceBlockWrappper>
             </section>
-                <section>
+                <section className="bg-gray-100/40 dark:bg-gray-900/40 pb-16">
                     <Timeline/>
                 </section>
             </div>
-            <section className="pt-40">
+            <section className="pt-40 mt-20">
                 <Kontakt/>
             </section>
             <section id="faq" className="md:px-8 px-4 w-full mb-24">
@@ -245,8 +290,8 @@ export default function Hero() {
                                 Next.js er et framework bygget oven på React.
                             </p>
                             <p>
-                                React er et JavaScript-framework udviklet af Facebook, der gør det lettere at genbruge komponenter —
-                                det bruges af mange af verdens bedste hjemmesider. Tailwind CSS gør udviklingen hurtigere ved at lade
+                                React er et JavaScript-framework udviklet af Facebook, der gør det lettere at genbruge komponenter.
+                                Det bruges af mange af verdens bedste hjemmesider. Tailwind CSS gør udviklingen hurtigere ved at lade
                                 mig style direkte i markup’en, så alt forbliver overskueligt og effektivt.
                             </p>
                         </AccordionContent>
@@ -258,7 +303,7 @@ export default function Hero() {
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-4 text-[#171717] text-lg dark:text-gray-200 leading-relaxed p-2">
                             <p>
-                                Jeg har brugt hundredevis af timer på at lære programmering og informatik — ikke gennem korte kurser,
+                                Jeg har brugt hundredevis af timer på at lære programmering og informatik og ikke gennem korte kurser,
                                 men gennem vedvarende, praktisk erfaring og undervisning.
                             </p>
                             <p>

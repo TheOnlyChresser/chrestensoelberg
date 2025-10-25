@@ -66,7 +66,7 @@ export default function Timeline () {
     ];
 
     return (
-        <div className="relative min-h-[200vh] flex md:items-center md:justify-center p-8 my-20">
+        <div className="relative min-h-[200vh] flex md:items-center md:justify-center p-8 mt-16">
             <div className="absolute h-full w-2 bg-blue-500 dark:bg-blue-700 rounded-xl"/>
             <ul className="border-gray-300 dark:border-gray-700 w-full md:grid md:grid-cols-2 gap-16">
                 {items.map((item, index) => { if (index % 2 === 0) { return [

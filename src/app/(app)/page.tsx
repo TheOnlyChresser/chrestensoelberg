@@ -5,9 +5,9 @@ import Script from "next/script";
 import Quote from "@/components/ChresserComponents/sections/Quote";
 
 export const metadata = {
-  title: "Billig og Personlig Hjemmeside | Webudvikling uden WordPress | Chresten Soelberg",
+  title: "Billig og Personlig Hjemmeside | Chresten Soelberg",
   description:
-      "Få en billig, skræddersyet og SEO-optimeret hjemmeside bygget fra bunden af mig. Perfekt til selvstændige og privatpersoner, der ønsker et professionelt webdesign uden WordPress.",
+      "Få en billig, skræddersyet og SEO-optimeret hjemmeside bygget fra bunden. Perfekt til selvstændige og privatpersoner, der ønsker et professionelt design.",
   keywords: [
     "billig hjemmeside",
     "personlig webudvikler",
