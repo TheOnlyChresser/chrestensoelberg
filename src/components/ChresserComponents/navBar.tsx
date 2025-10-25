@@ -14,7 +14,7 @@ export default function Navbar () {
             backdropFilter: "blur(8px)",
             duration: 2,
             borderBottom: "1px solid rgba(17, 24, 39, 0.1)",
-            backgroundColor: "rgba(17, 24, 39, 0.02)",
+            backgroundColor: "rgba(255, 255, 255, 0.64)",
             scrollTrigger: {
                 trigger: "#navtrigger",
                 start: "top top",
