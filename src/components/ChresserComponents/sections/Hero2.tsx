@@ -14,10 +14,11 @@ import {
 import {BlurFade} from "@/components/ui/blur-fade";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {AsideWrapper, AsideText, AsideImage} from "@/components/ChresserComponents/ui/Aside";
-import Timeline from "../ui/Timeline"
+import Timeline from "../Timeline"
 import {useState} from "react";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
+import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
 
 export default function Hero() {
     const [open, setOpen] = useState(false);
@@ -50,10 +51,10 @@ export default function Hero() {
                     </AttentionSpan>
                 </BlurFade>
                 <BlurFade delay={0.25} inView>
-                    <h1 className="dark:text-gray-50 mt-4 text-5xl px-4 md:text-7xl font-bold leading-tighter tracking-tight text-center md:max-w-[60vw]">En billig og personlig hjemmeside</h1>
+                    <Heading color="black" size="xl" position="center">En billig og personlig hjemmeside</Heading>
                 </BlurFade>
                 <BlurFade delay={0.25*2} inView>
-                    <p className="px-4 text-md md:text-xl text-center mt-6 text-gray-500 dark:text-gray-400 md:max-w-[72vw] wrap-words md:px-0">Få en personlig hjemmeside, som både er SEO optimeret og skrevet fra bunden af uden Wordpress. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</p>
+                    <Subheading size="md" color="black" position="center">Få en personlig hjemmeside, som både er SEO optimeret og skrevet fra bunden af uden Wordpress. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</Subheading>
                 </BlurFade>
                 <BlurFade delay={0.25*3} inView className="w-full">
                     <div className="mt-12 flex flex-col md:flex-row w-full items-center justify-center">
