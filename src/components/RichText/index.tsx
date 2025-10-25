@@ -117,16 +117,16 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
     if (node.$) {
       text = <span style={styles}>{text}</span>
     }
-    if (node.format && IS_BOLD) {
+    if (node.format & IS_BOLD) {
       text = <strong>{text}</strong>
     }
-    if (node.format && IS_ITALIC) {
+    if (node.format & IS_ITALIC) {
       text = <em>{text}</em>
     }
-    if (node.format && IS_STRIKETHROUGH) {
+    if (node.format & IS_STRIKETHROUGH) {
       text = <span className="line-through">{text}</span>
     }
-    if (node.format && IS_UNDERLINE) {
+    if (node.format & IS_UNDERLINE) {
       text = <span className="underline underline-offset-2 decoration-2">{text}</span>
     }
     return text
