@@ -2,8 +2,6 @@
 
 //TODO: tilføj "typer" til priceblocks så der står f.eks. ORD i siden ligesom tabeller
 //TODO: find ud af hvor mange af top 100 virksomheder som bruger samme framework/tailwind til hjemmeside
-//TODO: tilføj styling til dark mode
-//TODO: gsap animation til features evt med stagger og evt også i stedet for nuværende blur fade for bedre performance
 
 import Button from "../ui/Button";
 import Feature from "@/components/ChresserComponents/ui/Features";
@@ -52,10 +50,10 @@ export default function Hero() {
                     </AttentionSpan>
                 </BlurFade>
                 <BlurFade delay={0.25} inView>
-                    <h1 className="dark:text-gray-50 mt-4 text-5xl px-4 md:text-7xl font-bold leading-tighter tracking-tight text-center md:max-w-[60vw]">Hjemmesider, som passer til dig</h1>
+                    <h1 className="dark:text-gray-50 mt-4 text-5xl px-4 md:text-7xl font-bold leading-tighter tracking-tight text-center md:max-w-[60vw]">Billig og personlig hjemmeside, lavet kun til dig</h1>
                 </BlurFade>
                 <BlurFade delay={0.25*2} inView>
-                    <p className="px-4 text-md md:text-xl text-center mt-6 text-gray-500 dark:text-gray-400 md:max-w-[72vw] wrap-words md:px-0">Alt er lavet kun til dig uden brug af færdiglavet løsninger eller AI. Uden brug af usikre løsninger, som Wordpress. Alt er skrevet fra bunden af.</p>
+                    <p className="px-4 text-md md:text-xl text-center mt-6 text-gray-500 dark:text-gray-400 md:max-w-[72vw] wrap-words md:px-0">Få en personlig hjemmeside som både er SEO optimeret og skrevet fra bunden af uden brug af værktøjer som Wordpress. Så du får et unikt design, hurtig indlæsning og fuld kontrol. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</p>
                 </BlurFade>
                 <BlurFade delay={0.25*3} inView className="w-full">
                     <div className="mt-12 flex flex-col md:flex-row w-full items-center justify-center">
@@ -80,22 +78,22 @@ export default function Hero() {
                     <div className="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-white dark:to-gray-950 h-20"></div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-8 w-full">
                         <Feature overskrift="Billig">
-                            Det koster blot 989kr for en hjemmeside! Den har også billig vedligeholdelse.
+                            Få en profesionel men billig hjemmeside for blot 989kr med billig vedligholdelse!
                         </Feature>
                         <Feature overskrift="Sikker">
-                            Ingen usikre systemer som f.eks. Wordpress.
+                            Ingen usikre systemer som f.eks. Wordpress eller nogen usikre plugins.
                         </Feature>
                         <Feature overskrift="Hurtig">
-                            Du får på under en måned hele din hjemmeside oppe at køre.
+                            Du får på under en måned hele din hjemmeside oppe at køre. Hurtigt og problemfrit.
                         </Feature>
                         <Feature overskrift="Personlig">
-                            Jeg programmere alt fra bunden til dig.
+                            Jeg programmere alt fra bunden til dig og arbejder tæt sammen med dig.
                         </Feature>
                         <Feature overskrift="SEO">
-                            Hjemmesider jeg laver er SEO optimeret.
+                            Hjemmesider jeg laver er alle SEO optimeret, så du bliver fundet på Google.
                         </Feature>
-                        <Feature overskrift="Service">
-                            Du får 2 timers gratis support m.m. til de små justeringer.
+                        <Feature overskrift="Dansk service">
+                            Du får 2 timers gratis support fra mig, til rådgivning og små justeringer.
                         </Feature>
                     </div>
                 </div>

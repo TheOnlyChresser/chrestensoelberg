@@ -5,49 +5,54 @@ import Script from "next/script";
 import Quote from "@/components/ChresserComponents/sections/Quote";
 
 export const metadata = {
-  title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
+  title: "Billig og Personlig Hjemmeside | Webudvikling uden WordPress | Chresten Soelberg",
   description:
-      "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Python, SQL og moderne webteknologier.",
+      "Få en billig, skræddersyet og SEO-optimeret hjemmeside bygget fra bunden af mig. Perfekt til selvstændige og privatpersoner, der ønsker et professionelt webdesign uden WordPress.",
   keywords: [
-    "Chresten Soelberg",
-    "Frontend udvikler",
-    "HTX elev",
-    "React udvikler",
+    "billig hjemmeside",
+    "personlig webudvikler",
+    "webdesigner Danmark",
+    "skræddersyet hjemmeside",
+    "webudvikling uden WordPress",
+    "hjemmeside til små virksomheder",
+    "billig webudvikling",
+    "SEO optimeret hjemmeside",
     "Next.js udvikler",
-    "TypeScript udvikler",
-    "Webdesign",
-    "Webudvikling",
-    "Portfolio",
-    "Frontend",
-    "JavaScript",
-    "CSS",
-    "HTML",
-    "Tailwind CSS",
-    "Figma",
-    "Webdesigner",
-    "Programmør",
-    "Software udvikler",
-    "Dansk udvikler",
-    "udvikler"
+    "Tailwind CSS udvikler",
+    "hjemmeside udvikling",
+    "frontend udvikler",
+    "professionel hjemmeside",
+    "dansk webdesigner",
+    "webudvikler",
+    "hjemmeside pris",
+    "webdesign tilbud",
+    "hurtig hjemmeside",
+    "sikker hjemmeside",
+    "Chresten Soelberg"
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
+    title: "Billig og Personlig Hjemmeside | Chresten Soelberg",
     description:
-        "Jeg er en kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier.",
+        "Professionel, billig og SEO-optimeret hjemmeside bygget fra bunden. Få et unikt design uden WordPress som er perfekt til selvstændige.",
     url: "https://www.chrestensoelberg.dk",
-    siteName: "Chresten Soelberg",
-    images: [
-    ],
+    siteName: "Chresten Soelberg Webudvikling",
     locale: "da_DK",
     type: "website",
+    images: [
+      {
+        url: "https://www.chrestensoelberg.dk/avatar.png",
+        width: 1200,
+        height: 630,
+        alt: "Billig hjemmeside udviklet af Chresten Soelberg",
+      },
+    ],
   },
   twitter: {
     card: "summary",
-    title: "Chresten Soelberg - Frontend Udvikler & HTX'er",
+    title: "Billig & Personlig Hjemmeside | Chresten Soelberg",
     description:
-        "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js og moderne webteknologier.",
-    images: [],
+        "Få en skræddersyet og SEO-optimeret hjemmeside uden WordPress. Jeg bygger alt fra bunden. Hurtigt, sikkert og prisvenligt.",
   },
   alternates: {
     canonical: "https://www.chrestensoelberg.dk",
@@ -69,8 +74,7 @@ export default function Home() {
             "description": "Kreativ HTX-elev og frontend udvikler med ekspertise i React, Next.js, TypeScript og moderne webteknologier",
             "url": "https://www.chrestensoelberg.dk",
             "sameAs": [
-              "https://github.com/chrestensoelberg",
-              "https://linkedin.com/in/chrestensoelberg"
+              "https://github.com/theonlychresser",
             ],
             "knowsAbout": [
               "React",
@@ -97,6 +101,11 @@ export default function Home() {
       />
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
           <Hero/>
+          <footer className="w-full bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">
+            <p className="text-center max-w-3xl">
+              Jeg laver hjemmesider som hobby og ikke som en registreret virksomhed. Jeg gør altid mit bedste for at hjælpe, men kan ikke holdes ansvarlig for tekniske fejl, nedetid eller ændringer hos hostingudbydere.
+            </p>
+          </footer>
         </main>
     </>
   );
