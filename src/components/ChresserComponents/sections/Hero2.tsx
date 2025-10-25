@@ -50,10 +50,10 @@ export default function Hero() {
                     </AttentionSpan>
                 </BlurFade>
                 <BlurFade delay={0.25} inView>
-                    <h1 className="dark:text-gray-50 mt-4 text-5xl px-4 md:text-7xl font-bold leading-tighter tracking-tight text-center md:max-w-[60vw]">Billig og personlig hjemmeside, lavet kun til dig</h1>
+                    <h1 className="dark:text-gray-50 mt-4 text-5xl px-4 md:text-7xl font-bold leading-tighter tracking-tight text-center md:max-w-[60vw]">En billig og personlig hjemmeside</h1>
                 </BlurFade>
                 <BlurFade delay={0.25*2} inView>
-                    <p className="px-4 text-md md:text-xl text-center mt-6 text-gray-500 dark:text-gray-400 md:max-w-[72vw] wrap-words md:px-0">Få en personlig hjemmeside som både er SEO optimeret og skrevet fra bunden af uden brug af værktøjer som Wordpress. Så du får et unikt design, hurtig indlæsning og fuld kontrol. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</p>
+                    <p className="px-4 text-md md:text-xl text-center mt-6 text-gray-500 dark:text-gray-400 md:max-w-[72vw] wrap-words md:px-0">Få en personlig hjemmeside, som både er SEO optimeret og skrevet fra bunden af uden Wordpress. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</p>
                 </BlurFade>
                 <BlurFade delay={0.25*3} inView className="w-full">
                     <div className="mt-12 flex flex-col md:flex-row w-full items-center justify-center">
@@ -78,22 +78,22 @@ export default function Hero() {
                     <div className="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-white dark:to-gray-950 h-20"></div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-8 w-full">
                         <Feature overskrift="Billig">
-                            Få en profesionel men billig hjemmeside for blot 989kr med billig vedligholdelse!
+                            Professionel hjemmeside fra kun 989kr med lav vedligeholdelse.
                         </Feature>
                         <Feature overskrift="Sikker">
-                            Ingen usikre systemer som f.eks. Wordpress eller nogen usikre plugins.
+                            Ingen usikre systemer som WordPress eller plugins.
                         </Feature>
                         <Feature overskrift="Hurtig">
-                            Du får på under en måned hele din hjemmeside oppe at køre. Hurtigt og problemfrit.
+                            Du får på under en måned hele din hjemmeside oppe at køre.
                         </Feature>
                         <Feature overskrift="Personlig">
-                            Jeg programmere alt fra bunden til dig og arbejder tæt sammen med dig.
+                            Jeg programmere alt fra bunden til dig.
                         </Feature>
                         <Feature overskrift="SEO">
-                            Hjemmesider jeg laver er alle SEO optimeret, så du bliver fundet på Google.
+                            Alle hjemmesider er SEO-optimeret for bedre synlighed.
                         </Feature>
                         <Feature overskrift="Dansk service">
-                            Du får 2 timers gratis support fra mig, til rådgivning og små justeringer.
+                            2 timers gratis support, til rådgivning og små justeringer.
                         </Feature>
                     </div>
                 </div>
