@@ -101,9 +101,14 @@ export default function Home() {
       />
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
           <Hero/>
-          <footer className="w-full bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">
+          <footer className="w-full bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">
             <p className="text-center max-w-3xl">
               Jeg laver hjemmesider som hobby og ikke som en registreret virksomhed. Jeg gør altid mit bedste for at hjælpe, men kan ikke holdes ansvarlig for tekniske fejl, nedetid eller ændringer hos hostingudbydere.
+            </p>
+          </footer>
+          <footer className="w-full bg-blue-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">
+            <p className="text-center max-w-3xl">
+              Kom du her for at se mine noter? Se dem <a href="/noter" className="underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80">her</a>
             </p>
           </footer>
         </main>
