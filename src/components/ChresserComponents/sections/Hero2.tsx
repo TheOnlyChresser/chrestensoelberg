@@ -275,14 +275,14 @@ export default function Hero() {
                     <Timeline/>
                 </section>
             </div>
-            <section className="pt-40 mt-20">
+            <section className="md:pt-40 mt-20">
                 <Kontakt/>
             </section>
             <section id="faq" className="md:px-8 px-4 w-full mb-24">
                 <h2 className="text-gradient-subtle text-5xl font-bold text-center p-2 mb-12 tracking-tight">
                     Ofte stillede spørgsmål
                 </h2>
-                <Accordion type="single" collapsible className="w-full max-w-5xl mx-auto px-6 md:px-16 lg:px-32">
+                <Accordion type="single" collapsible className="w-full max-w-5xl mx-auto px-4 md:px-16 lg:px-32">
                     <AccordionItem value="item-2">
                         <AccordionTrigger className="dark:text-gray-50 text-2xl font-semibold dark:hover:text-white/60 hover:text-primary transition-colors">
                             Hvad bruger du til at lave hjemmesider?
