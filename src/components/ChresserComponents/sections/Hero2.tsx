@@ -15,7 +15,7 @@ import {BlurFade} from "@/components/ui/blur-fade";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {AsideWrapper, AsideText, AsideImage} from "@/components/ChresserComponents/ui/Aside";
 import Timeline from "../Timeline"
-import {useState} from "react";
+import {ChangeEvent, useState} from "react";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
@@ -332,7 +332,7 @@ export default function Hero() {
             </section>
             {open && !submitted && (
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center">
-                    <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-6 shadow-lg w-100 relative">
+                    <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 relative">
                         <button className="absolute top-0 right-0 p-4 dark:text-gray-50" onClick={()=>{setOpen(false);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
@@ -345,10 +345,10 @@ export default function Hero() {
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
                             Få en chance for at få pengene tilbage fra købet af et online visitkort.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
                         </p>
-                        <Input type="text" className="mb-2" value={formData.name || ""} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required>
+                        <Input type="text" className="mb-2" value={formData.name || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, name: e.target.value })} required>
                             Dit navn
                         </Input>
-                        <Input type="email" className="mb-4" value={formData.email || ""} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required>
+                        <Input type="email" className="mb-4" value={formData.email || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, email: e.target.value })} required>
                             Din email
                         </Input>
                         <Button type="submit" disabled={loading} className="px-4 py-2" button="normal" size="form-md">
