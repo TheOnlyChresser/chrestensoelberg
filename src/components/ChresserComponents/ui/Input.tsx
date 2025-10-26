@@ -3,14 +3,14 @@ import {HTMLProps, ReactNode} from "react";
 type InputProps = HTMLProps<HTMLInputElement> & {
     children?: ReactNode;
     className?: string;
-    size?: SizeProps;
+    containerSize?: SizeProps;
     color?: ColorProps;
 }
 
 type SizeProps = "sm" | "md" | "lg" | "xl";
 type ColorProps = "black" | "blue" | "yellow" | "green" | "red";
 
-export function Input({children = "", className = "", size = "md", color = "blue", ...props}: InputProps) {
+export function Input({children = "", className = "", containerSize = "md", color = "blue", ...props}: InputProps) {
     const sizeClass: Record<SizeProps, string> = {
         "sm": "",
         "md": "w-full border rounded-md py-2 px-4 focus:outline-none ring-4",
@@ -26,6 +26,6 @@ export function Input({children = "", className = "", size = "md", color = "blue
     }
 
     return (
-        <input className={`${sizeClass[size]} ${colorClass[color]} ${className}`} placeholder={children as string} aria-placeholder={children as string} {...props}/>
+        <input className={`${sizeClass[containerSize]} ${colorClass[color]} ${className}`} placeholder={children as string} aria-placeholder={children as string} {...props}/>
     )
 }
