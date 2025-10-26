@@ -321,7 +321,7 @@ export default function Hero() {
                         <AccordionContent className="flex flex-col gap-4 text-[#171717] dark:text-gray-200 text-lg leading-relaxed p-2">
                             <p>
                                 Det er helt op til dig om du vil inddrages i design processen. Normalt ville jeg spørge dig om dine behov og evt farver.
-                                Ved mindre du betaler ekstra skal du dog sende alt tekst der skal være på din hjemmeside. Hvis du køber et online visitkort kan du få op til 200 ord på din hjemmeside.
+                                Ved mindre du betaler ekstra skal du dog sende alt tekst der skal være på din hjemmeside. Hvis du køber et online visitkort kan der være op til 200 ord på din hjemmeside.
                             </p>
                             <p>
                                 Det sikrer, at du får høj kvalitet og gennemtænkte løsninger.
