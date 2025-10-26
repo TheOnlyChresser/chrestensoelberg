@@ -19,6 +19,7 @@ import {useState} from "react";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
+import {Input} from "@/components/ChresserComponents/ui/Input";
 
 export default function Hero() {
     const [open, setOpen] = useState(false);
@@ -340,10 +341,14 @@ export default function Hero() {
                             🎉 Tilmeld dig kampagnen 🎉
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
-                            Og få en chance for at vinde et online visitkort
+                            Få en chance for at få pengene tilbage fra købet af et online visitkort.
                         </p>
-                        <input type="text" placeholder="Dit navn" className="dark:text-gray-50 dark:placeholder-white/60 w-full border rounded-md p-2 mb-2" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required/>
-                        <input type="email" placeholder="Din email" className="dark:text-gray-50 dark:placeholder-white/60 w-full border rounded-md p-2 mb-4" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required/>
+                        <Input type="text" className="mb-2" value={formData.name || ""} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required>
+                            Dit navn
+                        </Input>
+                        <Input type="email" className="mb-4" value={formData.email || ""} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required>
+                            Din email
+                        </Input>
                         <Button type="submit" disabled={loading} className="px-4 py-2" button="normal" size="form-md">
                             {submitted ? "Tilmeldt ✅" : "Tilmeld"}
                         </Button>

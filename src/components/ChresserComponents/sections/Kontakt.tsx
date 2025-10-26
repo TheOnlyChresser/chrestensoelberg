@@ -7,6 +7,7 @@ import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all"
 import gsap from "gsap";
 import Button from "@/components/ChresserComponents/ui/Button";
+import { Input } from "../ui/Input";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,7 +84,7 @@ function Kontakt() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-blue-100/10 shadow-lg ring-1 ring-black/20 dark:ring-white/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
+                className="kontakt glass-box p-8 rounded-2xl backdrop-blur-md bg-blue-100/4 shadow-lg ring-1 ring-black/20 dark:ring-white/20 flex flex-col gap-6 w-[90%] max-w-xl mt-10 mb-20"
                 aria-label="Kontaktformular"
             >
                 <div>
@@ -93,17 +94,9 @@ function Kontakt() {
                     >
                         Dit navn:
                     </label>
-                    <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        value={userInput.name}
-                        className="bg-blue-500/2 dark:text-gray-200 dark:placeholder-white/60 backdrop-blur-sm border dark:border-white/30 border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
-                        onChange={handleChange}
-                        required
-                        aria-required="true"
-                        placeholder="Indtast dit navn"
-                    />
+                    <Input id="name" type="text" name="name" value={userInput.name} className="" onChange={handleChange} required aria-required="true">
+                        Indtast dit navn
+                    </Input>
                 </div>
                 <div>
                     <label
@@ -112,17 +105,9 @@ function Kontakt() {
                     >
                         Din email:
                     </label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        className="bg-blue-500/2 dark:text-gray-200 dark:placeholder-white/60 backdrop-blur-sm border dark:border-white/30 border-black/30 text-black/80 placeholder-black/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
-                        value={userInput.email}
-                        onChange={handleChange}
-                        required
-                        aria-required="true"
-                        placeholder="din@email.dk"
-                    />
+                    <Input id="email" type="email" name="email" value={userInput.email} onChange={handleChange} required aria-required="true">
+                        Din email
+                    </Input>
                 </div>
                 <div>
                     <label
@@ -135,7 +120,7 @@ function Kontakt() {
                         id="message"
                         name="message"
                         rows={5}
-                        className="resize-none dark:text-gray-200 bg-blue-500/2 backdrop-blur-sm border border-black/30 dark:border-white/30 text-black/80 placeholder-black/60 dark:placeholder-white/60 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-black/80 dark:focus:ring-white/80"
+                        className="resize-none w-full border rounded-md py-2 px-4 focus:outline-none ring-4 dark:text-gray-50 dark:placeholder-white/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 text-black bg-white"
                         value={userInput.message}
                         onChange={handleChange}
                         required
