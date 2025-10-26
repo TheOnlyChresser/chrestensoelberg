@@ -282,7 +282,7 @@ export default function Hero() {
                 <h2 className="text-gradient-subtle text-5xl font-bold text-center p-2 mb-12 tracking-tight">
                     Ofte stillede spørgsmål
                 </h2>
-                <Accordion type="single" collapsible className="w-full max-w-5xl mx-auto px-4 md:px-16 lg:px-32">
+                <Accordion type="single" collapsible className="w-full max-w-5xl mx-auto px-0 md:px-16 lg:px-32">
                     <AccordionItem value="item-2">
                         <AccordionTrigger className="dark:text-gray-50 text-2xl font-semibold dark:hover:text-white/60 hover:text-primary transition-colors">
                             Hvad bruger du til at lave hjemmesider?
@@ -331,7 +331,7 @@ export default function Hero() {
                 </Accordion>
             </section>
             {open && !submitted && (
-                <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center">
+                <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
                     <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 relative">
                         <button className="absolute top-0 right-0 p-4 dark:text-gray-50" onClick={()=>{setOpen(false);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
