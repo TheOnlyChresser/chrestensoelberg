@@ -26,6 +26,7 @@ export default function Hero() {
     const [formData, setFormData] = useState({ name: "", email: "" });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [highlighted, setHighlighted] = useState<boolean>(false);
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
@@ -337,11 +338,12 @@ export default function Hero() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
                             </svg>
                         </button>
+                        <AttentionSpan className="mx-8 mb-1">SLUTTER D. 3 MAJ</AttentionSpan>
                         <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
                             🎉 Tilmeld dig kampagnen 🎉
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
-                            Få en chance for at få pengene tilbage fra købet af et online visitkort.
+                            Få en chance for at få pengene tilbage fra købet af et online visitkort.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
                         </p>
                         <Input type="text" className="mb-2" value={formData.name || ""} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required>
                             Dit navn
@@ -352,6 +354,7 @@ export default function Hero() {
                         <Button type="submit" disabled={loading} className="px-4 py-2" button="normal" size="form-md">
                             {submitted ? "Tilmeldt ✅" : "Tilmeld"}
                         </Button>
+                        <p className="text-sm p-2 text-gray-400"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> Du skal have betalt for dit online visitkort indenfor de seneste 4 måneder</p>
                     </form>
                 </div>
             )}
