@@ -22,7 +22,7 @@ function Kontakt() {
         message: ""
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setUserInput({
             ...userInput,
@@ -122,7 +122,7 @@ function Kontakt() {
                         rows={5}
                         className="resize-none w-full border rounded-md py-2 px-4 focus:outline-none ring-4 dark:text-gray-50 dark:placeholder-white/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 text-black bg-white"
                         value={userInput.message}
-                        onChange={handleChange}
+                        onChange={(e) => setUserInput({ ...userInput, message: e.target.value })}
                         required
                         aria-required="true"
                         placeholder="Skriv din besked her..."
