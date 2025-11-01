@@ -354,7 +354,7 @@ export default function Hero() {
                         <Button type="submit" disabled={loading} className="px-4 py-2" button="normal" size="form-md">
                             {submitted ? "Tilmeldt ✅" : "Tilmeld"}
                         </Button>
-                        <p className="text-sm p-2 text-gray-400"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> Du skal have betalt for dit online visitkort indenfor de seneste 4 måneder</p>
+                        <p className="text-sm p-2 text-gray-400"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> Du skal have købt dit online visitkort indenfor de seneste 4 måneder</p>
                     </form>
                 </div>
             )}
