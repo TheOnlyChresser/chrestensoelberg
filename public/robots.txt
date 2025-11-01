@@ -1,7 +1,9 @@
 User-agent: *
 Disallow: /
 Allow: /$
+Allow: /noter
 Allow: /noter/
+Allow: /projekter
 Allow: /projekter/
 
 Sitemap: https://www.chrestensoelberg.dk/sitemap.xml
