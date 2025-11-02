@@ -1,8 +1,5 @@
 import Hero from "@/components/ChresserComponents/sections/Hero2";
-import OmMig from "@/components/ChresserComponents/sections/OmMig";
-import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import Script from "next/script";
-import Quote from "@/components/ChresserComponents/sections/Quote";
 
 export const metadata = {
   title: "Billig og Personlig Hjemmeside | Chresten Soelberg",

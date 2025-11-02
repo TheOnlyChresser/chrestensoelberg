@@ -6,16 +6,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from "next/script";
 import {Analytics} from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: {
     default: "Chresten Soelberg - Frontend Udvikler & HTX'er",
@@ -146,7 +136,7 @@ export default function RootLayout({
         />
     </head>
     <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
     >
     <SpeedInsights/>
     <Analytics/>
