@@ -67,6 +67,14 @@ html, body {
   @apply bg-gradient-to-br from-black via-[#1f1f2e] to-[#2a2a36] dark:from-white dark:via-[#d1d1e0] dark:to-[#c8c8d5] bg-clip-text text-transparent
 }
 
+@utility glass-box {
+  @apply border-1 border-black/20 dark:border-white/20 bg-white/20 dark:bg-black/20 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
+}
+
+@utility glass-box-2 {
+  @apply text-black dark:text-white border-1 dark:border-white/20 border-black/20 bg-black/5 dark:bg-white/5 rounded-2xl backdrop-blur-xl shadow-lg p-5 hover:shadow-md;
+}
+
 @layer base {
   .prose h1 {
     @apply text-5xl font-bold text-gradient-subtle mb-7 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal;
