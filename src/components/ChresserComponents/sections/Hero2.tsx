@@ -337,7 +337,7 @@ export default function Hero() {
             {open && !submitted && (
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
                     <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
-                        <button className="absolute top-0 right-0 p-4 dark:text-gray-50" onClick={()=>{setOpen(false);}}>
+                        <button className="cursor-pointer text-black hover:text-blue-500 active:scale-92 absolute top-0 right-0 m-4 dark:text-gray-50" onClick={()=>{setOpen(false);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
                             </svg>
