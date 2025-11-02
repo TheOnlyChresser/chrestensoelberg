@@ -4,7 +4,7 @@ import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
 export default function d() {
     return (
         <div className="w-full min-h-screen flex items-center justify-center flex-col">
-            <div className="bg-white flex flex-col items-center justify-center p-4 rounded-2xl shadow-md">
+            <div className="bg-white flex flex-col items-center justify-center p-4 rounded-2xl shadow-sm">
                 <Heading className="!mt-0">404</Heading>
                 <Subheading className="!mt-2">Siden kunne ikke blive fundet.</Subheading>
             </div>
