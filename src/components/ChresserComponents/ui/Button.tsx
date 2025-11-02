@@ -37,7 +37,7 @@ export default function Button ({className = "", children, color = "blue", size 
 
         switch (button) {
             case "normal":
-                return `${basecolor.bg} ${basecolor.text} hover:opacity-90 active:opacity-90 border-transparent !rounded-sm`
+                return `${basecolor.bg} ${basecolor.text} hover:opacity-90 active:opacity-90 active:scale-98 border-transparent !rounded-sm`
             case "outline":
                 return `${basecolor.border} hover:${basecolor.bg} hover:${basecolor.text} active:${basecolor.bg} active:${basecolor.text}`
             case "reverse":
@@ -48,7 +48,7 @@ export default function Button ({className = "", children, color = "blue", size 
 
     }
     return (
-        <button type={props.type || "button"} className={`text-black/80 cursor-pointer font-semibold shadow-sm hover:shadow-md active:shadow-md ${buttonClass(color, button)} ${sizeClass[size]} ${className}`} {...props}>
+        <button type={props.type || "button"} className={`text-black/80 cursor-pointer font-semibold shadow-sm ${buttonClass(color, button)} ${sizeClass[size]} ${className}`} {...props}>
             {children}
         </button>
     )
