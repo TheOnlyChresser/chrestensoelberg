@@ -59,40 +59,7 @@ export default function Feature ({className = "", children, color = "green", siz
                     }
                 )
             }
-
-            if (h3) {
-                const h3Split = new SplitText(h3, {type: "lines"});
-                gsap.from(h3Split.lines, {
-                    opacity: 0,
-                    y: 20,
-                    filter: "blur(6px)",
-                    duration: 1,
-                    ease: "power2.out",
-                    stagger: 0.15,
-                    delay: 0.4,
-                    scrollTrigger: {
-                        trigger: feature,
-                        start: "top 85%",
-                    },
-                })
-            }
-
-            if (p) {
-                const pSplit = new SplitText(p, {type: "lines"});
-                gsap.from(pSplit.lines, {
-                    opacity: 0,
-                    y: 15,
-                    filter: "blur(4px)",
-                    duration: 1,
-                    ease: "power2.out",
-                    stagger: 0.1,
-                    delay: 0.6,
-                    scrollTrigger: {
-                        trigger: feature,
-                        start: "top 85%",
-                    },
-                })
-            }
+            
         })
     })
     const colorClass: Record<FeatureColor, string> = {

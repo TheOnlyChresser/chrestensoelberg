@@ -47,18 +47,16 @@ export default function Hero() {
         <main className="font-dm-sans min-h-screen w-full items-center bg-white dark:bg-gray-950">
             <div className="bg-white bg-[hsla(82,0%,100%,1)] bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)] dark:bg-none w-full">
             <div className="dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
-                <BlurFade delay={0.25*4} inView>
+                <BlurFade delay={0.25} inView>
+                <div>
                     <AttentionSpan onClick={() => setOpen(true)} color="green" size="lg" >
                         🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT 🎉
                     </AttentionSpan>
-                </BlurFade>
-                <BlurFade delay={0.25} inView>
+                </div>
                     <Heading color="black" size="xl" position="center">En billig og personlig hjemmeside</Heading>
                 </BlurFade>
                 <BlurFade delay={0.25*2} inView>
                     <Subheading size="md" color="black" position="center">Få en personlig hjemmeside, som både er SEO optimeret og skrevet fra bunden af uden Wordpress. Perfekt til privatpersoner, som søger en billig og personlig hjemmeside.</Subheading>
-                </BlurFade>
-                <BlurFade delay={0.25*3} inView className="w-full">
                     <div className="mt-12 flex flex-col md:flex-row w-full items-center justify-center">
                         <a href="/#priser" className="md:mr-16 mb-6 md:mb-0"><Button button="normal" size="form-md" className="max-w-64">Få din pris</Button></a>
                         <a href="/#tekstsektion">
