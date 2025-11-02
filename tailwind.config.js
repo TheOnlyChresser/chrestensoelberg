@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        sans: ['var(--font-dmsans)', 'system-ui', 'sans-serif'],
       },
     },
   },
