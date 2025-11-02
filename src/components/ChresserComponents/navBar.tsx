@@ -10,14 +10,18 @@ import {usePathname} from "next/navigation";
 export default function Navbar () {
     gsap.registerPlugin(ScrollTrigger)
     useGSAP(() => {
+        const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const bgStart = isDark ? "rgba(0, 0, 0, 0)" : "rgba(255, 255, 255, 0)";
+        const bgEnd = isDark ? "rgba(0, 0, 0, 0.64)" : "rgba(255, 255, 255, 0.64)";
+
         gsap.fromTo("nav", {
-            backgroundColor: "rgba(255, 255, 255, 0",
+            backgroundColor: bgStart,
         }, {
             boxShadow: "0px 1px 4px rgba(0,0,0,0.08)",
             backdropFilter: "blur(12px)",
             duration: 2,
             borderBottom: "1px solid rgba(17, 24, 39, 0.1)",
-            backgroundColor: "rgba(255, 255, 255, 0.64)",
+            backgroundColor: bgEnd,
             scrollTrigger: {
                 trigger: "#navtrigger",
                 start: "top top",
