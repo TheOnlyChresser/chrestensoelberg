@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="bg-white bg-[hsla(82,0%,100%,1)] bg-[radial-gradient(at_45%_55%,hsla(1,0%,100%,1)_0px,transparent_30%),radial-gradient(at_36%_6%,hsla(181,100%,89%,1)_0px,transparent_25%),radial-gradient(at_2%_11%,hsla(155,100%,85%,1)_0px,transparent_20%)] dark:bg-none w-full">
             <div className="dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 px-4 flex flex-col pt-40 md:pt-0 md:mt-0 md:justify-center items-center min-h-screen">
                 <BlurFade delay={0.25} inView>
-                <div>
+                <div className="flex flex-col justify-center items-center">
                     <AttentionSpan onClick={() => setOpen(true)} color="green" size="lg" >
                         🎉 KICKSTART KAMPAGNE: FÅ ET GRATIS ONLINE VISITKORT 🎉
                     </AttentionSpan>
@@ -336,13 +336,15 @@ export default function Hero() {
             </section>
             {open && !submitted && (
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
-                    <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 relative">
+                    <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
                         <button className="absolute top-0 right-0 p-4 dark:text-gray-50" onClick={()=>{setOpen(false);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
                             </svg>
                         </button>
-                        <AttentionSpan className="mx-8 mb-1">SLUTTER D. 3 MAJ</AttentionSpan>
+                        <div className="w-full items-center justify-center flex mb-4">
+                        <AttentionSpan className="mx-8 mb-1">😬 SLUTTER D. 3 MAJ 😬</AttentionSpan>
+                        </div>
                         <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
                             🎉 Tilmeld dig kampagnen 🎉
                         </h2>
