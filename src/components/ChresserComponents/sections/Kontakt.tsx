@@ -67,7 +67,7 @@ function Kontakt() {
             y: 100,
             scrollTrigger: {
                 trigger: ".kontakt",
-                start: "center bottom",
+                start: "top bottom",
             }
         })
     })
