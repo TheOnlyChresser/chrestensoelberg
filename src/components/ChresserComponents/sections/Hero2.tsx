@@ -204,11 +204,13 @@ export default function Hero() {
                         </PriceBlockUndertitle>
                     </PriceBlockTextWrapper>
                     <PriceBlockFeatures>
-                        <li>Værdi for pengene</li>
-                        <li>10 klip</li>
-                        <li>Gyldigt i tre år</li>
-                        <li>Fleksibel booking</li>
-                        <li>Telefonsamtaler eller chat</li>
+                        <ul className="list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-200 space-y-1">
+                            <li>Værdi for pengene</li>
+                            <li>10 klip</li>
+                            <li>Gyldigt i tre år</li>
+                            <li>Fleksibel booking</li>
+                            <li>Telefonsamtaler eller chat</li>
+                        </ul>
                     </PriceBlockFeatures>
                     </PriceBlockTextWrapper>
                     <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">
@@ -232,12 +234,14 @@ export default function Hero() {
                         </PriceBlockUndertitle>
                     </PriceBlockTextWrapper>
                     <PriceBlockFeatures>
-                        <li>Responsivt design</li>
-                        <li>Skræddersyet design</li>
-                        <li>1-2 sider</li>
-                        <li>Animationer m.m.</li>
-                        <li>SEO optimeret</li>
-                        <li>Maks 200 ord</li>
+                        <ul className="list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-200 space-y-1">
+                            <li>Responsivt design</li>
+                            <li>Skræddersyet design</li>
+                            <li>1-2 sider</li>
+                            <li>Animationer m.m.</li>
+                            <li>SEO optimeret</li>
+                            <li>Maks 200 ord</li>
+                        </ul>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
                     <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">
@@ -258,12 +262,14 @@ export default function Hero() {
                         </PriceBlockUndertitle>
                     </PriceBlockTextWrapper>
                     <PriceBlockFeatures>
+                        <ul className="list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-200 space-y-1">
                         <li>Responsivt design</li>
                         <li>Skræddersyet design</li>
                         <li>Op til 10 sider og CMS</li>
                         <li>Animationer m.m.</li>
                         <li>SEO optimeret</li>
                         <li>Ubegrænset ord</li>
+                        </ul>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
                     <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">

@@ -37,7 +37,7 @@ export function PriceBlockWrappper({ children, className = "", ...props }: Price
 export function PriceBlockTitle({children, className = "", ...props}: PriceBlockTitleProps) {
     return (
         <div className={`w-full text-3xl font-semibold text-center text-gray-800 dark:text-gray-200 mb-0 ${className}`} {...props}>
-            {children}
+            <h3>{children}</h3>
         </div>
     )
 }
@@ -45,7 +45,7 @@ export function PriceBlockTitle({children, className = "", ...props}: PriceBlock
 export function PriceBlockPrice({ children, currency = "kr", className = "", ...props }: PriceBlockPriceProps) {
     return (
         <div className={`text-center text-xl font-bold text-gray-900 dark:text-gray-50 mt-0 mb-1 ${className}`} {...props}>
-            {children}{currency}
+            <span>{children}{currency}</span>
         </div>
     )
 }
@@ -53,9 +53,7 @@ export function PriceBlockPrice({ children, currency = "kr", className = "", ...
 export function PriceBlockFeatures({children, className = "", ...props}: PriceBlockFeaturesProps) {
     return (
         <div className="px-4 py-4 w-full flex-1">
-            <ul className={`list-disc list-inside marker:text-sky-500 text-base text-gray-700 dark:text-gray-200 space-y-1 ${className}`} {...props}>
-                {children}
-            </ul>
+            {children}
         </div>
     )
 }
