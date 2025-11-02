@@ -18,10 +18,10 @@ type ButtonColorTypes = {
 }
 export default function Button ({className = "", children, color = "blue", size = "md", button="outline", ...props}: ButtonProps) {
     const colorClass: Record<ButtonColor, ButtonColorTypes> = {
-        blue: {border: "border-blue-500", bg: "bg-blue-500", text: "text-blue-50"},
+        blue: {border: "border-blue-600", bg: "bg-blue-600", text: "text-blue-50"},
         black: {border: "border-black/80 dark:border-white/80", bg: "bg-black dark:bg-white", text: "text-gray-50 dark:text-gray-950"},
-        green: {border: "border-green-500", bg: "bg-green-500", text: "text-green-50"},
-        red: {border: "border-red-500", bg: "bg-red-500", text: "text-red-50"},
+        green: {border: "border-green-600", bg: "bg-green-600", text: "text-green-50"},
+        red: {border: "border-red-600", bg: "bg-red-600", text: "text-red-50"},
     }
     const sizeClass: Record<ButtonSize, string> = {
         sm: "p-2 border-1 rounded-lg text-sm",
@@ -48,7 +48,7 @@ export default function Button ({className = "", children, color = "blue", size 
 
     }
     return (
-        <button className={`text-black/80 cursor-pointer font-semibold shadow-sm hover:shadow-md active:shadow-md ${buttonClass(color, button)} ${sizeClass[size]} ${className}`} {...props}>
+        <button type={props.type || "button"} className={`text-black/80 cursor-pointer font-semibold shadow-sm hover:shadow-md active:shadow-md ${buttonClass(color, button)} ${sizeClass[size]} ${className}`} {...props}>
             {children}
         </button>
     )

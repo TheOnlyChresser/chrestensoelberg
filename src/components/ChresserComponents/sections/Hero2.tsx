@@ -65,7 +65,7 @@ export default function Hero() {
                             <p className="text-center group cursor-pointer dark:text-gray-50 dark:hover:text-white text-black/80 text-xl flex items-center font-semibold transition-colors duration-300 hover:text-black ml-2 md:ml-0">
                                 Læs mere
                                 <span className="inline-block ml-2 transform transition-all duration-300 md:opacity-0 group-hover:opacity-100 md:-translate-x-2 md:translate-y-2 group-hover:translate-x-0 group-hover:-translate-y-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/>
                                     </svg>
                                 </span>
