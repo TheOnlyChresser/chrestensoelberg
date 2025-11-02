@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import {DM_Sans, Geist, Geist_Mono} from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ChresserComponents/navBar";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from "next/script";
 import {Analytics} from "@vercel/analytics/next";
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -96,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="da" className={`${dmSans.variable} ${geistMono.variable} ${geistSans.variable}`}>
+    <html lang="da">
     <head>
         <link rel="icon" href="/avatar.png" />
         <link rel="apple-touch-icon" href="/avatar.png" />
@@ -151,7 +146,7 @@ export default function RootLayout({
         />
     </head>
     <body
-        className={`antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
     <SpeedInsights/>
     <Analytics/>
