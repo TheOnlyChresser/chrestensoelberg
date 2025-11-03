@@ -301,7 +301,7 @@ export default function Hero() {
                         setNotification(false)
                         console.log("Hjemmeside");
                     }}>
-                        Kontakt
+                        Bestil
                     </Button>
                 </PriceBlockWrappper>
             </section>
