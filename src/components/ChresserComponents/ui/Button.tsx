@@ -9,7 +9,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 type ButtonColor = "blue" | "black" | "green" | "red";
-type ButtonSize = "sm" | "md" | "lg" | "xl" | "form-md" | "form-lg";
+type ButtonSize = "sm" | "md" | "lg" | "xl" | "form-sm" | "form-md" | "form-lg";
 type ButtonType = "normal" | "outline" | "reverse" | "animated";
 type ButtonColorTypes = {
     border: string;
@@ -28,6 +28,7 @@ export default function Button ({className = "", children, color = "blue", size 
         md: "py-4 px-6 border-2 rounded-2xl text-xl",
         lg: "py-6 px-9 border-2 rounded-2xl text-3xl",
         xl: "py-8 px-12 border-2 rounded-2xl text-4xl",
+        "form-sm": "py-2 px-4 w-full border-2 rounded-xl text-lg",
         "form-md": "py-3 px-6 w-full border-2 rounded-xl text-xl",
         "form-lg": "py-4 px-6 w-full border-2 rounded-xl text-xl"
     }

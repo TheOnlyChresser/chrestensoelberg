@@ -3,7 +3,7 @@
 @plugin "tailwindcss-animate";
 
 html, body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM-Sans', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   @apply bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300/40 selection:text-sky-800 hyphens-auto;
@@ -17,6 +17,15 @@ html, body {
 @font-face{
   font-family: "DM-Sans";
   src: url('/fonts/DMSans.ttf') format('truetype'), url('/fonts/DMSans-Italic.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "Boldonse";
+  src: url('/fonts/Boldonse.ttf') format('truetype');
+}
+
+@utility font-boldonse {
+  font-family: 'Boldonse', "sans-serif";
 }
 
 @utility font-dm-sans {

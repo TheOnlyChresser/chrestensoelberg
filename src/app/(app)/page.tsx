@@ -87,7 +87,7 @@ export default function Home() {
           })
         }}
       />
-        <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-inter">
+        <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-dm-sans">
           <Hero/>
           <footer className="w-full bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">
             <p className="text-center max-w-3xl">

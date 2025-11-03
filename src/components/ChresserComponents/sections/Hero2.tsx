@@ -19,7 +19,8 @@ import {ChangeEvent, useState} from "react";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
-import {Input} from "@/components/ChresserComponents/ui/Input";
+import {Input, Textarea} from "@/components/ChresserComponents/ui/Input";
+import send from "../send";
 
 export default function Hero() {
     const [open, setOpen] = useState(false);
@@ -27,6 +28,14 @@ export default function Hero() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [highlighted, setHighlighted] = useState<boolean>(false);
+    const [step, setStep] = useState<number | null>(null);
+    const [ordered, setOrdered] = useState<boolean>(false);
+    const [productName, setProductName] = useState<string>("");
+    const [customerName, setCustomerName] = useState<string>("");
+    const [customerEmail, setCustomerEmail] = useState<string>("");
+    const [customerMessage, setCustomerMessage] = useState<string>("");
+    const [selectedProduct, setSelectedProduct] = useState<string>("");
+    const [notification, setNotification] = useState<boolean>(false);
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
@@ -211,7 +220,14 @@ export default function Hero() {
                         </ul>
                     </PriceBlockFeatures>
                     </PriceBlockTextWrapper>
-                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm" onClick={()=> {
+                        setProductName("et klippekort");
+                        setSelectedProduct("klippekort")
+                        setStep(1);
+                        setOpen(false);
+                        setNotification(false)
+                        console.log("Klippekort");
+                    }}>
                         Bestil
                     </Button>
                 </PriceBlockWrappper>
@@ -242,7 +258,14 @@ export default function Hero() {
                         </ul>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
-                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm" onClick={()=> {
+                        setProductName("et online visitkort");
+                        setSelectedProduct("online visitkort")
+                        setStep(1);
+                        setOpen(false);
+                        setNotification(false)
+                        console.log("Online visitkort");
+                    }}>
                         Bestil
                     </Button>
                 </PriceBlockWrappper>
@@ -270,7 +293,14 @@ export default function Hero() {
                         </ul>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
-                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm">
+                    <Button size="form-md" button="reverse" className="w-2xs !rounded-sm" onClick={()=> {
+                        setProductName("en hjemmeside");
+                        setSelectedProduct("hjemmeside")
+                        setStep(1);
+                        setOpen(false);
+                        setNotification(false)
+                        console.log("Hjemmeside");
+                    }}>
                         Kontakt
                     </Button>
                 </PriceBlockWrappper>
@@ -362,6 +392,63 @@ export default function Hero() {
                         </Button>
                         <p className="text-sm p-2 text-gray-400"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> Du skal have købt dit online visitkort indenfor de seneste 4 måneder</p>
                     </form>
+                </div>
+            )}
+            {step !== null && !ordered && productName && (
+                <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        send({
+                            name: customerName,
+                            email: customerEmail,
+                            message: customerMessage,
+                            product: selectedProduct,
+                        }).then((result) => {
+                            if (result.success) {
+                            setStep(null);
+                            setOrdered(true);
+                            setNotification(true)}
+                        })
+                    }} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
+                        <button className="cursor-pointer text-black hover:text-blue-500 active:scale-92 absolute top-0 right-0 m-4 dark:text-gray-50" onClick={()=>{setStep(null);}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                        <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
+                            🛒 Bestil {productName} 🛒
+                        </h2>
+                        <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
+                            Bestil {productName} ved at udfylde alle felterne. Du ville få en e-mail med yderligere info derefter.
+                        </p>
+                        <Input type="text" className="mb-2" value={customerName || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerName(e.target.value)} required>
+                            Dit navn
+                        </Input>
+                        <Input type="email" className="mb-4" value={customerEmail || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerEmail(e.target.value)} required>
+                            Din email
+                        </Input>
+                        <Textarea className="mb-4" value={customerMessage || ""} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setCustomerMessage(e.target.value)}>Evt kommentar</Textarea>
+                        <Button type="submit" disabled={loading} className="px-4 py-2" button="normal" size="form-sm">
+                            {ordered ? "Bestilt ✅" : "Bestil"}
+                        </Button>
+                    </form>
+                </div>
+            )}
+            {step === null && ordered && productName && notification && (
+                <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
+                    <div className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
+                        <button className="cursor-pointer text-black hover:text-blue-500 active:scale-92 absolute top-0 right-0 m-4 dark:text-gray-50" onClick={()=>{setNotification(false)}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                        <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
+                            🎉 Du har nu bestilt {productName} 🎉
+                        </h2>
+                        <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
+                            Du kan tjekke din e-mail for mere info.
+                        </p>
+                    </div>
                 </div>
             )}
         </main>
