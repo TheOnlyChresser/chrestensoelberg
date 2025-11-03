@@ -421,10 +421,10 @@ export default function Hero() {
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
                             Bestil {productName} ved at udfylde alle felterne. Du ville få en e-mail med yderligere info derefter.
                         </p>
-                        <Input type="text" className="mb-2" value={customerName || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerName(e.target.value)} required>
+                        <Input type="text" name="name" autoComplete="name" className="mb-2" value={customerName || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerName(e.target.value)} required>
                             Dit navn
                         </Input>
-                        <Input type="email" className="mb-4" value={customerEmail || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerEmail(e.target.value)} required>
+                        <Input type="email" className="mb-4" name="email" autoComplete="email" value={customerEmail || ""} onChange={(e: ChangeEvent<HTMLInputElement>) => setCustomerEmail(e.target.value)} required>
                             Din email
                         </Input>
                         <Textarea className="mb-4" value={customerMessage || ""} onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setCustomerMessage(e.target.value)}>Evt kommentar</Textarea>
