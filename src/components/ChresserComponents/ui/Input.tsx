@@ -27,7 +27,7 @@ export function Input({children = "", className = "", containerSize = "md", colo
     const colorClass: Record<ColorProps, string> = {
         "black": "dark:text-gray-50 dark:placeholder-white/60",
         "yellow": "",
-        "blue": "dark:text-gray-50 dark:placeholder-white/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 text-black bg-white",
+        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:ring-blue-600/24 text-black dark:text-gray-900 bg-white",
         "green": "",
         "red": "",
     }
@@ -47,7 +47,7 @@ export function Textarea({children = "", className = "", containerSize = "md", c
     const colorClass: Record<ColorProps, string> = {
         "black": "dark:text-gray-50 dark:placeholder-white/60",
         "yellow": "",
-        "blue": "dark:text-gray-50 dark:placeholder-white/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 text-black bg-white",
+        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:ring-blue-600/24 text-black dark:text-gray-900 bg-white",
         "green": "",
         "red": "",
     }
