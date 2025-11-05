@@ -124,7 +124,7 @@ html, body {
   .prose {
     overflow-x: hidden;
     overflow-y: hidden;
-    @apply font-montserrat;
+    @apply font-montserrat text-[#171717];
   }
   .blocks {
 

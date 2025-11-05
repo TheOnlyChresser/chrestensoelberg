@@ -196,7 +196,7 @@ export default function Hero() {
 
             </section>
             <div className="flex flex-col items-center justify-center">
-            <section className="min-h-screen scroll-mt-8 mb-40 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
+            <section className="min-h-screen scroll-mt-8 mb-20 grid grid-cols-1 md:grid-cols-3 p-8 place-content-center w-full gap-y-4 md:gap-y-0 place-items-center" id="priser">
                 <PriceBlockWrappper>
                     <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
@@ -231,7 +231,7 @@ export default function Hero() {
                         Bestil
                     </Button>
                 </PriceBlockWrappper>
-                <PriceBlockWrappper className="scale-104">
+                <PriceBlockWrappper className="scale-104 !bg-gray-50/40">
                 <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
                         <PriceBlockExtra>
@@ -305,9 +305,30 @@ export default function Hero() {
                     </Button>
                 </PriceBlockWrappper>
             </section>
-                <section className="bg-gray-100/40 dark:bg-gray-900/40 pb-16">
-                    <Timeline/>
-                </section>
+            <section className="mb-40">
+                <AsideWrapper>
+                    <AsideImage src="/forest.jpg" alt="avatar" />
+                    <AsideText>
+                        <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
+                            Hvad er fordelene ved at købe hos mig?
+                        </h3>
+                        <p className="text-lg mb-4 px-4">
+                            Jeg bygger alt fra bunden med fokus på ydeevne, sikkerhed og design, der afspejler din identitet.
+                            Du får ikke en færdiglavet skabelon, men et <strong>unikt produkt</strong>, som er lavet til at vokse sammen med dig.
+                        </p>
+                        <ul className="list-disc pl-8 space-y-1">
+                            <li>Responsivt design, der virker overalt</li>
+                            <li>Hurtig levering uden at gå på kompromis</li>
+                            <li>Personlig dialog og ærlig rådgivning</li>
+                            <li>Gratis support på små ændringer</li>
+                            <li>Langsigtet samarbejde og tryghed</li>
+                        </ul>
+                    </AsideText>
+                </AsideWrapper>
+            </section>
+            <section className="bg-gray-100/40 dark:bg-gray-900/40 pb-16">
+                <Timeline/>
+            </section>
             </div>
             <section className="md:pt-40 mt-20">
                 <Kontakt/>
