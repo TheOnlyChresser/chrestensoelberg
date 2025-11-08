@@ -51,11 +51,10 @@ export function AppSidebar() {
         toggleSidebar,
     } = useSidebar()
     return (
-        <div className={`${isMobile ? "ml-0": open? "ml-[152px]": "ml-15"} transition delay-150`}>
+        <div className={`${isMobile ? "ml-0": open? "ml-[152px]": "ml-12"} transition delay-150`}>
             <Sidebar collapsible={"icon"} variant={"sidebar"}>
                 <SidebarContent>
                     <SidebarGroup>
-                        <SidebarGroupLabel>Poul</SidebarGroupLabel>
                         <SidebarGroupContent>
                             <SidebarMenu>
                                 {items.map((item) => (

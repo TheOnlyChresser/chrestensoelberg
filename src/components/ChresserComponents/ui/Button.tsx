@@ -1,6 +1,6 @@
 import {ButtonHTMLAttributes, ReactNode} from "react";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     className?: string;
     children: ReactNode;
     color?: ButtonColor;

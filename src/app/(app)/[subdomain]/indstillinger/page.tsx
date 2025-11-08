@@ -1,38 +1,91 @@
-//TODO: tilføj parent til den f.eks. /s/a/b/[subdomain] så man ikke kan gå ind på chrestensoelberg.dk/[subdomain] hvor den ikke giver fejl. husk at tilføj / til middleware når det "erstattes"
-
 "use client"
-import {useState} from "react";
-import {Input} from "@/components/ChresserComponents/ui/Input";
-import Button from "@/components/ChresserComponents/ui/Button";
+import { useState, useEffect } from "react"
+import { useSubdomain } from "../SubdomainProvider"
+import { createClient } from '@/lib/client'
+import { User, Mail } from "lucide-react"
 
 export default function Page() {
-    const [loggedIn, setLoggedIn] = useState(true)
-    const [highlighted, setHighlighted] = useState(false)
+    const { loggedIn, subdomain } = useSubdomain()
+    const [customer, setCustomer] = useState<any>(null)
+    const [isLoading, setIsLoading] = useState(true)
+    const supabase = createClient()
+
+    useEffect(() => {
+        async function fetchCustomer() {
+            if (!loggedIn || !subdomain) {
+                setIsLoading(false)
+                return
+            }
+
+            try {
+                const { data, error } = await supabase
+                    .from('customers')
+                    .select('*')
+                    .eq('id', subdomain)
+                    .single()
+
+                if (error) {
+                    console.error('Error fetching customer:', error)
+                } else if (data) {
+                    setCustomer(data)
+                }
+            } catch (error) {
+                console.error('Error in fetchCustomer:', error)
+            } finally {
+                setIsLoading(false)
+            }
+        }
+
+        fetchCustomer()
+    }, [loggedIn, subdomain, supabase])
+
+    if (!loggedIn) {
+        return null // login
+    }
+
+    if (isLoading) {
+        return (
+            <div className="w-full min-h-screen p-8">
+                <p className="text-gray-500">Loading...</p>
+            </div>
+        )
+    }
+
     return (
-        <>
-            <div className="w-full min-h-screen"></div>
-            {!loggedIn && (
-                <div className="inset-0 w-full h-screen fixed bg-[#c999ff] bg-[radial-gradient(at_43%_6%,hsla(145,66%,78%,1)_0px,transparent_50%),radial-gradient(at_41%_43%,hsla(323,63%,61%,1)_0px,transparent_50%),radial-gradient(at_87%_76%,hsla(342,94%,60%,1)_0px,transparent_50%),radial-gradient(at_72%_35%,hsla(203,65%,61%,1)_0px,transparent_50%),radial-gradient(at_72%_77%,hsla(72,62%,61%,1)_0px,transparent_50%),radial-gradient(at_17%_3%,hsla(134,73%,61%,1)_0px,transparent_50%),radial-gradient(at_70%_17%,hsla(111,84%,64%,1)_0px,transparent_50%)] flex flex-col items-center pt-32">
-                        <form className="bg-white/64 dark:bg-black/40 rounded-2xl p-8 shadow-lg w-100 md:w-120 relative border-1 border-white/40 dark:border-black/40">
-                            <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
-                                Log ind
-                            </h2>
-                            <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
-                                Log ind med brugernavn og adgangskoden sendt på e-mailen.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
+        <div className="w-full min-h-screen p-8">
+            <h1 className="text-2xl font-bold mb-6">Indstillinger</h1>
+            
+            {customer && (
+                <div className="bg-white rounded-lg shadow-sm border p-6 max-w-2xl">
+                    <h2 className="text-lg font-semibold mb-4">Din information</h2>
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                            <User size={20} className="text-gray-500" />
+                            <div>
+                                <p className="text-sm text-gray-500">Navn</p>
+                                <p className="text-base font-medium">{customer.customer_name}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Mail size={20} className="text-gray-500" />
+                            <div>
+                                <p className="text-sm text-gray-500">Email</p>
+                                <p className="text-base font-medium">{customer.customer_email}</p>
+                            </div>
+                        </div>
+                        <div className="pt-4 border-t">
+                            <p className="text-sm text-gray-500">Konto oprettet</p>
+                            <p className="text-base font-medium">
+                                {new Date(customer.created_at).toLocaleDateString('da-DK', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
                             </p>
-                            <Input type="text" className="mb-2" required>
-                                Dit brugernavn
-                            </Input>
-                            <Input type="email" className="mb-4" required>
-                                Din adgangskode
-                            </Input>
-                            <Button type="submit" className="px-4 py-2" button="normal" size="form-md">
-                                Log ind
-                            </Button>
-                            <p className="text-sm p-2 text-gray-500"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> E-mailen du blev sendt, hvor der også stod linket til denne hjemmeside.</p>
-                        </form>
+                        </div>
+                    </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }

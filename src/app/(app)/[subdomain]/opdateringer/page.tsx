@@ -1,38 +1,152 @@
-//TODO: tilføj parent til den f.eks. /s/a/b/[subdomain] så man ikke kan gå ind på chrestensoelberg.dk/[subdomain] hvor den ikke giver fejl. husk at tilføj / til middleware når det "erstattes"
-
 "use client"
-import {useState} from "react";
-import {Input} from "@/components/ChresserComponents/ui/Input";
-import Button from "@/components/ChresserComponents/ui/Button";
+import { useState, useEffect } from "react"
+import { useSubdomain } from "../SubdomainProvider"
+import { createClient } from '@/lib/client'
+
+interface Update {
+    id: string
+    order_id: string
+    product: string
+    status: string
+    updated_at: string
+    created_at: string
+}
 
 export default function Page() {
-    const [loggedIn, setLoggedIn] = useState(true)
-    const [highlighted, setHighlighted] = useState(false)
+    const { loggedIn, subdomain } = useSubdomain()
+    const [updates, setUpdates] = useState<Update[]>([])
+    const [isLoading, setIsLoading] = useState(true)
+    const supabase = createClient()
+
+    useEffect(() => {
+        async function fetchUpdates() {
+            if (!loggedIn || !subdomain) {
+                setIsLoading(false)
+                return
+            }
+
+            try {
+                const { data, error } = await supabase
+                    .from('orders')
+                    .select('id, order_id, product, status, updated_at, created_at')
+                    .eq('customer_id', subdomain)
+                    .order('updated_at', { ascending: false })
+
+                if (error) {
+                    console.error('Error fetching updates:', error)
+                } else if (data) {
+                    setUpdates(data)
+                }
+            } catch (error) {
+                console.error('Error in fetchUpdates:', error)
+            } finally {
+                setIsLoading(false)
+            }
+        }
+
+        fetchUpdates()
+    }, [loggedIn, subdomain, supabase])
+
+    if (!loggedIn) {
+        return null // Login handled by layout
+    }
+
+    if (isLoading) {
+        return (
+            <div className="w-full min-h-screen p-8">
+                <p className="text-gray-500">Loading...</p>
+            </div>
+        )
+    }
+
+    const getStatusLabel = (status: string) => {
+        switch (status) {
+            case 'completed':
+                return 'Færdig'
+            case 'in_progress':
+                return 'I gang'
+            case 'pending':
+                return 'Afventer'
+            default:
+                return status
+        }
+    }
+
+    const getStatusColor = (status: string) => {
+        switch (status) {
+            case 'completed':
+                return 'bg-green-100 text-green-700'
+            case 'in_progress':
+                return 'bg-blue-100 text-blue-700'
+            case 'pending':
+                return 'bg-yellow-100 text-yellow-700'
+            default:
+                return 'bg-gray-100 text-gray-700'
+        }
+    }
+
     return (
-        <>
-            <div className="w-full min-h-screen"></div>
-            {!loggedIn && (
-                <div className="inset-0 w-full h-screen fixed bg-[#c999ff] bg-[radial-gradient(at_43%_6%,hsla(145,66%,78%,1)_0px,transparent_50%),radial-gradient(at_41%_43%,hsla(323,63%,61%,1)_0px,transparent_50%),radial-gradient(at_87%_76%,hsla(342,94%,60%,1)_0px,transparent_50%),radial-gradient(at_72%_35%,hsla(203,65%,61%,1)_0px,transparent_50%),radial-gradient(at_72%_77%,hsla(72,62%,61%,1)_0px,transparent_50%),radial-gradient(at_17%_3%,hsla(134,73%,61%,1)_0px,transparent_50%),radial-gradient(at_70%_17%,hsla(111,84%,64%,1)_0px,transparent_50%)] flex flex-col items-center pt-32">
-                        <form className="bg-white/64 dark:bg-black/40 rounded-2xl p-8 shadow-lg w-100 md:w-120 relative border-1 border-white/40 dark:border-black/40">
-                            <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
-                                Log ind
-                            </h2>
-                            <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
-                                Log ind med brugernavn og adgangskoden sendt på e-mailen.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
-                            </p>
-                            <Input type="text" className="mb-2" required>
-                                Dit brugernavn
-                            </Input>
-                            <Input type="email" className="mb-4" required>
-                                Din adgangskode
-                            </Input>
-                            <Button type="submit" className="px-4 py-2" button="normal" size="form-md">
-                                Log ind
-                            </Button>
-                            <p className="text-sm p-2 text-gray-500"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> E-mailen du blev sendt, hvor der også stod linket til denne hjemmeside.</p>
-                        </form>
+        <div className="w-full min-h-screen p-8">
+            <h1 className="text-2xl font-bold mb-6">Opdateringer</h1>
+            
+            {updates.length === 0 ? (
+                <div className="bg-white rounded-lg shadow-sm border p-6">
+                    <p className="text-gray-600">Ingen opdateringer endnu.</p>
+                </div>
+            ) : (
+                <div className="relative">
+                    {/* Timeline line */}
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                    
+                    <div className="space-y-6">
+                        {updates.map((update, index) => (
+                            <div key={update.id} className="relative flex items-start gap-4">
+                                {/* Timeline dot */}
+                                <div className={`relative z-10 w-4 h-4 rounded-full border-2 border-white ${
+                                    index === 0 ? 'bg-blue-500' : 'bg-gray-400'
+                                }`}></div>
+                                
+                                <div className="flex-1 bg-white rounded-lg shadow-sm border p-4 ml-4">
+                                    <div className="flex items-start justify-between mb-2">
+                                        <div>
+                                            <h3 className="font-semibold text-lg">Ordre {update.order_id}</h3>
+                                            <p className="text-sm text-gray-600">{update.product}</p>
+                                        </div>
+                                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(update.status)}`}>
+                                            {getStatusLabel(update.status)}
+                                        </span>
+                                    </div>
+                                    
+                                    <div className="mt-4 space-y-2 text-sm text-gray-600">
+                                        <p>
+                                            <span className="font-medium">Oprettet:</span>{' '}
+                                            {new Date(update.created_at).toLocaleString('da-DK', {
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: 'numeric',
+                                                hour: '2-digit',
+                                                minute: '2-digit'
+                                            })}
+                                        </p>
+                                        {update.updated_at !== update.created_at && (
+                                            <p>
+                                                <span className="font-medium">Opdateret:</span>{' '}
+                                                {new Date(update.updated_at).toLocaleString('da-DK', {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                })}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }
