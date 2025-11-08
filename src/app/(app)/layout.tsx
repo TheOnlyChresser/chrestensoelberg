@@ -139,7 +139,6 @@ export default function RootLayout({
     >
     <SpeedInsights/>
     <Analytics/>
-    <Navbar/>
         {children}
       </body>
     </html>
