@@ -3,12 +3,9 @@ import Link from "next/link";
 import Image from "next/image"
 import {Pointer} from "@/components/ui/pointer";
 import {CursorFollow, CursorProvider} from "@/components/ui/shadcn-io/animated-cursor";
-import Navbar from "@/components/ChresserComponents/navBar";
 
 export default function Page() {
     return (
-        <>
-        <Navbar/>
         <div className="bg-gradient-to-tr from-white via-blue-50 to-green-50 dark:from-black dark:via-[#050A1F] dark:to-[#041F12] flex-center w-full">
             <div className="min-h-screen w-full mb-20 md:mb-4 flex flex-col items-center">
                 <div className="mt-16 md:mt-12 mb-4 flex-center text-8xl text-gradient font-bold h-30">
@@ -111,6 +108,5 @@ export default function Page() {
                 </div>
             </div>
         </div>
-        </>
     );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/ChresserComponents/navBar";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from "next/script";
 import {Analytics} from "@vercel/analytics/next";
@@ -138,6 +139,7 @@ export default function RootLayout({
     >
     <SpeedInsights/>
     <Analytics/>
+    <Navbar/>
         {children}
       </body>
     </html>
