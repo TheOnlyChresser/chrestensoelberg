@@ -7,6 +7,7 @@ import Button from "@/components/ChresserComponents/ui/Button";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import {BookUser, HandCoins, Mail, NotebookTabs, PersonStanding, StickyNote, Tag, User} from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import {RealtimeChat} from "@/components/realtime-chat";
 
 export default function Page() {
     const expected_hours = 10
@@ -36,8 +37,9 @@ export default function Page() {
                         </div>
                         <div className="grid md:grid-cols-3 gap-4 p-4">
                             <div className="md:col-span-2 w-full">
-                                <div className="shadow-xs w-full p-4 border bg-white">
+                                <div className="shadow-xs w-full p-4 border bg-white max-h-[60vh] overflow-y-auto">
                                     <span>Beskeder</span>
+                                    <RealtimeChat roomName={order.orderId} username={order.name} />
                                 </div>
                             </div>
                             <div className="w-full space-y-4">
