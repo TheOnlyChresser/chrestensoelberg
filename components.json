@@ -19,7 +19,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@magicui": "https://magicui.design/r/{name}.json",
-    "@supabase": "https://supabase.com/ui/r/{name}.json"
+    "@magicui": "https://magicui.design/r/{name}.json"
   }
 }

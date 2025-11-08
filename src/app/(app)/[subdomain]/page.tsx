@@ -6,7 +6,6 @@ import {Input} from "@/components/ChresserComponents/ui/Input";
 import Button from "@/components/ChresserComponents/ui/Button";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import {HandCoins, Mail, PersonStanding, StickyNote, User} from "lucide-react";
-import { RealtimeChat } from '@/components/realtime-chat'
 
 export default function Page() {
     const [loggedIn, setLoggedIn] = useState(true)
@@ -30,7 +29,6 @@ export default function Page() {
                         <div className="md:col-span-2 w-full">
                         <div className="w-full p-4 border bg-white rounded-md">
                             <span>Beskeder</span>
-                            <RealtimeChat roomName={order.orderId} username={order.name}/>
                         </div>
                         </div>
                         <div className="w-full space-y-4">
