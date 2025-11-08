@@ -36,12 +36,12 @@ export default function Page() {
                         </div>
                         <div className="grid md:grid-cols-3 gap-4 p-4">
                             <div className="md:col-span-2 w-full">
-                                <div className="shadow-xs w-full p-4 border bg-white rounded-md">
+                                <div className="shadow-xs w-full p-4 border bg-white">
                                     <span>Beskeder</span>
                                 </div>
                             </div>
                             <div className="w-full space-y-4">
-                                <div className="shadow-xs w-full p-4 border bg-white rounded-md">
+                                <div className="shadow-xs w-full p-4 border bg-white">
                                     <h2 className="mb-1">Ordre information</h2>
                                     <div className="mt-3 space-y-2 cursor-default">
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Bruger ID"><BookUser size={20}/> <span className="ml-2 text-black">{order.userId}</span></p>
@@ -52,7 +52,7 @@ export default function Page() {
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Pris"><HandCoins size={20}/> <span className="ml-2 text-black">{order.money}<span className="text-xs">kr</span></span></p>
                                     </div>
                                 </div>
-                                <div className="shadow-xs w-full p-4 border bg-white rounded-md">
+                                <div className="shadow-xs w-full p-4 border bg-white">
                                     <h2 className="mb-1">Forventet tid</h2>
                                     <div className="mt-3 space-y-2">
                                         <Progress value={(hours_spend/expected_hours)*100}/>
