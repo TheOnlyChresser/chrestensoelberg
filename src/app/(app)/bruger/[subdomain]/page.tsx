@@ -34,7 +34,7 @@ export default function Page() {
                                 <AttentionSpan className="!animate-none !cursor-default" title="Status">Færdig</AttentionSpan>
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-3 gap-4 p-4 h-500">
+                        <div className="grid md:grid-cols-3 gap-4 p-4">
                             <div className="md:col-span-2 w-full">
                                 <div className="shadow-xs w-full p-4 border bg-white rounded-md">
                                     <span>Beskeder</span>
