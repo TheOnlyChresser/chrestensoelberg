@@ -9,7 +9,7 @@ import {
 } from '@/hooks/use-realtime-chat'
 import { Button } from '@/components/ui/button'
 import { Send } from 'lucide-react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import {ChangeEvent, useCallback, useEffect, useMemo, useState} from 'react'
 import { Input } from './ChresserComponents/ui/Input'
 
 interface RealtimeChatProps {
@@ -118,7 +118,7 @@ export const RealtimeChat = ({
           )}
           type="text"
           value={newMessage}
-          onChange={(e) => setNewMessage(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)}
           placeholder="Skriv en besked..."
           disabled={!isConnected}
         />
