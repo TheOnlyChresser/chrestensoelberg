@@ -29,7 +29,6 @@ export default async function send({ name, email, message, product }: SendProps)
             html: `
                 <h2>Hej ${name},</h2>
                 <p>Tak for din bestilling af <strong>${product}</strong>!</p>
-                <p>Du har x.chrestensoelberg.dk til kommunikation, opdateringer m.m. Du kan logge ind med adgangskoden <strong>y</strong>. Den bliver lukket automatisk efter 2 år uden kommunikation eller køb.</p>
                 ${emailtext}
                 <p>Jeg vender snart tilbage med mere information.</p>
                 <p>Venlig hilsen,<br>Chresten</p>
