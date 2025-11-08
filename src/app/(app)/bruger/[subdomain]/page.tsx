@@ -3,7 +3,7 @@ import {useState} from "react";
 import {Input} from "@/components/ChresserComponents/ui/Input";
 import Button from "@/components/ChresserComponents/ui/Button";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
-import {HandCoins, Mail, PersonStanding, StickyNote, User} from "lucide-react";
+import {BookUser, HandCoins, Mail, NotebookTabs, PersonStanding, StickyNote, Tag, User} from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
     const [highlighted, setHighlighted] = useState(false)
     const daysBack = Math.floor((end_at - Date.now()) / (1000 * 60 * 60 * 24));
     const expectedDaysBack = Math.floor(((expected_hours-hours_spend)/expected_hours)*30)
-    const [orders, setOrders] = useState([{orderId: "545445", name: "Poul", email: "Poul@gmail.com", money: "989", product:"Et online visitkort", comment:"jeg ville have ekstra information omkring bla bla bla",}])
+    const [orders, setOrders] = useState([{orderId: "545445", name: "Poul", email: "Poul@gmail.com", money: "989", product:"Et online visitkort", comment:"jeg ville have ekstra information omkring bla bla bla", userId:"reet-4433-bgfb-3535"}])
     return (
         <div className="w-full relative bg-gray-50">
             <div className="w-full h-screen overflow-y-auto">
@@ -29,7 +29,7 @@ export default function Page() {
                                 <p className="text-sm text-gray-500">{order.product}</p>
                             </div>
                             <div className="justify-center items-center flex flex-col">
-                                <AttentionSpan className="!animate-none">Færdig</AttentionSpan>
+                                <AttentionSpan className="!animate-none !cursor-default" title="Status">Færdig</AttentionSpan>
                             </div>
                         </div>
                         <div className="grid md:grid-cols-3 gap-4 p-4 h-500">
@@ -40,21 +40,24 @@ export default function Page() {
                             </div>
                             <div className="w-full space-y-4">
                                 <div className="w-full p-4 border bg-white rounded-md">
-                                    <h2 className="mb-1">Information</h2>
-                                    <hr/>
-                                    <div className="mt-3 space-y-2">
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"><User size={20}/> <span className="ml-2 text-black">{order.name}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"><Mail size={20}/> <span className="ml-2 text-black">{order.email}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"><HandCoins size={20}/> <span className="ml-2 text-black">{order.money}<span className="text-xs">kr</span></span></p>
+                                    <h2 className="mb-1">Ordre information</h2>
+                                    <div className="mt-3 space-y-2 cursor-default">
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Bruger ID"><BookUser size={20}/> <span className="ml-2 text-black">{order.userId}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Brugernavn"><User size={20}/> <span className="ml-2 text-black">{order.name}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="E-mail"><Mail size={20}/> <span className="ml-2 text-black">{order.email}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Ordre ID"><NotebookTabs size={20}/> <span className="ml-2 text-black">{order.orderId}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Produkt"><Tag size={20}/> <span className="ml-2 text-black">{order.product}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Pris"><HandCoins size={20}/> <span className="ml-2 text-black">{order.money}<span className="text-xs">kr</span></span></p>
                                     </div>
                                 </div>
                                 <div className="w-full p-4 border bg-white rounded-md">
                                     <h2 className="mb-1">Forventet tid</h2>
-                                    <hr/>
                                     <div className="mt-3 space-y-2">
                                         <Progress value={(hours_spend/expected_hours)*100}/>
+                                        <div className="flex flex-row justify-between text-sm text-gray-500">
                                         <p>ca. {expectedDaysBack} dage tilbage</p>
                                         <p>maks. {daysBack} dage tilbage</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
