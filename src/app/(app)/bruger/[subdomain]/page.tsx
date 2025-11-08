@@ -31,7 +31,7 @@ export default function Page() {
                                 <p className="text-sm text-gray-500">{order.product}</p>
                             </div>
                             <div className="justify-center items-center flex flex-col">
-                                <AttentionSpan className="!animate-none !cursor-default" title="Status">Færdig</AttentionSpan>
+                                <AttentionSpan color="blue" className="!animate-none !from-blue-100 !via-blue-100 !to-blue-100 !cursor-default" title="Status">Behandles</AttentionSpan>
                             </div>
                         </div>
                         <div className="grid md:grid-cols-3 gap-4 p-4">
