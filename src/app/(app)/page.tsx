@@ -1,5 +1,6 @@
 import Hero from "@/components/ChresserComponents/sections/Hero2";
 import Script from "next/script";
+import Navbar from "@/components/ChresserComponents/navBar";
 
 export const metadata = {
   title: "Billig og Personlig Hjemmeside | Chresten Soelberg",
@@ -87,6 +88,7 @@ export default function Home() {
           })
         }}
       />
+        <Navbar/>
         <main className="w-full min-h-screen flex-center flex-col justify-center text-black font-dm-sans">
           <Hero/>
           <footer className="w-full bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm py-4 px-6 md:px-12 flex justify-center items-center">

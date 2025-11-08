@@ -7,6 +7,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
 import PageClient from './page.client'
+import Navbar from "@/components/ChresserComponents/navBar";
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -28,6 +29,8 @@ export default async function Page() {
   })
 
   return (
+    <>
+    <Navbar/>
     <div className="bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] flex-center w-full">
     <div className="min-h-screen w-full mb-20 md:mb-4 flex flex-col items-center">
       <PageClient />
@@ -47,6 +50,7 @@ export default async function Page() {
       </div>
     </div>
     </div>
+    </>
   )
 }
 

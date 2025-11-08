@@ -16,6 +16,7 @@ import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import {MathJax, MathJaxContext} from "better-react-mathjax";
 import {DefaultTypedEditorState} from "@payloadcms/richtext-lexical";
+import Navbar from "@/components/ChresserComponents/navBar";
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -52,6 +53,8 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
+    <>
+    <Navbar/>
     <article className="max-w-full pt-16 pb-16 bg-white/80 dark:bg-gray-950/80">
       <PageClient />
 
@@ -79,6 +82,7 @@ export default async function Post({ params: paramsPromise }: Args) {
         </div>
       </div>
     </article>
+    </>
   )
 }
 

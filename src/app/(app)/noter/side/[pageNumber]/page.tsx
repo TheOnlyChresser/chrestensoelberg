@@ -8,6 +8,7 @@ import { getPayload } from 'payload'
 import React from 'react'
 import PageClient from './page.client'
 import { notFound } from 'next/navigation'
+import Navbar from "@/components/ChresserComponents/navBar";
 
 export const revalidate = 600
 
@@ -34,6 +35,8 @@ export default async function Page({ params: paramsPromise }: Args) {
   })
 
   return (
+    <>
+      <Navbar/>
     <div className="pt-24 pb-24">
       <PageClient />
       <div className="container mb-16">
@@ -59,6 +62,7 @@ export default async function Page({ params: paramsPromise }: Args) {
         )}
       </div>
     </div>
+    </>
   )
 }
 
