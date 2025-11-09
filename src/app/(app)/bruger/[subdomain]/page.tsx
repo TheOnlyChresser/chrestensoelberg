@@ -11,7 +11,7 @@ import {RealtimeChat} from "@/components/realtime-chat";
 
 export default function Page() {
     const expected_hours = 10
-    const hours_spend = 5
+    const hours_spend = 7
     const created_at = Date.now();
     const end_at = Date.now() + 30 * 24 * 60 * 60 * 1000;
     const created = new Date(created_at);
@@ -36,14 +36,12 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="grid md:grid-cols-3 gap-4 p-4">
-                            <div className="md:col-span-2 w-full">
-                                <div className="shadow-xs w-full p-4 border bg-white max-h-[60vh] overflow-y-auto">
-                                    <span>Beskeder</span>
-                                    <RealtimeChat roomName={order.orderId} username={order.name} />
-                                </div>
+                            <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border bg-white max-h-[60vh] overflow-y-hidden">
+                                <span>Beskeder</span>
+                                <RealtimeChat roomName={order.orderId} username={order.name} />
                             </div>
-                            <div className="w-full space-y-4">
-                                <div className="shadow-xs w-full p-4 border bg-white">
+                            <div className="w-full md:grid md:grid-rows-3 space-y-4">
+                                <div className="shadow-xs w-full p-4 border bg-white md:row-span-2">
                                     <h2 className="mb-1">Ordre information</h2>
                                     <div className="mt-3 space-y-2 cursor-default">
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Bruger ID"><BookUser size={20}/> <span className="ml-2 text-black">{order.userId}</span></p>
