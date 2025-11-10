@@ -88,7 +88,7 @@ export default function Page() {
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
                             Log ind med adgangskoden sendt på e-mailen.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
                         </p>
-                        <Input type="text" className="mb-4" value={password} onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} required>
+                        <Input type="password" className="mb-4" value={password} onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} required>
                             Din adgangskode
                         </Input>
                         <Button type="submit" className="px-4 py-2" button="normal" size="form-md" onClick={async ()=>{
