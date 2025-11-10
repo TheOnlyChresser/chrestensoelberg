@@ -423,56 +423,87 @@ export default function Hero() {
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
                     <form onSubmit={async (e) => {
                         e.preventDefault();
-                        const {data: customerData, error: customerError} = await supabase
+                        let {data: existingCustomer, error: existingCustomerError} = await supabase
                             .from("customers")
-                            .insert([{customerName: customerName, customerEmail: customerEmail}])
-                            .select()
+                            .select("*")
+                            .eq("customerEmail", customerEmail)
+                            .single();
 
-                        if (customerError) {
-                            console.error("Fejl med database:", customerError)
-                            return
+                        if (existingCustomerError) {
+                            if (existingCustomerError.code == "PGRST116") {existingCustomer = false } else {
+                            console.error("Fejl med database:", existingCustomerError); return;}
                         }
-                        if (customerData) {
-                            const orderId = Math.random().toString(36).substring(2, 10)
-                            if (productName) {
-                                switch (productName) {
-                                    case "et online visitkort":
-                                        setProductPrice("989")
-                                        setExpectedTime(10)
-                                        break
-                                    case "et klippekort":
-                                        setProductPrice("500")
-                                        setExpectedTime(10)
-                                        break
-                                    case "en hjemmeside":
-                                        setProductPrice("Pris kommer!")
-                                        setExpectedTime(200)
-                                }
+
+                        let customerData;
+                        if (existingCustomer) {
+                            customerData = [existingCustomer];
+                        } else {
+                            const securePassword = Math.random().toString(36).substring(2, 12);
+                            const secureId = Math.random().toString(36).substring(2, 8);
+                            const { data, error: customerError } = await supabase
+                                .from("customers")
+                                .insert([{ id: secureId, customerName: customerName, customerEmail: customerEmail, password: securePassword, }])
+                                .select();
+                            if (customerError) {
+                                console.error("Fejl med database:", customerError);
+                                return;
                             }
-                            const {data: orderData, error: orderError} = await supabase
-                                .from("orders")
-                                .insert([{id: orderId, customerId: customerData[0].id, timeTaken: 0, expectedTime: expectedTime, productName: productName, productPrice: productPrice, status: "Afventer svar", comment: customerMessage, }])
-                                .select()
-                            if (orderError) {
-                                console.error("Fejl med database:", orderError)
-                                return
-                            }
-                            send({
+                            customerData = data;
+                        }
+
+                        const orderId = Math.random().toString(36).substring(2, 10);
+
+                        switch (productName) {
+                            case "et online visitkort":
+                                setProductPrice("989");
+                                setExpectedTime(10);
+                                break;
+                            case "et klippekort":
+                                setProductPrice("500");
+                                setExpectedTime(10);
+                                break;
+                            case "en hjemmeside":
+                                setProductPrice("Pris kommer!");
+                                setExpectedTime(200);
+                                break
+                        }
+
+                        const { data: orderData, error: orderError } = await supabase
+                            .from("orders")
+                            .insert([{
+                                id: orderId,
                                 customerId: customerData[0].id,
-                                orderId: orderId,
-                                password: customerData[0].password,
-                                name: customerName,
-                                email: customerEmail,
-                                message: customerMessage,
-                                product: selectedProduct,
-                            }).then((result) => {
-                                if (result.success) {
-                                    setStep(null);
-                                    setOrdered(true);
-                                    setNotification(true)}
-                            })
+                                timeTaken: 0,
+                                expectedTime: expectedTime,
+                                productName: productName,
+                                productPrice: productPrice,
+                                status: "Afventer svar",
+                                comment: customerMessage,
+                            }])
+                            .select();
+
+                        if (orderError) {
+                            console.error("Fejl med database:", orderError);
+                            return;
                         }
-                    }} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
+
+                        send({
+                            customerId: customerData[0].id,
+                            orderId,
+                            password: customerData[0].password,
+                            name: customerName,
+                            email: customerEmail,
+                            message: customerMessage,
+                            product: selectedProduct,
+                        }).then((result) => {
+                            if (result.success) {
+                                setStep(null);
+                                setOrdered(true);
+                                setNotification(true);
+                            }
+                        });
+                    }}
+                          className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
                         <button className="cursor-pointer text-black hover:text-blue-500 active:scale-92 absolute top-0 right-0 m-4 dark:text-gray-50" onClick={()=>{setStep(null);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"/>
