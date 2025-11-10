@@ -47,7 +47,7 @@ export default function Page() {
                                 <AttentionSpan color="blue" className="!animate-none !from-blue-100 !via-blue-100 !to-blue-100 !cursor-default" title="Status">{order.status}</AttentionSpan>
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-3 gap-4 p-4 mx-4 md:mx-0 pb-24 md:pb-0 min-h-screen">
+                        <div className="grid md:grid-cols-3 gap-4 p-4 mx-4 md:mx-0 pb-24 md:pb-0">
                             <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border bg-white max-h-[80vh] md:max-h-[60vh] overflow-y-hidden">
                                 <span>Beskeder</span>
                                 <RealtimeChat roomName={order.id} username={customer.customerName} />
