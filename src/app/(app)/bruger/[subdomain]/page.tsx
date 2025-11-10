@@ -37,7 +37,7 @@ export default function Page() {
         <div className="w-full relative bg-gray-50">
             <div className="w-full h-screen overflow-y-auto">
                 {orders.map((order, index) => (
-                    <div className="" key={index}>
+                    <div className="min-h-screen" key={index}>
                         <div className="z-100 border-b border-t mb-4 bg-white/64 backdrop-blur-sm w-full flex sticky top-0 flex-row justify-between py-4 px-8">
                             <div>
                                 <h1 className="text-xl font-bold text-gradient-subtle mb-1 mt-5 lg:text-wrap break-words hyphens-auto lg:break-normal">Ordre {order.id}</h1>
