@@ -80,8 +80,8 @@ export default function Page() {
                 ))}
             </div>
             {!loggedIn && (
-                <div className="z-1000 inset-0 w-full h-[100vh] fixed bg-[#c999ff] bg-[radial-gradient(at_43%_6%,hsla(145,66%,78%,1)_0px,transparent_50%),radial-gradient(at_41%_43%,hsla(323,63%,61%,1)_0px,transparent_50%),radial-gradient(at_87%_76%,hsla(342,94%,60%,1)_0px,transparent_50%),radial-gradient(at_72%_35%,hsla(203,65%,61%,1)_0px,transparent_50%),radial-gradient(at_72%_77%,hsla(72,62%,61%,1)_0px,transparent_50%),radial-gradient(at_17%_3%,hsla(134,73%,61%,1)_0px,transparent_50%),radial-gradient(at_70%_17%,hsla(111,84%,64%,1)_0px,transparent_50%)] flex flex-col items-center pt-32">
-                    <div className="bg-white/64 dark:bg-black/40 rounded-2xl p-8 shadow-lg w-100 md:w-120 relative border-1 border-white/40 dark:border-black/40">
+                <div className="z-1000 inset-0 w-full h-[100dvh] fixed bg-gray-50 flex flex-col items-center pt-32">
+                    <div className="bg-gray-100/64 dark:bg-gray-950/40 rounded-2xl p-8 shadow-lg w-100 md:w-120 relative border-1 border-black/40 dark:border-black/40">
                         <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
                             Log ind
                         </h2>
