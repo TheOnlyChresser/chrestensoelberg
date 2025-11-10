@@ -15,12 +15,13 @@ import {BlurFade} from "@/components/ui/blur-fade";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {AsideWrapper, AsideText, AsideImage} from "@/components/ChresserComponents/ui/Aside";
 import Timeline from "../Timeline"
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import AttentionSpan from "@/components/ChresserComponents/ui/Attention";
 import Kontakt from "@/components/ChresserComponents/sections/Kontakt";
 import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
 import {Input, Textarea} from "@/components/ChresserComponents/ui/Input";
 import send from "../send";
+import {createClient} from "@/lib/client";
 
 export default function Hero() {
     const [open, setOpen] = useState(false);
@@ -36,6 +37,9 @@ export default function Hero() {
     const [customerMessage, setCustomerMessage] = useState<string>("");
     const [selectedProduct, setSelectedProduct] = useState<string>("");
     const [notification, setNotification] = useState<boolean>(false);
+    const [productPrice, setProductPrice] = useState<string>("Pris kommer!")
+    const [expectedTime, setExpectedTime] = useState<number>(0)
+    const supabase = createClient()
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
@@ -231,7 +235,7 @@ export default function Hero() {
                         Bestil
                     </Button>
                 </PriceBlockWrappper>
-                <PriceBlockWrappper className="scale-104 !bg-gray-50/40">
+                <PriceBlockWrappper className="scale-104 !bg-gray-50/40 !dark:bg-gray-900/40 !border-blue-500">
                 <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
                         <PriceBlockExtra>
@@ -254,7 +258,7 @@ export default function Hero() {
                             <li>1-2 sider</li>
                             <li>Animationer m.m.</li>
                             <li>SEO optimeret</li>
-                            <li>Maks 200 ord</li>
+                            <li>Op til 400 ord</li>
                         </ul>
                     </PriceBlockFeatures>
             </PriceBlockTextWrapper>
@@ -276,7 +280,7 @@ export default function Hero() {
                             Hjemmeside
                         </PriceBlockTitle>
                         <PriceBlockPrice>
-                            Op til 10000
+                            Op til 20000
                         </PriceBlockPrice>
                         <PriceBlockUndertitle>
                             En komplet hjemmeside til virksomhed eller privatperson
@@ -417,19 +421,57 @@ export default function Hero() {
             )}
             {step !== null && !ordered && productName && (
                 <div className="fixed inset-0 backdrop-blur-sm bg-black/5 flex justify-center items-center dark:text-gray-50">
-                    <form onSubmit={(e) => {
+                    <form onSubmit={async (e) => {
                         e.preventDefault();
-                        send({
-                            name: customerName,
-                            email: customerEmail,
-                            message: customerMessage,
-                            product: selectedProduct,
-                        }).then((result) => {
-                            if (result.success) {
-                            setStep(null);
-                            setOrdered(true);
-                            setNotification(true)}
-                        })
+                        const {data: customerData, error: customerError} = await supabase
+                            .from("customers")
+                            .insert([{customerName: customerName, customerEmail: customerEmail}])
+                            .select()
+
+                        if (customerError) {
+                            console.error("Fejl med database:", customerError)
+                            return
+                        }
+                        if (customerData) {
+                            const orderId = Math.random().toString(36).substring(2, 10)
+                            if (productName) {
+                                switch (productName) {
+                                    case "et online visitkort":
+                                        setProductPrice("989")
+                                        setExpectedTime(10)
+                                        break
+                                    case "et klippekort":
+                                        setProductPrice("500")
+                                        setExpectedTime(10)
+                                        break
+                                    case "en hjemmeside":
+                                        setProductPrice("Pris kommer!")
+                                        setExpectedTime(200)
+                                }
+                            }
+                            const {data: orderData, error: orderError} = await supabase
+                                .from("orders")
+                                .insert([{id: orderId, customerId: customerData[0].id, timeTaken: 0, expectedTime: expectedTime, productName: productName, productPrice: productPrice, status: "Afventer svar", comment: customerMessage, }])
+                                .select()
+                            if (orderError) {
+                                console.error("Fejl med database:", orderError)
+                                return
+                            }
+                            send({
+                                customerId: customerData[0].id,
+                                orderId: orderId,
+                                password: customerData[0].password,
+                                name: customerName,
+                                email: customerEmail,
+                                message: customerMessage,
+                                product: selectedProduct,
+                            }).then((result) => {
+                                if (result.success) {
+                                    setStep(null);
+                                    setOrdered(true);
+                                    setNotification(true)}
+                            })
+                        }
                     }} className="bg-white dark:bg-black rounded-2xl p-8 shadow-lg w-100 md:w-120 relative">
                         <button className="cursor-pointer text-black hover:text-blue-500 active:scale-92 absolute top-0 right-0 m-4 dark:text-gray-50" onClick={()=>{setStep(null);}}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

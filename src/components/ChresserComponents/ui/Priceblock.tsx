@@ -45,7 +45,7 @@ export function PriceBlockTitle({children, className = "", ...props}: PriceBlock
 export function PriceBlockPrice({ children, currency = "kr", className = "", ...props }: PriceBlockPriceProps) {
     return (
         <div className={`text-center text-xl font-bold text-gray-900 dark:text-gray-50 mt-0 mb-1 ${className}`} {...props}>
-            <span>{children}{currency}</span>
+            <p>{children}<span className="text-lg">{currency}</span></p>
         </div>
     )
 }
