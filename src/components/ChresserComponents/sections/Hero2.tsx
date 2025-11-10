@@ -2,7 +2,7 @@
 
 //TODO: tilføj "typer" til priceblocks så der står f.eks. ORD i siden ligesom tabeller
 //TODO: find ud af hvor mange af top 100 virksomheder som bruger samme framework/tailwind til hjemmeside
-
+//TODO: man kan kun bestille hvis man har et punktum i email-addressen, men den siger ikke fejl hvis man ikke har det, bestil-knappen virker bare ikke
 import Button from "../ui/Button";
 import Feature from "@/components/ChresserComponents/ui/Features";
 import {
