@@ -38,7 +38,7 @@ export default function Hero() {
     const [selectedProduct, setSelectedProduct] = useState<string>("");
     const [notification, setNotification] = useState<boolean>(false);
     const [productPrice, setProductPrice] = useState<string>("Pris kommer!")
-    const [expectedTime, setExpectedTime] = useState<number>(0)
+    const [expectedTime, setExpectedTime] = useState<number>(10)
     const supabase = createClient()
 
     const handleSubmit = async (e:any) => {
