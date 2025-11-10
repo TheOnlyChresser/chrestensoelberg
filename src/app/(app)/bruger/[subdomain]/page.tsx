@@ -17,7 +17,7 @@ export default function Page() {
     const [password, setPassword] = useState("")
     const [highlighted, setHighlighted] = useState(false)
     const falseDeadline: string = new Date(Date.now() + 30*24*60*60*1000).toISOString();
-    const [orders, setOrders] = useState<any[]>([{id: "545445", customerId: "reet-4433-bgfb-3535", timeTaken: "4", expectedTime: "10", updatedAt: "", createdAt: "", design: "", productName: "et online visitkort", productPrice: "989", status:"Et online visitkort", comment:"jeg ville have ekstra information omkring bla bla bla", deadline: falseDeadline}])
+    const [orders, setOrders] = useState<any[]>([{id: "545445", customerId: "reet-4433-bgfb-3535", timeTaken: "4", expectedTime: "10", updatedAt: "", createdAt: "", design: "", productName: "et online visitkort", productPrice: "989", status:"Et online visitkort", comment:"jeg ville have ekstra information omkring bla bla bla", deadline: falseDeadline, totalClip: "10", clipsUsed: "0"}])
     const [customer, setCustomer] = useState({id: "reet-4433-bgfb-3535", customerName: "Poul", customerEmail: "Poul@gmail.com"})
     const [expectedTime, setExpectedTime] = useState<number>(10)
     const [timeTaken, setTimeTaken] = useState<number>(7)
@@ -65,13 +65,19 @@ export default function Page() {
                                     </div>
                                 </div>
                                 <div className="shadow-xs w-full p-4 border bg-white">
-                                    <h2 className="mb-1">Forventet tid</h2>
+                                    <h2 className="mb-1">{order.productName === "et klippekort" ? ("Antal klip"):("Forventet tid")}</h2>
                                     <div className="mt-3 space-y-2">
-                                        <Progress value={(parseInt(order.timeTaken)/parseInt(order.expectedTime))*100}/>
-                                        <div className="flex flex-row justify-between text-sm text-gray-500">
-                                        <p>ca. {Math.ceil(((parseInt(order.expectedTime)-parseInt(order.timeTaken))/parseInt(order.expectedTime))*30)} dage tilbage</p>
-                                        <p>maks. {Math.ceil((new Date(order.deadline.split(".")[0] + "Z").getTime() - Date.now()) / (1000 * 60 * 60 * 24))} dage tilbage</p>
-                                        </div>
+                                        <Progress value={order.productName === "et klippekort" ? (parseInt(order.clipsUsed)/parseInt(order.totalClip)): (parseInt(order.timeTaken)/parseInt(order.expectedTime))*100}/>
+                                        {order.productName === "et klippekort" ? (
+                                            <div className="flex flex-row justify-between text-sm text-gray-500">
+                                                <p>klip tilbage: {parseInt(order.totalClip)-parseInt(order.clipsUsed)}</p>
+                                            </div>
+                                        ):(
+                                            <div className="flex flex-row justify-between text-sm text-gray-500">
+                                                <p>ca. {Math.ceil(((parseInt(order.expectedTime)-parseInt(order.timeTaken))/parseInt(order.expectedTime))*30)} dage tilbage</p>
+                                                <p>maks. {Math.ceil((new Date(order.deadline.split(".")[0] + "Z").getTime() - Date.now()) / (1000 * 60 * 60 * 24))} dage tilbage</p>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
