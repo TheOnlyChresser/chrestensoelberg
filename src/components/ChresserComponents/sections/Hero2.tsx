@@ -230,6 +230,7 @@ export default function Hero() {
                         setStep(1);
                         setOpen(false);
                         setNotification(false)
+                        setOrdered(false)
                         console.log("Klippekort");
                     }}>
                         Bestil
@@ -268,6 +269,7 @@ export default function Hero() {
                         setStep(1);
                         setOpen(false);
                         setNotification(false)
+                        setOrdered(false)
                         console.log("Online visitkort");
                     }}>
                         Bestil
@@ -303,6 +305,7 @@ export default function Hero() {
                         setStep(1);
                         setOpen(false);
                         setNotification(false)
+                        setOrdered(false)
                         console.log("Hjemmeside");
                     }}>
                         Bestil
