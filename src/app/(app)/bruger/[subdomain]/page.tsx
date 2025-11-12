@@ -33,6 +33,10 @@ export default function Page() {
             setId(subdomain);
         }
     }, []);
+    useEffect(()=> {
+        console.log(orders)
+        console.log(customer)
+    }, [orders, customer])
     return (
         <div className="w-full relative bg-gray-50">
             <div className="w-full h-screen overflow-y-auto">
@@ -47,7 +51,7 @@ export default function Page() {
                                 <AttentionSpan color="blue" className="!animate-none !from-blue-100 !via-blue-100 !to-blue-100 !cursor-default" title="Status">{order.status}</AttentionSpan>
                             </div>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex flex-col items-center justify-center w-full">
                         <div className="grid md:grid-cols-3 gap-4 p-4 mx-4 md:mx-0 pb-24 md:pb-0">
                             <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border bg-white max-h-[80vh] md:max-h-[60vh] overflow-y-hidden">
                                 <span>Beskeder</span>
@@ -83,13 +87,22 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                            <div className="flex w-full mx-8 items-center justify-center rounded-xl border bg-white">
-                                {order.design !== "" ? (
-                                    <img src={order.design} alt="billede af design" className="w-full h-full object-cover"/>
-                                ): (
-                                    <p className="text-center text-sm text-gray-500">Designet er ikke færdigt endnu.</p>
+                            { order.productName !== "et klippekort" && (
+                            <div className="my-8 flex flex-col items-center justify-center border bg-white p-4 max-w-7xl mx-auto min-h-[300px] shadow-xs">
+                                {order.design && order.design !== "" ? (
+                                    <img
+                                        src={order.design}
+                                        alt="billede af design"
+                                        className="w-full max-w-[1200px] h-auto object-contain rounded shadow-md"
+                                    />
+                                ) : (
+                                    <p className="w-full text-center text-sm text-gray-500 sm:text-base px-16 lg:px-24">
+                                        Designet er ikke færdigt endnu.
+                                    </p>
                                 )}
-                            </div>
+                            </div>)}
+
+
                         </div>
                     </div>
                 ))}
