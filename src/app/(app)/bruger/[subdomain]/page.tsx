@@ -87,7 +87,7 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                            { order.productName !== "et klippekort" && (
+                            { order.productName !== "et klippekort" && order.design && order.design !== "" && (
                         <div className="flex flex-col w-full items-center justify-center">
                             <div className="my-8 flex flex-col items-center justify-center border bg-white p-4 max-w-7xl mx-auto min-h-[300px] shadow-xs">
                                 {order.design && order.design !== "" ? (
