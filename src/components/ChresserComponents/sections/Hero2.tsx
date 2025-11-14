@@ -120,8 +120,8 @@ export default function Hero() {
                             Hvad du får hos mig
                         </h3>
                         <p className="text-lg mb-4 px-4">
-                            Jeg fokuserer på gennemsigtighed og selvfølgelig kvalitet. Ingen skjulte gebyrer og ingen hurtige løsninger –
-                            kun <strong>håndskreven kode</strong> og design, så du kan bruge din tid, hvor den virkelig tæller.
+                            Jeg fokuserer på gennemsigtighed og selvfølgelig kvalitet. Ingen skjulte gebyrer og ingen hurtige løsninger.
+                            Det betyder at du kun får <strong>håndskreven kode</strong> og design, så du kan bruge din tid, hvor den virkelig tæller.
                         </p>
                         <ul className="list-disc pl-8 space-y-1">
                             <li>Værdi for pengene</li>
