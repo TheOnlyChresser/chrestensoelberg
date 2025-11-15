@@ -312,27 +312,6 @@ export default function Hero() {
                     </Button>
                 </PriceBlockWrappper>
             </section>
-            <section className="mb-40">
-                <AsideWrapper>
-                    <AsideImage src="/forest.jpg" alt="avatar" />
-                    <AsideText>
-                        <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
-                            Hvad er fordelene ved at købe hos mig?
-                        </h3>
-                        <p className="text-lg mb-4 px-4">
-                            Jeg bygger alt fra bunden med fokus på ydeevne, sikkerhed og design, der afspejler din identitet.
-                            Du får ikke en færdiglavet skabelon, men et <strong>unikt produkt</strong>, som er lavet til at vokse sammen med dig.
-                        </p>
-                        <ul className="list-disc pl-8 space-y-1">
-                            <li>Responsivt design, der virker overalt</li>
-                            <li>Hurtig levering uden at gå på kompromis</li>
-                            <li>Personlig dialog og ærlig rådgivning</li>
-                            <li>Gratis support på små ændringer</li>
-                            <li>Langsigtet samarbejde og tryghed</li>
-                        </ul>
-                    </AsideText>
-                </AsideWrapper>
-            </section>
             <section className="bg-gray-100/40 dark:bg-gray-900/40 pb-16">
                 <Timeline/>
             </section>
