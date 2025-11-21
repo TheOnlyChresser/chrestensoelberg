@@ -11,7 +11,13 @@ export default function d() {
                 <Heading className="!mt-0">404</Heading>
                 <Subheading className="!mt-2">Siden kunne ikke blive fundet.</Subheading>
             </div>
-            <Button className="mt-8" button="normal">Gå tilbage til forsiden</Button>
+            <Link href="/">
+                <Button
+                    className="mt-8"
+                    button="normal">
+                    Gå tilbage til forsiden
+                </Button>
+            </Link>
         </div>
         </>
     )
