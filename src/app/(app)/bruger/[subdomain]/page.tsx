@@ -37,6 +37,26 @@ export default function Page() {
         console.log(orders)
         console.log(customer)
     }, [orders, customer])
+
+    useEffect(()=> {
+        const cachedLoggedIn = localStorage.getItem("loggedIn") === "true";
+        const cachedCustomer = localStorage.getItem("customer");
+        const cachedOrders = localStorage.getItem("orders");
+
+        if (cachedLoggedIn && cachedCustomer && cachedOrders) {
+            setLoggedIn(true);
+            setCustomer(JSON.parse(cachedCustomer));
+            setOrders(JSON.parse(cachedOrders));
+        }
+    }, [])
+
+    useEffect(() => {
+        if (loggedIn) {
+            localStorage.setItem("loggedIn", "true");
+            localStorage.setItem("customer", JSON.stringify(customer));
+            localStorage.setItem("orders", JSON.stringify(orders));
+        }
+    }, [loggedIn, customer, orders]);
     return (
         <div className="w-full relative bg-gray-50">
             <div className="w-full h-screen overflow-y-auto">

@@ -1,6 +1,7 @@
 import Button from "@/components/ChresserComponents/ui/Button";
 import {Heading, Subheading} from "@/components/ChresserComponents/ui/Text";
 import Navbar from "@/components/ChresserComponents/navBar";
+import Link from "next/link";
 
 export default function d() {
     return (
