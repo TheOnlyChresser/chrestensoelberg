@@ -29,7 +29,7 @@ export default async function send({ customerId, orderId, password, name, email,
         const { data, error } = await resend.emails.send({
             from: 'Chresten <noreply@chrestensoelberg.dk>',
             to: email,
-            subject: `Bestilling af ${product}. Ordre: ${orderId}`,
+            subject: `Ordre: ${orderId} - ${product}`,
             html: `
                 <h2>Hej ${name},</h2>
                 <p>Tak for din bestilling af <strong>${product}</strong>!</p>
