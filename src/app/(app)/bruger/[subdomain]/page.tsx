@@ -17,8 +17,27 @@ export default function Page() {
     const [password, setPassword] = useState("")
     const [highlighted, setHighlighted] = useState(false)
     const falseDeadline: string = new Date(Date.now() + 30*24*60*60*1000).toISOString();
-    const [orders, setOrders] = useState<any[]>([{id: "545445", customerId: "reet-4433-bgfb-3535", timeTaken: "4", expectedTime: "10", updatedAt: "", createdAt: "", design: "", productName: "et online visitkort", productPrice: "989", status:"Et online visitkort", comment:"jeg ville have ekstra information omkring bla bla bla", deadline: falseDeadline, totalClip: "10", clipsUsed: "0"}])
-    const [customer, setCustomer] = useState({id: "reet-4433-bgfb-3535", customerName: "Poul", customerEmail: "Poul@gmail.com"})
+    const [orders, setOrders] = useState<any[]>([{
+        id: "545445",
+        customerId: "reet-4433-bgfb-3535",
+        timeTaken: "4",
+        expectedTime: "10",
+        updatedAt: "",
+        createdAt: "",
+        design: "",
+        productName: "et online visitkort",
+        productPrice: "989",
+        status:"Et online visitkort",
+        comment:"jeg ville have ekstra information omkring bla bla bla",
+        deadline: falseDeadline,
+        totalClip: "10",
+        clipsUsed: "0"
+    }])
+    const [customer, setCustomer] = useState({
+        id: "reet-4433-bgfb-3535",
+        customerName: "Poul",
+        customerEmail: "Poul@gmail.com"
+    })
     const [expectedTime, setExpectedTime] = useState<number>(10)
     const [timeTaken, setTimeTaken] = useState<number>(7)
     const [orderCreatedAt, setOrderCreatedAt] = useState<number>(Date.now())
@@ -33,6 +52,7 @@ export default function Page() {
             setId(subdomain);
         }
     }, []);
+
     useEffect(()=> {
         console.log(orders)
         console.log(customer)
@@ -61,29 +81,63 @@ export default function Page() {
         <div className="w-full relative bg-gray-50">
             <div className="w-full h-screen overflow-y-auto">
                 {orders.map((order, index) => (
-                    <div className="min-h-screen" key={index}>
+                    <div className="min-h-screen"
+                         key={index}>
                         <div className="z-100 border-b border-t mb-4 bg-white/64 backdrop-blur-sm w-full flex sticky top-0 flex-row justify-between py-4 px-8">
                             <div>
-                                <h1 className="text-xl font-bold text-gradient-subtle mb-1 mt-5 lg:text-wrap break-words hyphens-auto lg:break-normal">Ordre {order.id}</h1>
-                                <p className="text-sm text-gray-500">{order.productName}</p>
+                                <h1 className="text-xl font-bold text-gradient-subtle mb-1 mt-5 lg:text-wrap break-words hyphens-auto lg:break-normal">
+                                    Ordre {order.id}
+                                </h1>
+                                <p className="text-sm text-gray-500">
+                                    {order.productName}
+                                </p>
                             </div>
                             <div className="justify-center items-center flex flex-col">
-                                <AttentionSpan color="blue" className="!animate-none !from-blue-100 !via-blue-100 !to-blue-100 !cursor-default" title="Status">{order.status}</AttentionSpan>
+                                <AttentionSpan color="blue"
+                                               className="!animate-none !from-blue-100 !via-blue-100 !to-blue-100 !cursor-default"
+                                               title="Status">
+                                    {order.status}
+                                </AttentionSpan>
                             </div>
                         </div>
                         <div className="items-center justify-center w-full">
                         <div className="grid md:grid-cols-3 gap-4 p-4 mx-4 md:mx-0 pb-24 md:pb-0">
                             <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border bg-white max-h-[80vh] md:max-h-[60vh] overflow-y-hidden">
-                                <span>Beskeder</span>
-                                <RealtimeChat roomName={order.id} username={customer.customerName} />
+                                <span>
+                                    Beskeder
+                                </span>
+                                <RealtimeChat
+                                    roomName={order.id}
+                                    username={customer.customerName}
+                                />
                             </div>
                             <div className="w-full md:grid md:grid-rows-3 space-y-4">
                                 <div className="shadow-xs w-full p-4 border bg-white md:row-span-2">
-                                    <h2 className="mb-1">Ordre information</h2>
+                                    <h2 className="mb-1">
+                                        Ordre information
+                                    </h2>
                                     <div className="mt-3 space-y-2 cursor-default">
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Bruger ID"><BookUser size={20}/> <span className="ml-2 text-black">{order.customerId}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Brugernavn"><User size={20}/> <span className="ml-2 text-black">{customer.customerName}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="E-mail"><Mail size={20}/> <span className="ml-2 text-black">{customer.customerEmail}</span></p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                           title="Bruger ID">
+                                            <BookUser size={20}/>
+                                            <span className="ml-2 text-black">
+                                                {order.customerId}
+                                            </span>
+                                        </p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                           title="Brugernavn">
+                                            <User size={20}/>
+                                            <span className="ml-2 text-black">
+                                                {customer.customerName}
+                                            </span>
+                                        </p>
+                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                           title="E-mail">
+                                            <Mail size={20}/>
+                                            <span className="ml-2 text-black">
+                                                {customer.customerEmail}
+                                            </span>
+                                        </p>
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Ordre ID"><NotebookTabs size={20}/> <span className="ml-2 text-black">{order.id}</span></p>
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Produkt"><Tag size={20}/> <span className="ml-2 text-black">{order.productName}</span></p>
                                         <p className="flex flex-row text-gray-500 items-center text-sm" title="Pris"><HandCoins size={20}/> <span className="ml-2 text-black">{order.productPrice}{ !isNaN(Number(order.productPrice)) && (<span className="text-xs">kr</span>)}</span></p>
@@ -136,12 +190,30 @@ export default function Page() {
                             Log ind
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md text-center pb-6">
-                            Log ind med adgangskoden sendt på e-mailen.<span className="mb-1 cursor-default hover:text-blue-300" onMouseEnter={()=> {setHighlighted(true)}} onMouseLeave={()=>{setHighlighted(false)}}>*</span>
+                            Log ind med adgangskoden sendt på e-mailen.
+                            <span className="mb-1 cursor-default hover:text-blue-300"
+                                  onMouseEnter={()=> {setHighlighted(true)}}
+                                  onMouseLeave={()=>{setHighlighted(false)}}
+                            >
+                            *
+                        </span>
                         </p>
-                        <Input type="password" className="mb-4" value={password} onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} required>
+                        <Input
+                            type="password"
+                            className="mb-4"
+                            value={password}
+                            onChange={
+                            (e: ChangeEvent<HTMLInputElement>) =>
+                                setPassword(e.target.value)}
+                            required>
                             Din adgangskode
                         </Input>
-                        <Button type="submit" className="px-4 py-2" button="normal" size="form-md" onClick={async ()=>{
+                        <Button
+                            type="submit"
+                            className="px-4 py-2"
+                            button="normal"
+                            size="form-md"
+                            onClick={async ()=>{
                             const {data: customerData, error: customerError} = await supabase
                                 .from("customers")
                                 .select()
@@ -163,7 +235,10 @@ export default function Page() {
                         }}>
                             Log ind
                         </Button>
-                        <p className="text-sm p-2 text-gray-500"><span className={highlighted ? ("text-blue-300"): ("")}>*</span> E-mailen du blev sendt, hvor der også stod linket til denne hjemmeside.</p>
+                        <p className="text-sm p-2 text-gray-500">
+                            <span className={highlighted ? ("text-blue-300"): ("")}>*</span>
+                            E-mailen du blev sendt, hvor der også stod linket til denne hjemmeside.
+                        </p>
                     </div>
                 </div>
             )}
