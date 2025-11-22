@@ -1,3 +1,5 @@
+//TODO: vend timeline om, gør den simplere, mindre space imellem, ikke skiftende sider, evt billeder
+
 "use client"
 
 import { gsap } from "gsap";

@@ -114,7 +114,7 @@ export default function Hero() {
             </section>
             <section id="tekstsektion">
                 <AsideWrapper color="black">
-                    <AsideImage src="/happy.png" alt="avatar" className="md:hidden" />
+                    <AsideImage src="/mancodingchair.avif" alt="avatar" className="md:hidden" />
                     <AsideText>
                         <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
                             Hvad du får hos mig
@@ -131,11 +131,11 @@ export default function Hero() {
                             <li>Telefonsamtaler eller chat</li>
                         </ul>
                     </AsideText>
-                    <AsideImage src="/happy.png" alt="avatar" type="right" className="hidden md:flex" />
+                    <AsideImage src="/mancodingchair.avif" alt="avatar" type="right" className="hidden md:flex" />
                 </AsideWrapper>
 
                 <AsideWrapper>
-                    <AsideImage src="/forest.jpg" alt="avatar" />
+                    <AsideImage src="/teamwork.avif" alt="avatar" />
                     <AsideText>
                         <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
                             Hvad du kan forvente
@@ -154,7 +154,7 @@ export default function Hero() {
                     </AsideText>
                 </AsideWrapper>
                 <AsideWrapper color="black">
-                    <AsideImage src="/code.jpg" alt="WordPress vs Next.js illustration" className="md:hidden" />
+                    <AsideImage src="/codingimage.avif" alt="WordPress vs Next.js illustration" className="md:hidden" />
                     <AsideText>
                         <h3 className="text-5xl font-bold text-gradient-subtle mb-1 mt-5 mx-5 ml-1 p-4 lg:text-wrap break-words hyphens-auto lg:break-normal">
                             WordPress vs. Next.js
@@ -195,7 +195,7 @@ export default function Hero() {
                             Du kan læse mere om NextJS <a href="https://nextjs.org/" className="underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80">her</a> og mere om Wordpress <a href="https://wordpress.com/" className="underline hover:no-underline underline-offset-2 active:no-underline decoration-2 decoration-sky-500 text-black dark:text-white/80">her</a>
                         </p>
                     </AsideText>
-                    <AsideImage src="/code.jpg" alt="WordPress vs Next.js illustration" type="right" className="hidden md:flex" />
+                    <AsideImage src="/codingimage.avif" alt="WordPress vs Next.js illustration" type="right" className="hidden md:flex" />
                 </AsideWrapper>
 
             </section>
