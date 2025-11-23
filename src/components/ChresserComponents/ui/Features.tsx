@@ -31,7 +31,7 @@ export default function Feature ({className = "", children, color = "green", siz
                 y: 0,
                 opacity: 1,
                 filter: "blur(0px)",
-                duration: 1.2,
+                duration: 0.8,
                 ease: "power3.out",
                 stagger: 0.25,
             }
