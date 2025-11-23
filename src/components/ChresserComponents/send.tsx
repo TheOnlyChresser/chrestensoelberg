@@ -1,3 +1,5 @@
+//TODO: gør email fancy med tailwind styling
+
 'use server'
 
 import { createClient } from '@/lib/client';
