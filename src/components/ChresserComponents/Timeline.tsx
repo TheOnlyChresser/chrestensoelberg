@@ -1,32 +1,28 @@
-//TODO: vend timeline om, gør den simplere, mindre space imellem, ikke skiftende sider, evt billeder
-
 "use client"
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import {useGSAP} from "@gsap/react"
+import { useGSAP } from "@gsap/react";
+import * as Icons from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Timeline () {
+export default function Timeline() {
     useGSAP(() => {
-        const timelineItems = document.querySelectorAll(".timeline-item")
-        timelineItems.forEach((item) => {
-            gsap.fromTo(item,
-                {
-                    opacity: 0,
-                    filter: "blur(4px)",
-                    y: 50
-                },
+        const items = document.querySelectorAll(".timeline-item");
+        items.forEach((el) => {
+            gsap.fromTo(
+                el,
+                { opacity: 0, y: 30, filter: "blur(4px)" },
                 {
                     opacity: 1,
                     y: 0,
                     filter: "blur(0px)",
-                    duration: 1,
+                    duration: 0.5,
+                    ease: "power2.out",
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 80%",
-                        end: "bottom 60%",
+                        trigger: el,
+                        start: "top 85%",
                         toggleActions: "play none none reverse",
                     },
                 }
@@ -34,63 +30,33 @@ export default function Timeline () {
         });
     }, []);
 
-    const items = [
-        {
-            title: "Planlægning",
-            description:
-                "Vi starter med at snakke sammen om hvad dine behov er og hvordan vi kan få dem udfyldt. Det er også her du indsender teksten du har skrevet.",
-        },
-        {
-            title: "Design",
-            description:
-                "En prototype bliver lavet i Figma så du kan se om der skal foretages evt ændringer.",
-        },
-        {
-            title: "Betaling",
-            description:
-                "Efter designet er færdig og du har bekræftet det er sådan du ville have hjemmesiden ser ud betaler du 10% af beløbet."
-        },
-        {
-            title: "Udvikling",
-            description:
-                "Hjemmesiden bliver kodet med NextJS og TailwindCSS for at sikre hurtig performance og responsivt design.",
-        },
-        {
-            title: "Test",
-            description:
-                "Jeg tester hjemmesiden grundigt for fejl, responsivitet og brugervenlighed på alle enheder.",
-        },
-        {
-            title: "Lancering og betaling",
-            description:
-                "Hjemmesiden bliver lanceret, og du får en kort introduktion til administration og vedligeholdelse efter at betale det resterende beløb.",
-        },
+    const steps = [
+        { title: "Planlægning", description: "Vi starter med at gennemgå dine behov og målsætninger.", icon: "CalendarCheck" },
+        { title: "Design", description: "Der udarbejdes en prototype i Figma, som du godkender.", icon: "PenTool" },
+        { title: "Betaling", description: "Efter godkendt design betales 10% af beløbet.", icon: "CreditCard" },
+        { title: "Udvikling", description: "Siden bygges i Next.js og Tailwind for høj performance.", icon: "Code2" },
+        { title: "Test", description: "Alt testes grundigt på flere enheder.", icon: "CheckCircle2" },
+        { title: "Lancering", description: "Siden går live, og du får en kort introduktion.", icon: "Rocket" },
     ];
 
     return (
-        <div className="relative min-h-[200vh] flex md:items-center md:justify-center p-8 mt-16">
-            <div className="absolute h-full w-2 bg-blue-500 dark:bg-blue-700 rounded-xl"/>
-            <ul className="border-gray-300 dark:border-gray-700 w-full md:grid md:grid-cols-2 gap-16">
-                {items.map((item, index) => { if (index % 2 === 0) { return [
-                    <div key={index+100}></div>,
-                    <li key={index} className="mb-24 col-start-2 relative timeline-item">
-                        <div className="md:w-12 w-4 md:-ml-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl"></div>
-                        <h3 className="dark:text-gray-50 ml-6 text-3xl font-bold">{item.title}</h3>
-                        <p className="ml-6 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
-                    </li>
-                ]}
-                else {
-                    return [
-                        <li key={index} className="mb-24 col-start-1 relative timeline-item">
-                            <div className="w-4 md:w-12 md:-mr-8 mt-4 h-2 bg-blue-500 dark:bg-blue-700 absolute rounded-xl md:right-0"></div>
-                            <h3 className="dark:text-gray-50 ml-6 md:mr-6 md:ml-0 text-3xl font-bold">{item.title}</h3>
-                            <p className="md:mr-6 ml-6 md:ml-0 mt-2 text-gray-700 dark:text-gray-200 text-lg">{item.description}</p>
-                        </li>,
-                        <div key={index+100}></div>
-                    ]
-                }
-                })}
-            </ul>
+        <div className="relative mx-auto max-w-3xl mt-20 px-6 space-y-16">
+            <div className="absolute left-6 top-0 h-full w-1 bg-blue-500/40 rounded-full" />
+            {steps.map((step, i) => {
+                // @ts-ignore
+                const Icon: any = Icons[step.icon];
+                return (
+                    <div key={i} className="timeline-item relative pl-20">
+                        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-md rounded-xl p-5">
+                            <div className="flex items-center gap-3 mb-2">
+                                <Icon className="w-6 h-6 text-blue-600" />
+                                <h3 className="text-xl font-bold dark:text-gray-50">{step.title}</h3>
+                            </div>
+                            <p className="text-gray-700 dark:text-gray-300 text-base">{step.description}</p>
+                        </div>
+                    </div>
+                );
+            })}
         </div>
     );
-};
+}

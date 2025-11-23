@@ -313,7 +313,7 @@ export default function Hero() {
                     </Button>
                 </PriceBlockWrappper>
             </section>
-            <section className="bg-gray-100/40 dark:bg-gray-900/40 pb-16">
+            <section className="pb-16">
                 <Timeline/>
             </section>
             </div>
