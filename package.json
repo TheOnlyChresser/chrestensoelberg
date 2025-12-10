@@ -46,7 +46,7 @@
     "gsap": "^3.13.0",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.24",
-    "next": "15.3.4",
+    "next": "15.3.6",
     "payload": "^3.45.0",
     "posthog-js": "^1.297.2",
     "posthog-node": "^5.13.2",
