@@ -6,7 +6,7 @@ html, body {
   font-family: 'DM-Sans', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  @apply bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300/40 selection:text-sky-800 hyphens-auto;
+  @apply bg-gradient-to-tr from-white via-blue-50 to-green-50  dark:from-black dark:via-[#050A1F] dark:to-[#041F12] selection:bg-sky-300/40 selection:text-sky-800 dark:selection:bg-sky-600/40 dark:selection:text-sky-100 hyphens-auto;
 }
 
 @font-face{
