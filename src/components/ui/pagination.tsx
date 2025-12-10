@@ -17,7 +17,7 @@ const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
 const PaginationContent: React.FC<
   { ref?: React.Ref<HTMLUListElement> } & React.HTMLAttributes<HTMLUListElement>
 > = ({ className, ref, ...props }) => (
-  <ul className={cn('flex flex-row items-center gap-1', className)} ref={ref} {...props} />
+  <ul className={cn('flex flex-row items-center gap-1 dark:text-white', className)} ref={ref} {...props} />
 )
 
 const PaginationItem: React.FC<
