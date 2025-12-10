@@ -41,7 +41,7 @@ export const Card: React.FC<{
         {titleToUse && (
           <div className="prose font-bold">
             <h3>
-              <Link className="-m-4 font-inter no-underline break-all not-prose text-black dark:text-white group-hover:text-white dark:group-hover:text-black dark:group-active:text-black group-active:text-white line-clamp-3 md:line-clamp-2 p-1" href={href} ref={link.ref}>
+              <Link className="-m-4 font-inter no-underline break-all not-prose text-black dark:text-white group-hover:text-white dark:group-hover:text-white dark:group-active:text-black group-active:text-white line-clamp-3 md:line-clamp-2 p-1" href={href} ref={link.ref}>
                 {titleToUse}
               </Link>
             </h3>
