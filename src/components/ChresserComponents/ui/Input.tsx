@@ -27,7 +27,7 @@ export function Input({children = "", className = "", containerSize = "md", colo
     const colorClass: Record<ColorProps, string> = {
         "black": "dark:text-gray-50 dark:placeholder-white/60",
         "yellow": "",
-        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:ring-blue-600/24 text-black dark:text-gray-900 bg-white",
+        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:border-gray-600 dark:focus:ring-gray-600/24 text-black dark:text-gray-900 bg-white dark:bg-gray-600",
         "green": "",
         "red": "",
     }
@@ -40,14 +40,14 @@ export function Input({children = "", className = "", containerSize = "md", colo
 export function Textarea({children = "", className = "", containerSize = "md", color = "blue", ...props}: TextareaProps) {
     const sizeClass: Record<SizeProps, string> = {
         "sm": "",
-        "md": "w-full border rounded-md py-2 px-4 focus:outline-none ring-4",
+        "md": "w-full border rounded-md py-2 px-4 focus:outline-none ring-4 resize-none",
         "lg": "",
         "xl": "",
     }
     const colorClass: Record<ColorProps, string> = {
         "black": "dark:text-gray-50 dark:placeholder-white/60",
         "yellow": "",
-        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:ring-blue-600/24 text-black dark:text-gray-900 bg-white",
+        "blue": "dark:placeholder-black/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 dark:focus:border-gray-600 dark:focus:ring-gray-600/24 text-black dark:text-gray-900 bg-white dark:bg-gray-600",
         "green": "",
         "red": "",
     }

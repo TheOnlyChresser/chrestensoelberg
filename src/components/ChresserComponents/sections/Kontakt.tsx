@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {ChangeEvent, useState} from "react";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all"
 import gsap from "gsap";
 import Button from "@/components/ChresserComponents/ui/Button";
-import { Input } from "../ui/Input";
+import {Input, Textarea} from "../ui/Input";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -116,13 +116,12 @@ function Kontakt() {
                     >
                         Din besked:
                     </label>
-                    <textarea
+                    <Textarea
                         id="message"
                         name="message"
                         rows={5}
-                        className="resize-none w-full border rounded-md py-2 px-4 focus:outline-none ring-4 dark:text-gray-50 dark:placeholder-white/60 border-gray-400/24 ring-transparent focus:ring-blue-600/16 focus:border-blue-600 text-black bg-white"
                         value={userInput.message}
-                        onChange={(e) => setUserInput({ ...userInput, message: e.target.value })}
+                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setUserInput({ ...userInput, message: e.target.value })}
                         required
                         aria-required="true"
                         placeholder="Skriv din besked her..."

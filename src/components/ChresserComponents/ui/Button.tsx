@@ -19,7 +19,7 @@ type ButtonColorTypes = {
 export default function Button ({className = "", children, color = "blue", size = "md", button="outline", ...props}: ButtonProps) {
     const colorClass: Record<ButtonColor, ButtonColorTypes> = {
         blue: {border: "border-blue-600", bg: "bg-blue-600", text: "text-blue-50"},
-        black: {border: "border-black/80 dark:border-white/80", bg: "bg-black dark:bg-white", text: "text-gray-50 dark:text-gray-950"},
+        black: {border: "border-black/80 dark:border-gray-600", bg: "bg-black dark:bg-gray-600", text: "text-gray-50 dark:text-gray-950"},
         green: {border: "border-green-600", bg: "bg-green-600", text: "text-green-50"},
         red: {border: "border-red-600", bg: "bg-red-600", text: "text-red-50"},
     }
