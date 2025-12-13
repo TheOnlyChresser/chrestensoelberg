@@ -71,12 +71,25 @@ export default function AdminHome() {
   }, [searchQuery, customers])
 
   const handleAdminLogin = async () => {
-    if (adminPassword === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
-      setIsAuthenticated(true)
-      localStorage.setItem("adminAuthenticated", "true")
-      fetchCustomers()
-    } else {
-      alert("Forkert adgangskode")
+    try {
+      const response = await fetch('/info/admin/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: adminPassword })
+      })
+      
+      const data = await response.json()
+      
+      if (data.success) {
+        setIsAuthenticated(true)
+        localStorage.setItem("adminAuthenticated", "true")
+        fetchCustomers()
+      } else {
+        alert("Forkert adgangskode")
+      }
+    } catch (error) {
+      console.error("Login error:", error)
+      alert("Der opstod en fejl")
     }
   }
 
