@@ -235,7 +235,7 @@ export default function Hero() {
                         Bestil
                     </Button>
                 </PriceBlockWrappper>
-                <PriceBlockWrappper className="scale-104 !bg-gray-50/40 !dark:bg-gray-900/40 !border-blue-500">
+                <PriceBlockWrappper className="scale-104 !bg-gray-50/40 !dark:bg-gray-950 !border-blue-500">
                 <PriceBlockTextWrapper>
                     <PriceBlockTextWrapper>
                         <PriceBlockExtra>
