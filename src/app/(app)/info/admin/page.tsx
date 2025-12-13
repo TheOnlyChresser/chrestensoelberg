@@ -71,7 +71,7 @@ export default function AdminHome() {
   }, [searchQuery, customers])
 
   const handleAdminLogin = async () => {
-    if (adminPassword === "admin123") {
+    if (adminPassword === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setIsAuthenticated(true)
       localStorage.setItem("adminAuthenticated", "true")
       fetchCustomers()
