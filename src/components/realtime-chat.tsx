@@ -73,8 +73,12 @@ export const RealtimeChat = ({
   const handleSendMessage = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault()
-      if (!newMessage.trim() || !isConnected) return
+      if (!newMessage.trim() || !isConnected) {
+        console.log('Cannot send message:', { isConnected, hasContent: newMessage.trim() })
+        return
+      }
 
+      console.log('Sending message:', newMessage)
       sendMessage(newMessage)
       setNewMessage('')
     },
@@ -83,7 +87,6 @@ export const RealtimeChat = ({
 
   return (
     <div className="flex flex-col h-full w-full bg-background text-foreground antialiased">
-      {/* Messages */}
       <div ref={containerRef} className="flex-1 overflow-y-auto p-4 space-y-4">
         {isLoading ? (
           <div className="text-center text-sm text-muted-foreground">

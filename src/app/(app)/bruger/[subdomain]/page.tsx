@@ -38,6 +38,7 @@ export default function Page() {
         customerName: "Poul",
         customerEmail: "Poul@gmail.com"
     })
+    const [timeEntries, setTimeEntries] = useState<Record<string, number>>({})
     const [expectedTime, setExpectedTime] = useState<number>(10)
     const [timeTaken, setTimeTaken] = useState<number>(7)
     const [orderCreatedAt, setOrderCreatedAt] = useState<number>(Date.now())
@@ -75,6 +76,27 @@ export default function Page() {
             localStorage.setItem("loggedIn", "true");
             localStorage.setItem("customer", JSON.stringify(customer));
             localStorage.setItem("orders", JSON.stringify(orders));
+            
+            // fetcher tid for alle ordre
+            const fetchTimeEntries = async () => {
+                const { data } = await supabase
+                    .from("time_entries")
+                    .select("order_id, hours_spent")
+                    .eq("customer_id", customer.id);
+                
+                if (data) {
+                    const entriesByOrder: Record<string, number> = {};
+                    data.forEach((entry: any) => {
+                        if (!entriesByOrder[entry.order_id]) {
+                            entriesByOrder[entry.order_id] = 0;
+                        }
+                        entriesByOrder[entry.order_id] += entry.hours_spent;
+                    });
+                    setTimeEntries(entriesByOrder);
+                }
+            };
+            
+            fetchTimeEntries();
         }
     }, [loggedIn, customer, orders]);
     return (
@@ -146,14 +168,14 @@ export default function Page() {
                                 <div className="shadow-xs w-full p-4 border bg-white">
                                     <h2 className="mb-1">{order.productName === "et klippekort" ? ("Antal klip"):("Forventet tid")}</h2>
                                     <div className="mt-3 space-y-2">
-                                        <Progress value={order.productName === "et klippekort" ? (parseInt(order.clipsUsed)/parseInt(order.totalClip)): (parseInt(order.timeTaken)/parseInt(order.expectedTime))*100}/>
+                                        <Progress value={order.productName === "et klippekort" ? (parseInt(order.clipsUsed)/parseInt(order.totalClip)): ((timeEntries[order.id] || 0) / (order.expectedTime || 1)) * 100}/>
                                         {order.productName === "et klippekort" ? (
                                             <div className="flex flex-row justify-between text-sm text-gray-500">
                                                 <p>klip tilbage: {parseInt(order.totalClip)-parseInt(order.clipsUsed)}</p>
                                             </div>
                                         ):(
                                             <div className="flex flex-row justify-between text-sm text-gray-500">
-                                                <p>ca. {Math.ceil(((parseInt(order.expectedTime)-parseInt(order.timeTaken))/parseInt(order.expectedTime))*30)} dage tilbage</p>
+                                                <p>ca. {order.expectedTime ? Math.ceil(((order.expectedTime - (timeEntries[order.id] || 0)) / order.expectedTime) * 30) : 0} dage tilbage</p>
                                                 <p>maks. {Math.ceil((new Date(order.deadline.split(".")[0] + "Z").getTime() - Date.now()) / (1000 * 60 * 60 * 24))} dage tilbage</p>
                                             </div>
                                         )}
