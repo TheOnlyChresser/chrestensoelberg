@@ -100,17 +100,17 @@ export default function Page() {
         }
     }, [loggedIn, customer, orders]);
     return (
-        <div className="w-full relative bg-gray-50">
+        <div className="w-full relative bg-gray-50 dark:bg-gray-950">
             <div className="w-full h-screen overflow-y-auto">
                 {orders.map((order, index) => (
                     <div className="min-h-screen"
                          key={index}>
-                        <div className="z-100 border-b border-t mb-4 bg-white/64 backdrop-blur-sm w-full flex sticky top-0 flex-row justify-between py-4 px-8">
+                        <div className="z-100 border-b border-t mb-4 bg-white/64 dark:bg-gray-900/64 backdrop-blur-sm w-full flex sticky top-0 flex-row justify-between py-4 px-8">
                             <div>
-                                <h1 className="text-xl font-bold text-gradient-subtle mb-1 mt-5 lg:text-wrap break-words hyphens-auto lg:break-normal">
+                                <h1 className="text-xl font-bold text-gradient-subtle dark:text-white/90 mb-1 mt-5 lg:text-wrap break-words hyphens-auto lg:break-normal">
                                     Ordre {order.id}
                                 </h1>
-                                <p className="text-sm text-gray-500">
+                                <p className="text-sm text-gray-500 dark:text-gray-400">
                                     {order.productName}
                                 </p>
                             </div>
@@ -124,8 +124,8 @@ export default function Page() {
                         </div>
                         <div className="items-center justify-center w-full">
                         <div className="grid md:grid-cols-3 gap-4 p-4 mx-4 md:mx-0 pb-24 md:pb-0">
-                            <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border bg-white max-h-[80vh] md:max-h-[60vh] overflow-y-hidden">
-                                <span>
+                            <div className="shadow-xs md:col-span-2 w-full p-4 pb-6 border dark:border-gray-800 bg-white dark:bg-gray-900 max-h-[80vh] md:max-h-[60vh] overflow-y-hidden">
+                                <span className="dark:text-white/90">
                                     Beskeder
                                 </span>
                                 <RealtimeChat
@@ -134,47 +134,47 @@ export default function Page() {
                                 />
                             </div>
                             <div className="w-full md:grid md:grid-rows-3 space-y-4">
-                                <div className="shadow-xs w-full p-4 border bg-white md:row-span-2">
-                                    <h2 className="mb-1">
+                                <div className="shadow-xs w-full p-4 border dark:border-gray-800 bg-white dark:bg-gray-900 md:row-span-2">
+                                    <h2 className="mb-1 dark:text-white/90">
                                         Ordre information
                                     </h2>
                                     <div className="mt-3 space-y-2 cursor-default">
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm"
                                            title="Bruger ID">
                                             <BookUser size={20}/>
-                                            <span className="ml-2 text-black">
+                                            <span className="ml-2 text-black dark:text-white/90">
                                                 {order.customerId}
                                             </span>
                                         </p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm"
                                            title="Brugernavn">
                                             <User size={20}/>
-                                            <span className="ml-2 text-black">
+                                            <span className="ml-2 text-black dark:text-white/90">
                                                 {customer.customerName}
                                             </span>
                                         </p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm"
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm"
                                            title="E-mail">
                                             <Mail size={20}/>
-                                            <span className="ml-2 text-black">
+                                            <span className="ml-2 text-black dark:text-white/90">
                                                 {customer.customerEmail}
                                             </span>
                                         </p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Ordre ID"><NotebookTabs size={20}/> <span className="ml-2 text-black">{order.id}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Produkt"><Tag size={20}/> <span className="ml-2 text-black">{order.productName}</span></p>
-                                        <p className="flex flex-row text-gray-500 items-center text-sm" title="Pris"><HandCoins size={20}/> <span className="ml-2 text-black">{order.productPrice}{ !isNaN(Number(order.productPrice)) && (<span className="text-xs">kr</span>)}</span></p>
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm" title="Ordre ID"><NotebookTabs size={20}/> <span className="ml-2 text-black dark:text-white/90">{order.id}</span></p>
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm" title="Produkt"><Tag size={20}/> <span className="ml-2 text-black dark:text-white/90">{order.productName}</span></p>
+                                        <p className="flex flex-row text-gray-500 dark:text-gray-400 items-center text-sm" title="Pris"><HandCoins size={20}/> <span className="ml-2 text-black dark:text-white/90">{order.productPrice}{ !isNaN(Number(order.productPrice)) && (<span className="text-xs">kr</span>)}</span></p>
                                     </div>
                                 </div>
-                                <div className="shadow-xs w-full p-4 border bg-white">
-                                    <h2 className="mb-1">{order.productName === "et klippekort" ? ("Antal klip"):("Forventet tid")}</h2>
+                                <div className="shadow-xs w-full p-4 border dark:border-gray-800 bg-white dark:bg-gray-900">
+                                    <h2 className="mb-1 dark:text-white/90">{order.productName === "et klippekort" ? ("Antal klip"):("Forventet tid")}</h2>
                                     <div className="mt-3 space-y-2">
                                         <Progress value={order.productName === "et klippekort" ? (parseInt(order.clipsUsed)/parseInt(order.totalClip)): ((timeEntries[order.id] || 0) / (order.expectedTime || 1)) * 100}/>
                                         {order.productName === "et klippekort" ? (
-                                            <div className="flex flex-row justify-between text-sm text-gray-500">
+                                            <div className="flex flex-row justify-between text-sm text-gray-500 dark:text-gray-400">
                                                 <p>klip tilbage: {parseInt(order.totalClip)-parseInt(order.clipsUsed)}</p>
                                             </div>
                                         ):(
-                                            <div className="flex flex-row justify-between text-sm text-gray-500">
+                                            <div className="flex flex-row justify-between text-sm text-gray-500 dark:text-gray-400">
                                                 <p>ca. {order.expectedTime ? Math.ceil(((order.expectedTime - (timeEntries[order.id] || 0)) / order.expectedTime) * 30) : 0} dage tilbage</p>
                                                 <p>maks. {Math.ceil((new Date(order.deadline.split(".")[0] + "Z").getTime() - Date.now()) / (1000 * 60 * 60 * 24))} dage tilbage</p>
                                             </div>
@@ -185,7 +185,7 @@ export default function Page() {
                         </div>
                             { order.productName !== "et klippekort" && order.design && order.design !== "" && (
                         <div className="flex flex-col w-full items-center justify-center">
-                            <div className="my-8 flex flex-col items-center justify-center border bg-white p-4 max-w-7xl mx-auto min-h-[300px] shadow-xs">
+                            <div className="my-8 flex flex-col items-center justify-center border dark:border-gray-800 bg-white dark:bg-gray-900 p-4 max-w-7xl mx-auto min-h-[300px] shadow-xs">
                                 {order.design && order.design !== "" ? (
                                     <img
                                         src={order.design}
@@ -193,7 +193,7 @@ export default function Page() {
                                         className="w-full max-w-[1200px] h-auto object-contain rounded shadow-md"
                                     />
                                 ) : (
-                                    <p className="w-full text-center text-sm text-gray-500 sm:text-base px-16 lg:px-24">
+                                    <p className="w-full text-center text-sm text-gray-500 dark:text-gray-400 sm:text-base px-16 lg:px-24">
                                         Designet ville blive vist her når det er færdigt.
                                     </p>
                                 )}
@@ -206,7 +206,7 @@ export default function Page() {
                 ))}
             </div>
             {!loggedIn && (
-                <div className="z-1000 inset-0 w-full h-[100dvh] fixed bg-gray-50 flex flex-col items-center pt-32">
+                <div className="z-1000 inset-0 w-full h-[100dvh] fixed bg-gray-50 dark:bg-gray-950 flex flex-col items-center pt-32">
                     <div className="bg-gray-100/64 dark:bg-gray-950/40 rounded-2xl p-8 shadow-lg w-100 md:w-120 relative border-1 border-black/40 dark:border-black/40">
                         <h2 className="text-lg font-semibold mb-1 text-center dark:text-gray-50">
                             Log ind
@@ -257,7 +257,7 @@ export default function Page() {
                         }}>
                             Log ind
                         </Button>
-                        <p className="text-sm p-2 text-gray-500">
+                        <p className="text-sm p-2 text-gray-500 dark:text-gray-400">
                             <span className={highlighted ? ("text-blue-300"): ("")}>*</span>
                             E-mailen du blev sendt, hvor der også stod linket til denne hjemmeside.
                         </p>

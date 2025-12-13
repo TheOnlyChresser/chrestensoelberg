@@ -86,14 +86,14 @@ export const RealtimeChat = ({
   )
 
   return (
-    <div className="flex flex-col h-full w-full bg-background text-foreground antialiased">
+    <div className="flex flex-col h-full w-full bg-white dark:bg-gray-900 text-foreground dark:text-white antialiased">
       <div ref={containerRef} className="flex-1 overflow-y-auto p-4 space-y-4">
         {isLoading ? (
-          <div className="text-center text-sm text-muted-foreground">
+          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
             Indlæser beskeder...
           </div>
         ) : allMessages.length === 0 ? (
-          <div className="text-center text-sm text-muted-foreground">
+          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
             Ingen beskeder.
           </div>
         ) : null}
@@ -118,7 +118,7 @@ export const RealtimeChat = ({
         </div>
       </div>
 
-      <form onSubmit={handleSendMessage} className="flex w-full gap-2 border-t border-border p-4">
+      <form onSubmit={handleSendMessage} className="flex w-full gap-2 border-t border-border dark:border-gray-800 p-4">
         <Input
           className={cn(
             'text-sm',
