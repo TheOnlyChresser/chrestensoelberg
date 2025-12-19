@@ -1,3 +1,5 @@
+//TODO: tilføj AI hvor man kan style spørgsmål til en note eller den kan finde en eller søg
+
 import type { Metadata } from 'next/types'
 
 import { CollectionArchive } from '@/components/CollectionArchive'
