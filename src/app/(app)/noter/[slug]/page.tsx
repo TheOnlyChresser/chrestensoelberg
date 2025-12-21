@@ -62,17 +62,17 @@ export default async function Post({ params: paramsPromise }: Args) {
       <PostHero post={post} />
 
       <div className="flex flex-col items-center gap-4 pt-8 relative">
-        <div className="container">
-          <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 dark:from-gray-950/100 to-transparent" />
+        <div className="screen:container print:px-8">
+          <div className="print:hidden absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-white/100 dark:from-gray-950/100 to-transparent" />
           <MathJaxContext>
             <MathJax>
-              <RichText className="max-w-full md:max-w-[75vw] relative mt-4" data={post.content as DefaultTypedEditorState} enableGutter={false} />
+              <RichText className="max-w-full screen:md:max-w-[75vw] relative mt-4" data={post.content as DefaultTypedEditorState} enableGutter={false} />
             </MathJax>
           </MathJaxContext>
-          <h2 className="flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h2>
+          <h2 className="print:hidden flex-center flex-col mt-20 font-bold text-3xl text-gradient-2">Relateret</h2>
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
-              className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr] mx-4"
+              className="print:hidden mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr] mx-4"
               docs={post.relatedPosts.filter((post) => typeof post === 'object')}
             />
           )}

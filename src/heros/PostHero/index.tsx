@@ -15,7 +15,7 @@ export const PostHero: React.FC<{
     populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
 
   return (
-    <div className="relative min-h-screen -mt-[8.4rem] pt-[8.4rem] flex justify-center items-center">
+    <div className="print:hidden relative min-h-screen -mt-[8.4rem] pt-[8.4rem] flex justify-center items-center">
       <div className="z-10 relative min-w-[60vw] max-w-[75vw] lg:flex lg:min-w-[10vw] lg:max-w-[75vw] lg:justify-center text-black/85 dark:text-white/85 pb-25">
         <div className="glass-box z-10 px-5 lg:px-20 col-start-1 col-span-1 md:col-start-2 md:col-span-2">
           <div className="">
