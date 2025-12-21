@@ -264,3 +264,10 @@ html, body {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  @page {
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+  }
+}
