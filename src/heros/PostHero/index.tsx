@@ -67,7 +67,7 @@ export const PostHero: React.FC<{
           <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-white/100 dark:from-gray-950/100 to-transparent" />
         </div>
       </div>
-      <div className="w-full items-center print:flex print:flex-col hidden mb-8">
+      <div className="w-full items-center print:flex print:flex-col hidden mb-8 px-8">
         <span className="text-3xl font-bold text-center">{title}</span>
       </div>
     </>
